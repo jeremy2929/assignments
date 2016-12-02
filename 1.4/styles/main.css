@@ -1,0 +1,54 @@
+*{
+  box-sizing: border-box;
+}
+
+body{
+  background: DarkSeaGreen;
+  margin: 0;
+}
+
+nav{
+  background: white;
+  height: 60px;
+}
+
+.top_image{
+  height: 40px;
+  display: inline-block;
+}
+
+.top_search{
+  display: inline-block;
+
+  padding-top: 10px;
+  vertical-align: top;
+  }
+
+.top_search_box{
+  width: 500px;
+  display: inline-block;
+
+}
+
+.top_search_button{
+  width: 50px;
+  display: inline-block;
+
+}
+.top_submit{
+  width: 60px;
+  display: inline-block;
+}
+.top_button{
+  width: 60px;
+  display: inline-block;
+  vertical-align: top;
+  padding-top: 10px;
+}
+.top_right{
+  width: 20px;
+  display: inline-block;
+  vertical-align: top;
+  float: right;
+  padding-top: 10px;
+}
