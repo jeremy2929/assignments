@@ -9,12 +9,57 @@ body{
 
 nav{
   background: white;
-  height: 50px;
+  height: 40px;
 }
 
+.movie_article{
+  margin: 0;
+}
+.movie_box{
+  height: 400px;
+  margin-left: 70px;
+}
+
+.movie_title{
+  font-size: 15px;
+  height: 10px;
+  margin-left: 70px;
+  margin-bottom: 10px;
+}
+
+.movie_user_image{
+  height: 30px;
+  margin-left: 70px;
+  }
+
+.movie_user_name{
+  display: block;
+
+}
 .top_image{
   display: inline-block;
   height: 40px;
+}
+
+.top_right{
+  float: right;
+  height: 20px;
+  margin-top: 8px;
+}
+
+.top_right_button{
+  display: inline-block;
+  margin-right: 2px;
+  vertical-align: top;
+  width: 60px;
+}
+
+.top_right_image{
+  border-radius: 10px;
+  display: inline-block;
+  float: right;
+  vertical-align: top;
+  width: 20px;
 }
 
 .top_search{
@@ -36,20 +81,4 @@ nav{
 .top_submit{
   display: inline-block;
   width: 60px;
-}
-
-.top_button{
-  display: inline-block;
-  margin-left: 557px;
-  margin-top: 11px;
-  vertical-align: top;
-  width: 60px;
-}
-
-.top_right{
-  width: 20px;
-  display: inline-block;
-  float: right;
-  padding-top: 10px;
-  vertical-align: top;
 }

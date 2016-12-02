@@ -21,34 +21,47 @@
         alt="YouTube"
         class="top_image">
       <!--Creating search bar above movie window  -->
-      <form action="#/search" method="get" class="top_search">
-        <input type="text" class="top_search_box">
-        <input type="submit" value="search" class="top_search_button">
+      <form
+        action="#/search"
+        method="get"
+        class="top_search">
+        <input
+          type="text"
+          class="top_search_box">
+        <input
+          type="submit"
+          value="search"
+          class="top_search_button">
       </form>
       <!--Top Right Upload button  -->
-      <button class="top_button">
-        Upload
-      </button>
-      <!--Top right image for user, with link  -->
-        <a href = "#">
-          <img src="assets/user-corner.jpg" alt="user" class="top_right">
-        </a>
+      <div class="top_right">
+          <button class="top_right_button">
+            Upload
+          </button>
+          <!--Top right image for user, with link  -->
+          <a href = "#">
+            <img src="assets/user-corner.jpg" alt="user" class="top_right_image">
+          </a>
     </nav>
     <!-- End of Nav  -->
     <!-- Begin Main element to show primary video area -->
     <main>
       <!-- Movie image as placeholder for movie box -->
-      <img src="assets/movie.jpeg" alt="movie image">
+      <img src="assets/movie.jpeg" alt="movie image"
+        class="movie_box">
       <!-- This Section all parts below movie -->
       <section>
         <!-- This article is first box of section below main movie box -->
-        <article>
-          <h2>
+        <article class="movie_article">
+          <h2 class="movie_title">
               The Matrix (1999) - The Pill scene
           </h2>
           <!-- Below is User image and user name, source of movie -->
-          <img src="assets/user.jpg" alt="user image">
-          <p>
+          <img
+            src="assets/user.jpg"
+            alt="user image"
+            class="movie_user_image">
+          <p class="movie_user_name">
               UserName
           </p>
           <button>Subscribe</button>
