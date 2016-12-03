@@ -2,73 +2,92 @@
   box-sizing: border-box;
 }
 
+/* I like dark sea green for background on this page, dont know why */
 body{
   background: DarkSeaGreen;
   margin: 0;
 }
 
+/* Setting nav bar across top as white and height 40 */
 nav{
   background: white;
   height: 40px;
 }
 
+/* setting up box below movie box that contains movie info*/
 .movie_article{
+  background: white;
   border-radius: 5px;
-  background: grey;
+  display: inline-block;
   height: 30px;
   width: 570px;
-  display: inline-block;
 }
+
+/* defining area for main movie box */
 .movie_box{
   height: 400px;
   margin-left: 70px;
 }
 
+/* properties of Subscribe button below main movie box */
 .movie_subscribe{
-  height: 4px;
-  margin-top: 0px;
-  margin-left: 3px;
+  background-color: red;
   display: inline-block;
-}
-.movie_title{
-  font-size: 18px;
-  margin-left: 70px;
-  margin-top: 0;
-  margin-bottom: 0;
+  font-weight: bolder;
+  height: 20px;
+  margin-left: 3px;
+  margin-top: 0px;
 }
 
-.movie_user_image{
-  height: 30px;
-  float: left;
+/* properties of title of movie displayed below main movie box */
+.movie_title{
+  background-color: white;
+  font-size: 18px;
+  margin-bottom: 0;
   margin-left: 70px;
+  margin-top: 0;
+  width: 600px;
+}
+
+/* properties of user icon below main movie box */
+.movie_user_image{
   display: inline-block;
+  float: left;
+  height: 30px;
+  margin-left: 70px;
   }
 
+/* properties of user name near user image below main movie box */
 .movie_user_name{
   font-size: 12px;
-  margin-top: 0;
-  margin-left: 15px;
   height: 0;
-}
-.movie_views{
-  float: right;
+  margin-left: 15px;
   margin-top: 0;
-  margin-right: 3px;
-  margin-bottom: 3px;
-  display: inline-block;
 }
 
+/* properties of total number of views of movie */
+.movie_views{
+  display: inline-block;
+  float: right;
+  margin-bottom: 3px;
+  margin-right: 3px;
+  margin-top: 0;
+}
+
+/* defines image logo for YouTube top left */
 .top_image{
   display: inline-block;
   height: 40px;
 }
 
+/* defines element that groups two items at top right */
 .top_right{
   float: right;
   height: 20px;
   margin-top: 8px;
 }
 
+/* Upload button at top right */
 .top_right_button{
   display: inline-block;
   margin-right: 2px;
@@ -76,6 +95,7 @@ nav{
   width: 60px;
 }
 
+/* User icon at top right */
 .top_right_image{
   border-radius: 10px;
   display: inline-block;
@@ -95,6 +115,7 @@ nav{
 }
 
 .top_search_button{
+  color: blue;
   display: inline-block;
   width: 50px;
 
