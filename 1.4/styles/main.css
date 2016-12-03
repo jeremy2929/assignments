@@ -13,29 +13,51 @@ nav{
 }
 
 .movie_article{
-  margin: 0;
+  border-radius: 5px;
+  background: grey;
+  height: 30px;
+  width: 570px;
+  display: inline-block;
 }
 .movie_box{
   height: 400px;
   margin-left: 70px;
 }
 
+.movie_subscribe{
+  height: 4px;
+  margin-top: 0px;
+  margin-left: 3px;
+  display: inline-block;
+}
 .movie_title{
-  font-size: 15px;
-  height: 10px;
+  font-size: 18px;
   margin-left: 70px;
-  margin-bottom: 10px;
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
 .movie_user_image{
   height: 30px;
+  float: left;
   margin-left: 70px;
+  display: inline-block;
   }
 
 .movie_user_name{
-  display: block;
-
+  font-size: 12px;
+  margin-top: 0;
+  margin-left: 15px;
+  height: 0;
 }
+.movie_views{
+  float: right;
+  margin-top: 0;
+  margin-right: 3px;
+  margin-bottom: 3px;
+  display: inline-block;
+}
+
 .top_image{
   display: inline-block;
   height: 40px;
@@ -57,7 +79,6 @@ nav{
 .top_right_image{
   border-radius: 10px;
   display: inline-block;
-  float: right;
   vertical-align: top;
   width: 20px;
 }
