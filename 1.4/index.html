@@ -47,10 +47,20 @@
     </nav>
     <!-- End of Nav  -->
     <!-- Begin Main element to show primary video area -->
-    <main>
+    <main class="left_side">
       <!-- Movie image as placeholder for movie box -->
       <img src="assets/movie.jpeg" alt="movie image"
         class="movie_box">
+
+
+
+
+
+
+
+
+
+
       <!-- This Section all parts below movie -->
       <section class="movie_section">
         <h2 class="movie_title">
@@ -116,27 +126,46 @@
         </article>
         <!-- End of article for second part of section below movie box  -->
         <!-- The aside element will contain articles listing the preview of movies Up Next-->
-        <aside>
-            <!-- Next is image source for ad above movies Up Next-->
-            <img src = "assets/ad.jpg" alt="ad image">
-            <!-- This article element contains one movie preview in Up Next section -->
-            <article>
-              <!-- Items above movie image- Title, buttons -->
-              <h4>
-                Up Next
-              </h4>
-              <button>Autoplay</button>
-              <button> I </button>
-              <button> Check </button>
-              <!-- Image of movie -->
-              <img src = "assets/suggestion-1.jpg" alt="movie preview">
-              <p>The Matrix 1999 (Welcome to the real world)</p>
-              <p>User1</p>
-              <p>423,567 views</p>
-            </article>
-          </aside>
       </section>
-    </main>
+      <!-- area to right listing movies up next -->
+          </main>
+
+          <aside class="movie_upnext">
+            <img
+                alt="ad image"
+                class="movie_upnext_ad"
+                src = "assets/ad.jpg">
+                <article>
+                  <!-- Items above movie image- Title, buttons -->
+                  <p class="movie_upnext_title">
+                    Up Next
+                  </p>
+                  <div class="movie_upnext_buttons">
+                      <button>Autoplay</button>
+                      <button> I </button>
+                      <button> Check </button>
+                    </div>
+                  <div1 class="movie_upnext1">
+                      <!-- Image of movie -->
+                      <img
+                          alt="movie preview"
+                          class="movie_upnext_image"
+                          src = "assets/suggestion-1.jpg" >
+                      <p class="movie_upnext_title1">
+                        The Matrix 1999 (Welcome to the real world)
+                      </p>
+                      <p class="movie_upnext_user">
+                        User1
+                      </p>
+                      <p class="movie_upnext_views">
+                        423,567 views
+                      </p>
+                  </div>
+                </article>
+            <!-- Next is image source for ad above movies Up Next-->
+            <!-- This article element contains one movie preview in Up Next section -->
+
+          </aside>
   </body>
 <!--End of body  -->
 </html>

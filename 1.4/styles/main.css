@@ -2,7 +2,6 @@
   box-sizing: border-box;
 }
 
-/* I like dark sea green for background on this page, dont know why */
 body{
   background: LightGrey;
   margin: 0;
@@ -12,6 +11,7 @@ body{
 nav{
   background: white;
   height: 40px;
+  width: 100%;
 }
 
 /* div to control two buttons Like and Dislike */
@@ -40,6 +40,11 @@ nav{
   height: 79px;
 }
 
+.left_side{
+  display: inline-block;
+  width: 680px;
+}
+
 /* setting up box below movie box that contains movie info*/
 .movie_article{
   background: white;
@@ -51,9 +56,11 @@ nav{
 
 /* defining area for main movie box */
 .movie_box{
+  display: inline-block;
   height: 330px;
   width : 600px;
   margin-left: 70px;
+  margin-top: 10px;
 }
 
 .movie_section{
@@ -75,10 +82,58 @@ nav{
 /* properties of title of movie displayed below main movie box */
 .movie_title{
   background-color: white;
+
   font-size: 18px;
   margin-bottom: 0;
   margin-top: 0;
   width: 600px;
+}
+
+/* element containing all things on right, movies upnext */
+.movie_upnext {
+  background: white;
+  float: right;
+  margin-right: 40px;
+  margin-top: 10px;
+  vertical-align: top;
+  width: 300px;
+}
+
+.movie_upnext1{
+  display: inline-block;
+  height: 100px;
+  width: 300px;
+
+}
+
+.movie_upnext_ad{
+  width: 300px;
+  height: 120px;
+}
+
+.movie_upnext_buttons{
+  display: inline-block;
+  float: right;
+  margin: 0;
+  width: 140px;
+
+}
+.movie_upnext_image{
+  display: inline-block;
+  width: 40%;
+}
+
+.movie_upnext_title{
+  display: inline-block;
+  margin: 0;
+}
+
+.movie_upnext_title1{
+  display: inline-block;
+  font-size: 12px;
+  font-weight: 300;
+  width: 60%;
+  vertical-align: top;
 }
 
 /* properties of user icon below main movie box */
