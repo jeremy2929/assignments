@@ -25,6 +25,22 @@ nav{
   height: 20px;
 }
 
+.button_show{
+  width: 100%;
+  border: 2px;
+  height: 20px;
+}
+
+.comments{
+  margin: 0;
+
+}
+.comments_box{
+  background: white;
+  width: 600px;
+  height: 79px;
+}
+
 /* setting up box below movie box that contains movie info*/
 .movie_article{
   background: white;
@@ -138,4 +154,8 @@ nav{
 .top_submit{
   display: inline-block;
   width: 60px;
+}
+
+.uploaded_date{
+  font-size: 10px;
 }
