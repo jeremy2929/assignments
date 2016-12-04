@@ -14,6 +14,17 @@ nav{
   height: 40px;
 }
 
+/* div to control two buttons Like and Dislike */
+.button_right{
+  float: right
+}
+
+/* this contains all button below movie */
+.button_section{
+  background: white;
+  height: 20px;
+}
+
 /* setting up box below movie box that contains movie info*/
 .movie_article{
   background: white;
@@ -29,6 +40,12 @@ nav{
   margin-left: 70px;
 }
 
+.movie_section{
+  height: 52px;
+  width: 600px;
+  margin-left: 70px;
+  display: inline-block;
+}
 /* properties of Subscribe button below main movie box */
 .movie_subscribe{
   background-color: red;
@@ -44,7 +61,6 @@ nav{
   background-color: white;
   font-size: 18px;
   margin-bottom: 0;
-  margin-left: 70px;
   margin-top: 0;
   width: 600px;
 }
@@ -54,7 +70,6 @@ nav{
   display: inline-block;
   float: left;
   height: 30px;
-  margin-left: 70px;
   }
 
 /* properties of user name near user image below main movie box */
