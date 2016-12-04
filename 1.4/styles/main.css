@@ -4,7 +4,7 @@
 
 /* I like dark sea green for background on this page, dont know why */
 body{
-  background: DarkSeaGreen;
+  background: LightGrey;
   margin: 0;
 }
 
@@ -27,7 +27,6 @@ nav{
 
 .button_show{
   width: 100%;
-  border: 2px;
   height: 20px;
 }
 
@@ -52,7 +51,8 @@ nav{
 
 /* defining area for main movie box */
 .movie_box{
-  height: 400px;
+  height: 330px;
+  width : 600px;
   margin-left: 70px;
 }
 
@@ -137,6 +137,7 @@ nav{
 .top_search{
   display: inline-block;
   padding-top: 10px;
+  margin-left: 20px;
   vertical-align: top;
   }
 
