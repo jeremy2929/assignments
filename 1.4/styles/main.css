@@ -101,7 +101,7 @@ nav{
 
 .movie_upnext1{
   display: inline-block;
-  height: 100px;
+  height: 70px;
   width: 300px;
 
 }
@@ -116,7 +116,10 @@ nav{
   float: right;
   margin: 0;
   width: 140px;
+}
 
+.movie_upnext_description1{
+  float: right;
 }
 .movie_upnext_image{
   display: inline-block;
@@ -129,11 +132,18 @@ nav{
 }
 
 .movie_upnext_title1{
-  display: inline-block;
   font-size: 12px;
-  font-weight: 300;
-  width: 60%;
+  font-weight: 800;
+  margin: 0;
+  width: 175px;
   vertical-align: top;
+}
+
+.movie_upnext_user1{
+  color: grey;
+  font-size: 8px;
+  margin: 0;
+  width: 100px;
 }
 
 /* properties of user icon below main movie box */
