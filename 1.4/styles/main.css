@@ -103,7 +103,12 @@ nav{
   display: inline-block;
   height: 70px;
   width: 300px;
+}
 
+.movie_upnext2{
+  display: inline-block;
+  height: 70px;
+  width: 300px;
 }
 
 .movie_upnext_ad{
@@ -121,6 +126,11 @@ nav{
 .movie_upnext_description1{
   float: right;
 }
+
+.movie_upnext_description2{
+  float: right;
+}
+
 .movie_upnext_image{
   display: inline-block;
   width: 40%;
@@ -139,7 +149,22 @@ nav{
   vertical-align: top;
 }
 
+.movie_upnext_title2{
+  font-size: 12px;
+  font-weight: 800;
+  margin: 0;
+  width: 175px;
+  vertical-align: top;
+}
+
 .movie_upnext_user1{
+  color: grey;
+  font-size: 8px;
+  margin: 0;
+  width: 100px;
+}
+
+.movie_upnext_user2{
   color: grey;
   font-size: 8px;
   margin: 0;
