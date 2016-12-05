@@ -1,0 +1,175 @@
+*{
+  box-sizing: border-box;
+}
+
+/* I like dark sea green for background on this page, dont know why */
+body{
+  background: LightGrey;
+  margin: 0;
+}
+
+/* Setting nav bar across top as white and height 40 */
+nav{
+  background: white;
+  height: 40px;
+  width: 100%;
+}
+
+/* div to control two buttons Like and Dislike */
+.button_right{
+  float: right
+}
+
+/* this contains all button below movie */
+.button_section{
+  background: white;
+  height: 20px;
+}
+
+.button_show{
+  width: 100%;
+  height: 20px;
+}
+
+.comments{
+  margin: 0;
+
+}
+.comments_box{
+  background: white;
+  width: 600px;
+  height: 79px;
+}
+
+/* setting up box below movie box that contains movie info*/
+.movie_ad{
+  width: 100px;
+  height: 40px;
+
+}
+.movie_article{
+  background: white;
+  border-radius: 5px;
+  display: inline-block;
+  height: 30px;
+  width: 570px;
+}
+
+/* defining area for main movie box */
+.movie_box{
+  display: inline-block;
+  height: 330px;
+  width : 600px;
+  margin-left: 70px;
+}
+
+.movie_section{
+  height: 52px;
+  width: 600px;
+  margin-left: 70px;
+  display: inline-block;
+}
+/* properties of Subscribe button below main movie box */
+.movie_subscribe{
+  background-color: red;
+  display: inline-block;
+  font-weight: bolder;
+  height: 20px;
+  margin-left: 3px;
+  margin-top: 0px;
+}
+
+/* properties of title of movie displayed below main movie box */
+.movie_title{
+  background-color: white;
+  font-size: 18px;
+  margin-bottom: 0;
+  margin-top: 0;
+  width: 600px;
+}
+
+/* element containing all things on right, movies upnext */
+.movie_upnext {
+  float: right;
+  vertical-align: top;
+  width: 50px;
+}
+/* properties of user icon below main movie box */
+.movie_user_image{
+  display: inline-block;
+  float: left;
+  height: 30px;
+  }
+
+/* properties of user name near user image below main movie box */
+.movie_user_name{
+  font-size: 12px;
+  height: 0;
+  margin-left: 15px;
+  margin-top: 0;
+}
+
+/* properties of total number of views of movie */
+.movie_views{
+  display: inline-block;
+  float: right;
+  margin-bottom: 3px;
+  margin-right: 3px;
+  margin-top: 0;
+}
+
+/* defines image logo for YouTube top left */
+.top_image{
+  display: inline-block;
+  height: 40px;
+}
+
+/* defines element that groups two items at top right */
+.top_right{
+  float: right;
+  height: 20px;
+  margin-top: 8px;
+}
+
+/* Upload button at top right */
+.top_right_button{
+  display: inline-block;
+  margin-right: 2px;
+  vertical-align: top;
+  width: 60px;
+}
+
+/* User icon at top right */
+.top_right_image{
+  border-radius: 10px;
+  display: inline-block;
+  vertical-align: top;
+  width: 20px;
+}
+
+.top_search{
+  display: inline-block;
+  padding-top: 10px;
+  margin-left: 20px;
+  vertical-align: top;
+  }
+
+.top_search_box{
+  display: inline-block;
+  width: 500px;
+}
+
+.top_search_button{
+  color: blue;
+  display: inline-block;
+  width: 50px;
+
+}
+.top_submit{
+  display: inline-block;
+  width: 60px;
+}
+
+.uploaded_date{
+  font-size: 10px;
+}
