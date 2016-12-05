@@ -25,14 +25,15 @@ nav{
   height: 20px;
 }
 
+/* section for area below buttons area below main movie box */
 .below_show{
   background: white;
   height: 20px;
   margin: 0;
   width: 600px;
-
 }
 
+/* Show More [comments] button */
 .button_show{
   height: 20px;
   width: 100%;
@@ -42,6 +43,7 @@ nav{
   margin: 0;
 
 }
+
 .comments_box{
   background: white;
   width: 600px;
@@ -71,12 +73,14 @@ nav{
   margin-top: 10px;
 }
 
+/* defining area below main movie box */
 .movie_section{
+  display: inline-block;
   height: 52px;
   width: 600px;
   margin-left: 70px;
-  display: inline-block;
 }
+
 /* properties of Subscribe button below main movie box */
 .movie_subscribe{
   background-color: red;
@@ -90,7 +94,6 @@ nav{
 /* properties of title of movie displayed below main movie box */
 .movie_title{
   background-color: white;
-
   font-size: 18px;
   margin-bottom: 0;
   margin-top: 0;
@@ -209,6 +212,7 @@ nav{
   width: 20px;
 }
 
+/* did not finish comments down below */
 .top_search{
   display: inline-block;
   padding-top: 10px;
