@@ -25,9 +25,17 @@ nav{
   height: 20px;
 }
 
-.button_show{
-  width: 100%;
+.below_show{
+  background: white;
   height: 20px;
+  margin: 0;
+  width: 600px;
+
+}
+
+.button_show{
+  height: 20px;
+  width: 100%;
 }
 
 .comments{
@@ -93,20 +101,15 @@ nav{
 .movie_upnext {
   background: white;
   float: right;
-  margin-right: 40px;
+  margin-right: 185px;
   margin-top: 10px;
   vertical-align: top;
-  width: 300px;
+  width: 400px;
 }
 
-.movie_upnext1{
+.movie_upnext_listing{
   display: inline-block;
-  height: 70px;
-  width: 300px;
-}
-
-.movie_upnext2{
-  display: inline-block;
+  float: left;
   height: 70px;
   width: 300px;
 }
@@ -123,11 +126,7 @@ nav{
   width: 140px;
 }
 
-.movie_upnext_description1{
-  float: right;
-}
-
-.movie_upnext_description2{
+.movie_upnext_description{
   float: right;
 }
 
@@ -136,12 +135,12 @@ nav{
   width: 40%;
 }
 
-.movie_upnext_title{
+.movie_upnext_heading{
   display: inline-block;
   margin: 0;
 }
 
-.movie_upnext_title1{
+.movie_upnext_title{
   font-size: 12px;
   font-weight: 800;
   margin: 0;
@@ -149,23 +148,9 @@ nav{
   vertical-align: top;
 }
 
-.movie_upnext_title2{
-  font-size: 12px;
-  font-weight: 800;
-  margin: 0;
-  width: 175px;
-  vertical-align: top;
-}
-
-.movie_upnext_user1{
+.movie_upnext_user{
   color: grey;
-  font-size: 8px;
-  margin: 0;
-  width: 100px;
-}
-
-.movie_upnext_user2{
-  color: grey;
+  display: inline;
   font-size: 8px;
   margin: 0;
   width: 100px;
