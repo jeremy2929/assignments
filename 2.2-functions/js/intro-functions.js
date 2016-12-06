@@ -11,16 +11,13 @@ var myObject = {
  * and returns the largest of them. Use the if-then-else construct available in Javascript.
  */
 
-
 function max(a, b){
-    if (a > b) {
-      console.log(a);
-    }
-      else {
-      console.log(b);
-      }
+  if (a > b){
+    return a;
+  } else {
+    return b;
+  }
 }
-console.log("output=", max(5,8));
 
 console.assert(max(1,3) === 3);
 console.assert(max(0,3) === 3);
@@ -37,7 +34,12 @@ console.assert(isNaN(max("aaa","bbb")));
  */
 
 function maxOfThree(a, b, c){
-    // YOUR CODE HERE
+  if (a > b && a > c){
+      return a;
+  } else if ( b > a && b > c){
+      return b;
+  } else
+      return c;
 }
 
 console.assert(maxOfThree(1,3,2) === 3);
@@ -55,6 +57,25 @@ console.assert(isNaN(maxOfThree("aaa","bbb","ccc")));
  */
 
 function isVowel(char){
+  if (char === "A" || char === "a"){
+    return true;}
+  if (char === "E" || char === "e"){
+      return true;}
+  if (char === "I" || char === "i"){
+      return true;}
+  if (char === "O" || char === "o"){
+      return true;}
+  if (char === "U" || char === "u"){
+      return true;
+    } else return false;
+    
+  }
+  }
+
+  }
+
+  if (char )
+  }
     // YOUR CODE HERE
 }
 
