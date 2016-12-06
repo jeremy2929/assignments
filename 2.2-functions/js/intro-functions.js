@@ -18,7 +18,6 @@ function max(a, b){
     return b;
   }
 }
-
 console.assert(max(1,3) === 3);
 console.assert(max(0,3) === 3);
 console.assert(max(10,3) === 10);
@@ -68,17 +67,7 @@ function isVowel(char){
   if (char === "U" || char === "u"){
       return true;
     } else return false;
-    
   }
-  }
-
-  }
-
-  if (char )
-  }
-    // YOUR CODE HERE
-}
-
 console.assert(isVowel(0) === false);
 console.assert(isVowel("B") === false);
 console.assert(isVowel("b") === false);
@@ -97,9 +86,30 @@ console.assert(isVowel("E") === true);
 
  */
 
+
 function rovarspraket(text){
-    // YOUR CODE HERE
+  var vowelsArray = [ "a", "e", "i", "o", "u", "A", "E", "I", "O", "U"]
+  var vowelsArrayLength = vowelsArray.length;
+  var textLength = text.length;
+  for (var i = 0; i < vowelsArrayLength; i++) {
+    for (var n = 0; n < textLength; n++) {
+        console.log("vowelsArray[n]=",vowelsArray[n]);
+        console.log("test char=",text[i]);
+        if (vowelsArray[n] === text[i]) {
+          console.log("is a vowel");
+        } else {
+          console.log("not a vowel");
+          text.splice(i,0,text(i));
+          console.log(text[i]);
+        }
+
+    }
+  }
 }
+/* this is a test console for debugging */
+console.assert(rovarspraket("abcdefgh") === "a")
+
+
 
 console.assert(rovarspraket("a") === "a")
 console.assert(rovarspraket("b") === "bob")
