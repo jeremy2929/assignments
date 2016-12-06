@@ -11,9 +11,16 @@ var myObject = {
  * and returns the largest of them. Use the if-then-else construct available in Javascript.
  */
 
+
 function max(a, b){
-    // YOUR CODE HERE
+    if (a > b) {
+      console.log(a);
+    }
+      else {
+      console.log(b);
+      }
 }
+console.log("output=", max(5,8));
 
 console.assert(max(1,3) === 3);
 console.assert(max(0,3) === 3);
