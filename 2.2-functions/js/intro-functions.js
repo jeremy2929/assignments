@@ -84,36 +84,27 @@ console.assert(isVowel("E") === true);
  * For example, rovarspraket("this is fun") should
  * return the string "tothohisos isos fofunon".
 
- */
- /*
+ /* This code seems functional when displayed to console but I didnt have time to deal with the "0" string*/
 function rovarspraket(text){
   var textAsString = text.toString();
   var textArray = textAsString.split("");
   var build = textArray;
   var textLength = textArray.length;
   for (var i = 0; i < textLength; i++) {
-    if (isVowel(textArray[i]) === false){
+    if (isVowel(textArray[i]) === false || textArray[i]===0){
       build.splice(i,1,textArray[i] + "o" + textArray[i]);
-      console.log("textArray",textArray);
     }
-    return textArray = build.join("");
   }
-  console.log("new array build", build);
-  console.log (textArray);
-
-
+    textArray = build.join("");
+    console.log (textArray);
+    return textArray;
 }
-rovarspraket("abcdefgh")
-/* this is a test console for debugging */
-
-/*
-
 console.assert(rovarspraket("a") === "a")
 console.assert(rovarspraket("b") === "bob")
 console.assert(rovarspraket("cat") === "cocatot")
 console.assert(rovarspraket("javascript") === "jojavovasoscocroripoptot")
 console.assert(rovarspraket(0) === "0")
-*/
+
 /**
  * Part 4
  *
@@ -143,22 +134,22 @@ console.assert(reverse("we don't want no trouble") === "elbuort on tnaw t'nod ew
  * i.e. findLongestWord("book dogs") should return "book"
  */
 
+/* I didnt have time to finish storing each word and comparing the lengths to find largest */
 function findLongestWord(sentence){
   var holdString = "";
   var newString = "";
   var jlength= sentence.length;
   for (var i =0; i < jlength; i++){
-      if (sentence[i] === " " || i === jlength-1) {
+      if (sentence[i] === " " || i === jlength) {
         newString = holdString;
         console.log(newString);
         holdString = ""
       }
       else {
         holdString += sentence[i];
-        console.log(holdString);
-        }
+      }
   }
+  console.log(holdString);
 }
-
 console.assert(findLongestWord("book dogs") === "book")
 console.assert(findLongestWord("don't mess with Texas") === "Texas")
