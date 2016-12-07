@@ -32,7 +32,31 @@ console.assert(nicer("dad get the heck in here and bring me a darn sandwich.") =
 console.assert(nicer("here son, your crappy sandwich is on the dang plate.") === "here son, your sandwich is on the plate.")
 
 // PART 2: write a function called capitalizeAll(). It should take as input a sentence and capitalize the first letter of every word in the sentence.
+/* first, bring in the string sentence
+   convert string to array
+   identify begininng of each word
+   use a function to convert the character to upper case
+   write new character back into array
+   convert array back to text and return output */
 
+function capitalizeAll(sentence){
+  var sentenceArray = sentence.split(" ");
+  var currentChar = "";
+  var newChar = "";
+  var newWord = "";
+  var newSentence = "";
+  var finalSentence = "";
+  for (var i = 0; i < sentenceArray.length; i++){
+    var word = sentenceArray[i];
+    newWord = word.split("");
+    newChar = newWord[0].toUpperCase();
+    newWord[0] = newChar;
+    sentenceArray[i] = newWord.join("")
+    console.log(newSentence);
+  }
+  finalSentence = sentenceArray.join(" ");
+  console.log(finalSentence);
+}
 console.assert(capitalizeAll('every day is like sunday.') === 'Every Day Is Like Sunday.')
 
 // PART 3: write a function called properSentences(). It should take as input a string and capitalize the first letter of every sentence in that string. (For our purposes, all sentences will end with periods. Write one that works with ? and ! and receive a gratifying high five, right on the hand!)
