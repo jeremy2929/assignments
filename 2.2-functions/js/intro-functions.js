@@ -85,8 +85,10 @@ console.assert(isVowel("E") === true);
  * return the string "tothohisos isos fofunon".
 
  */
+ /*
 function rovarspraket(text){
-  var textArray = text.split("");
+  var textAsString = text.toString();
+  var textArray = textAsString.split("");
   var build = textArray;
   var textLength = textArray.length;
   for (var i = 0; i < textLength; i++) {
@@ -94,25 +96,24 @@ function rovarspraket(text){
       build.splice(i,1,textArray[i] + "o" + textArray[i]);
       console.log("textArray",textArray);
     }
+    return textArray = build.join("");
   }
   console.log("new array build", build);
-  textArray = build.join("");
   console.log (textArray);
 
 
 }
-rovarspraket("test")
+rovarspraket("abcdefgh")
 /* this is a test console for debugging */
-console.assert(rovarspraket("abcdefgh") === "a")
 
-
+/*
 
 console.assert(rovarspraket("a") === "a")
 console.assert(rovarspraket("b") === "bob")
 console.assert(rovarspraket("cat") === "cocatot")
 console.assert(rovarspraket("javascript") === "jojavovasoscocroripoptot")
 console.assert(rovarspraket(0) === "0")
-
+*/
 /**
  * Part 4
  *
@@ -123,7 +124,12 @@ console.assert(rovarspraket(0) === "0")
  */
 
 function reverse(str){
-    // YOUR CODE HERE
+    var newString = ""
+    for (var i = str.length-1; i > -1; i--){
+      newString += str[i];
+    }
+    console.log(newString);
+    return newString;
 }
 
 console.assert(reverse("books") === "skoob")
