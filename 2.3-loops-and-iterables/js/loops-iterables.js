@@ -1,18 +1,39 @@
 // PART 0: Write a function called squareDance() that squares each number in an array.
+function squareDance(givenArray){
+    for (var i=0; i < givenArray.length; i++){
+        // Hold a reference to current number
+        var currentNumber = givenArray[i];
+        // square the current number and set it back (replace existing) into array
+          givenArray[i] = Math.pow(currentNumber, 2);
+    }
+   return givenArray;
 
+}
 console.assert(squareDance([1, 2])[1] === 4)
 console.assert(squareDance([5,10,15])[2] === 225)
 console.assert(squareDance([3,6,9,3])[0] === 9)
 
 // PART 1: write a function called nicer(). It should clean up the language in its input sentence.
-
+function nicer(sentenceString){
+      var badWordArray = ["heck", "darn", "crappy", "dang"]
+      var sentenceArray = sentenceString.split(" ");
+      var badWord
+      for (i=0; i < badWordArray.length; i++){
+        badWord = sentenceArray.indexOf(badWordArray[i]);
+        if (badWord != -1){
+          sentenceArray.splice(badWord,1);
+        }
+      }
+      newSentence = sentenceArray.join(" ");
+      return newSentence;
+}
 console.assert(nicer("dad get the heck in here and bring me a darn sandwich.") === "dad get the in here and bring me a sandwich.")
 
 console.assert(nicer("here son, your crappy sandwich is on the dang plate.") === "here son, your sandwich is on the plate.")
 
 // PART 2: write a function called capitalizeAll(). It should take as input a sentence and capitalize the first letter of every word in the sentence.
 
-console.assert(capitalizeAll('every day is like sunday.') === 'Every Day Is Like Sunday.'))
+console.assert(capitalizeAll('every day is like sunday.') === 'Every Day Is Like Sunday.')
 
 // PART 3: write a function called properSentences(). It should take as input a string and capitalize the first letter of every sentence in that string. (For our purposes, all sentences will end with periods. Write one that works with ? and ! and receive a gratifying high five, right on the hand!)
 
