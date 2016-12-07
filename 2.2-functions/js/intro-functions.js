@@ -128,7 +128,6 @@ function reverse(str){
     for (var i = str.length-1; i > -1; i--){
       newString += str[i];
     }
-    console.log(newString);
     return newString;
 }
 
@@ -145,7 +144,20 @@ console.assert(reverse("we don't want no trouble") === "elbuort on tnaw t'nod ew
  */
 
 function findLongestWord(sentence){
-    // YOUR CODE HERE
+  var holdString = "";
+  var newString = "";
+  var jlength= sentence.length;
+  for (var i =0; i < jlength; i++){
+      if (sentence[i] === " " || i === jlength-1) {
+        newString = holdString;
+        console.log(newString);
+        holdString = ""
+      }
+      else {
+        holdString += sentence[i];
+        console.log(holdString);
+        }
+  }
 }
 
 console.assert(findLongestWord("book dogs") === "book")
