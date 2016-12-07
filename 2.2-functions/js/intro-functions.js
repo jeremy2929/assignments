@@ -85,27 +85,23 @@ console.assert(isVowel("E") === true);
  * return the string "tothohisos isos fofunon".
 
  */
-
-
 function rovarspraket(text){
-  var vowelsArray = [ "a", "e", "i", "o", "u", "A", "E", "I", "O", "U"]
-  var vowelsArrayLength = vowelsArray.length;
-  var textLength = text.length;
-  for (var i = 0; i < vowelsArrayLength; i++) {
-    for (var n = 0; n < textLength; n++) {
-        console.log("vowelsArray[n]=",vowelsArray[n]);
-        console.log("test char=",text[i]);
-        if (vowelsArray[n] === text[i]) {
-          console.log("is a vowel");
-        } else {
-          console.log("not a vowel");
-          text.splice(i,0,text(i));
-          console.log(text[i]);
-        }
-
+  var textArray = text.split("");
+  var build = textArray;
+  var textLength = textArray.length;
+  for (var i = 0; i < textLength; i++) {
+    if (isVowel(textArray[i]) === false){
+      build.splice(i,1,textArray[i] + "o" + textArray[i]);
+      console.log("textArray",textArray);
     }
   }
+  console.log("new array build", build);
+  textArray = build.join("");
+  console.log (textArray);
+
+
 }
+rovarspraket("test")
 /* this is a test console for debugging */
 console.assert(rovarspraket("abcdefgh") === "a")
 
