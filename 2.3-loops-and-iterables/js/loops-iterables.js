@@ -64,7 +64,6 @@ function capWord(str){
   strArray = str.split("");
   strArray[0] = strArray[0].toUpperCase();
   str = strArray.join("");
-  console.log(str);
   return str;
 }
 function properSentences(paraString){
@@ -91,6 +90,20 @@ var paragraph = 'it was a fine morning! the wine was good? light slanted in thro
 console.assert(properSentences(paragraph) === "It was a fine morning! The wine was good? Light slanted in through the cafe window.")
 
 // PART 4: write a function called iPutTheFunIn(). It should take a string as input. The output should be a copy of the original string with the word 'fun' inserted into the center of the string.
+function iPutTheFunIn(text){
+  var textArray = text.split(",");
+  var textLength = text.length;
+  var halfLength = parseInt(textLength/2) -1;
+  var newBuild = "";
+  for (var i = 0; i < textLength; i++){
+    newBuild += text[i];
+    if (i === halfLength){
+      newBuild += "fun";
+    }
+  }
+  return (newBuild);
+}
+
 
 console.assert(iPutTheFunIn("funerary") === "funefunrary")
 console.assert(iPutTheFunIn("reds") === "refunds")
