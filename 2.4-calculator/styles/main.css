@@ -6,11 +6,12 @@ body{
   display: inline-block;
   margin-left: 500px;
   margin-top: 200px;
-  width: 400px;;
+  width: 400px;
 }
 
 .buttonRegular{
-  background-color: SpringGreen;
+  background-color: rgb(96,180,100);
+  color: white;
   height: 70px;
   font-size: 22px;
   width: 70px;
@@ -18,9 +19,10 @@ body{
 }
 
 .buttonLite{
-  background-color: PaleGreen;
-  height: 70px;
+  background-color: rgb(125,193,128);
+  color: rgb(75, 110, 69);
   font-size: 22px;
+  height: 70px;
   width: 70px;
 
 }
@@ -57,7 +59,10 @@ body{
  }
 
  .outputWindow{
+   background-color: rgb(96,180,100);
    border-style: solid;
+   border-color: white;
+   border-width: thin;
    display: inline-block;
    height: 70px;
    margin: 0;
