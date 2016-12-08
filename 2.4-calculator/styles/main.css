@@ -4,43 +4,62 @@
 
 body{
   display: inline-block;
-  width: 280;
+  width: 400px;;
 }
 
-.rowOne{
+.buttonRegular{
   background-color: SpringGreen;
   height: 70px;
+  font-size: 22px;
+  width: 70px;
+
+}
+
+.buttonLite{
+  background-color: PaleGreen;
+  height: 70px;
+  font-size: 22px;
+  width: 70px;
+
+}
+.rowOne{
+  background-color: SpringGreen;
+  display: inline-block;
+  height: 70px;
   margin: 0;
-  width: 280;
+  width: 294px;
 }
 
 .rowTwo {
-  display: block;
+  display: inline-block;;
   background-color: SpringGreen;
-  width: 280;
+  width: 294px;
 }
 
 .rowThree {
   display: block;
   background-color: SpringGreen;
-  width: 280;
+  width: 294px;
 }
 
 .rowFour {
   display: block;
   background-color: SpringGreen;
-  width: 280;
+  width: 294px;
 }
 
  .rowFive {
    display: block;
    background-color: SpringGreen;
-   width: 280;
+   width: 294px;
  }
 
  .outputWindow{
+   border-style: solid;
    display: inline-block;
+   height: 70px;
    margin: 0;
-   width: 210;
+   vertical-align: top;
+   width: 218px;
 
  }
