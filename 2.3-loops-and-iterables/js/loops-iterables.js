@@ -134,12 +134,17 @@ console.assert(pipeline(7,squareNum,addOne) === 50)
 // test 3
 var exclaimAll = function(arr) {
     var newArr = []
+/* commented this out to make it just add exclamation
     for (var i = 0; i < arr.length; i ++) {
         newArr.push(arr[i] + '!')
     }
+  */
+
+    newStr = arr + "!";
+    return newStr;
 }
+console.log(exclaimAll("30"));
 
-var result = pipeline([10,20,30],squareDance,exclaimAll)
-
-console.assert(result[1] === "400!")
+var result = pipeline(10,squareDance,exclaimAll)
+console.assert(result[0] === "100!")
 console.assert(result[2] === "900!")
