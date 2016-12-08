@@ -1,0 +1,46 @@
+*{
+  box-sizing: border-box;
+}
+
+body{
+  display: inline-block;
+  width: 280;
+}
+
+.rowOne{
+  background-color: SpringGreen;
+  height: 70px;
+  margin: 0;
+  width: 280;
+}
+
+.rowTwo {
+  display: block;
+  background-color: SpringGreen;
+  width: 280;
+}
+
+.rowThree {
+  display: block;
+  background-color: SpringGreen;
+  width: 280;
+}
+
+.rowFour {
+  display: block;
+  background-color: SpringGreen;
+  width: 280;
+}
+
+ .rowFive {
+   display: block;
+   background-color: SpringGreen;
+   width: 280;
+ }
+
+ .outputWindow{
+   display: inline-block;
+   margin: 0;
+   width: 210;
+
+ }
