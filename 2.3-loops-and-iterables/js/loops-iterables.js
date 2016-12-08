@@ -43,8 +43,7 @@ function capitalizeAll(sentence){
   var sentenceArray = sentence.split(" ");
   var newChar = "";
   var newWord = "";
-  var newSentence = "";
-  var finalSentence = "";
+    var finalSentence = "";
   for (var i = 0; i < sentenceArray.length; i++){
     var word = sentenceArray[i];
     newWord = word.split("");
@@ -59,12 +58,37 @@ console.assert(capitalizeAll('every day is like sunday.') === 'Every Day Is Like
 
 
 
-
 // PART 3: write a function called properSentences(). It should take as input a string and capitalize the first letter of every sentence in that string. (For our purposes, all sentences will end with periods. Write one that works with ? and ! and receive a gratifying high five, right on the hand!)
 
-var paragraph = 'it was a fine morning. the wine was good. light slanted in through the cafe window.'
+function capWord(str){
+  strArray = str.split("");
+  strArray[0] = strArray[0].toUpperCase();
+  str = strArray.join("");
+  console.log(str);
+  return str;
+}
+function properSentences(paraString){
+  var paraArray = paraString.split(" ")
+  var chk = true;
+  for (var i = 0; i < paraArray.length; i++){
+      text = paraArray[i];
+      if (chk === true){
+        paraArray[i] = capWord(text);
+        chk = false;
+      }
+      var textEnd = text.length-1;
+      if (text[textEnd] === "." || text[textEnd] === "?" || text[textEnd] === "!"){
+        chk = true;
+      }
+  }
+  paraString = paraArray.join(" ");
+  return paraString;
+}
 
-console.assert(properSentences(paragraph) === "It was a fine morning. The wine was good. Light slanted in through the cafe window.")
+
+var paragraph = 'it was a fine morning! the wine was good? light slanted in through the cafe window.'
+
+console.assert(properSentences(paragraph) === "It was a fine morning! The wine was good? Light slanted in through the cafe window.")
 
 // PART 4: write a function called iPutTheFunIn(). It should take a string as input. The output should be a copy of the original string with the word 'fun' inserted into the center of the string.
 
