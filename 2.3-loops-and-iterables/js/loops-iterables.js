@@ -112,8 +112,11 @@ console.assert(iPutTheFunIn("reds") === "refunds")
 
 // the following three tests all correspond to the pipeline() function.
 
+function pipeline(str, fnc1, fnc2){
+  return fnc2((fnc1(str)));
+}
 // test 1
-var paragraph = 'dad bring your crappy self in here. i want a dang sandwich.'
+var paragraph = 'mom bring your crappy self in here. i want a dang sandwich.'
 
 console.assert(pipeline(paragraph,nicer,properSentences) === "Mom bring your self in here. I want a sandwich.")
 
@@ -137,5 +140,6 @@ var exclaimAll = function(arr) {
 }
 
 var result = pipeline([10,20,30],squareDance,exclaimAll)
+
 console.assert(result[1] === "400!")
 console.assert(result[2] === "900!")
