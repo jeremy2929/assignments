@@ -4,6 +4,8 @@
 
 body{
   display: inline-block;
+  margin-left: 500px;
+  margin-top: 200px;
   width: 400px;;
 }
 
@@ -25,8 +27,8 @@ body{
 .rowOne{
   background-color: SpringGreen;
   display: inline-block;
-  height: 70px;
-  margin: 0;
+  height: 68px;
+  margin-bottom: 2px;
   width: 294px;
 }
 
