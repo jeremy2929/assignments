@@ -14,6 +14,7 @@ body{
   color: white;
   height: 70px;
   font-size: 22px;
+  vertical-align: top;
   width: 70px;
 
 }
@@ -31,6 +32,7 @@ body{
   display: inline-block;
   height: 68px;
   margin-bottom: 2px;
+  vertical-align: top;
   width: 294px;
 }
 
@@ -64,9 +66,11 @@ body{
    border-color: white;
    border-width: thin;
    display: inline-block;
+   font-size: 50px;
    height: 70px;
    margin: 0;
+   text-align: right;
+   padding-top: 17px;
    vertical-align: top;
    width: 218px;
-
  }
