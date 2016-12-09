@@ -6,78 +6,82 @@
 document.addEventListener("DOMContentLoaded", function (){
 
   /* declaring all variables to reference each button defined in HTML */
-var numberButtonElement0 = document.querySelector("[data-js='numberButton0']");
-var numberButtonElement1 = document.querySelector("[data-js='numberButton1']");
-var numberButtonElement2 = document.querySelector("[data-js='numberButton2']");
-var numberButtonElement3 = document.querySelector("[data-js='numberButton3']");
-var numberButtonElement4 = document.querySelector("[data-js='numberButton4']");
-var numberButtonElement5 = document.querySelector("[data-js='numberButton5']");
-var numberButtonElement6 = document.querySelector("[data-js='numberButton6']");
-var numberButtonElement7 = document.querySelector("[data-js='numberButton7']");
-var numberButtonElement8 = document.querySelector("[data-js='numberButton8']");
-var numberButtonElement9 = document.querySelector("[data-js='numberButton9']");
-var numberButtonElementClear = document.querySelector("[data-js='numberButtonClear']");
-var numberButtonElementDecimal = document.querySelector("[data-js='numberButtonDecimal']");
-var numberButtonElementAddition = document.querySelector("[data-js='numberButtonAddition']");
-var numberButtonElementSubtract = document.querySelector("[data-js='numberButtonSubtract']");
-var numberButtonElementMultiply = document.querySelector("[data-js='numberButtonMultiply']");
-var numberButtonElementDivide = document.querySelector("[data-js='numberButtonDivide']");
-var numberButtonElementEqual = document.querySelector("[data-js='numberButtonEqual']");
+  var numberButtonElement0 = document.querySelector("[data-js='numberButton0']");
+  var numberButtonElement1 = document.querySelector("[data-js='numberButton1']");
+  var numberButtonElement2 = document.querySelector("[data-js='numberButton2']");
+  var numberButtonElement3 = document.querySelector("[data-js='numberButton3']");
+  var numberButtonElement4 = document.querySelector("[data-js='numberButton4']");
+  var numberButtonElement5 = document.querySelector("[data-js='numberButton5']");
+  var numberButtonElement6 = document.querySelector("[data-js='numberButton6']");
+  var numberButtonElement7 = document.querySelector("[data-js='numberButton7']");
+  var numberButtonElement8 = document.querySelector("[data-js='numberButton8']");
+  var numberButtonElement9 = document.querySelector("[data-js='numberButton9']");
+  var numberButtonElementClear = document.querySelector("[data-js='numberButtonClear']");
+  var numberButtonElementDecimal = document.querySelector("[data-js='numberButtonDecimal']");
+  var numberButtonElementAddition = document.querySelector("[data-js='numberButtonAddition']");
+  var numberButtonElementSubtract = document.querySelector("[data-js='numberButtonSubtract']");
+  var numberButtonElementMultiply = document.querySelector("[data-js='numberButtonMultiply']");
+  var numberButtonElementDivide = document.querySelector("[data-js='numberButtonDivide']");
+  var numberButtonElementEqual = document.querySelector("[data-js='numberButtonEqual']");
 
-var outputTextElement = document.querySelector("[data-js='outputText']");
+/* defining variable for output window */
+  var outputTextElement = document.querySelector("[data-js='outputText']");
 
+
+  /* CLEAR function- Sets the string variable of output window to null*/
   numberButtonElementClear.addEventListener("click", function(){
     outputTextElement.textContent = "";
   });
+  /* Operands functions- As each button is clicked, the text content of the button is concatenated to the output string*/
   numberButtonElementDecimal.addEventListener("click", function(){
-    outputTextElement.textContent += numberButtonElementDecimal.textContent;
+    outputTextElement.textContent += ".";
   });
   numberButtonElementAddition.addEventListener("click", function(){
-    outputTextElement.textContent += numberButtonElementAddition.textContent;
+    outputTextElement.textContent += "+";
   });
   numberButtonElementSubtract.addEventListener("click", function(){
-    outputTextElement.textContent += numberButtonElementSubtract.textContent;
+    outputTextElement.textContent += "-";
   });
   numberButtonElementMultiply.addEventListener("click", function(){
-    outputTextElement.textContent += numberButtonElementMultiply.textContent;
+    outputTextElement.textContent += "*";
   });
   numberButtonElementDivide.addEventListener("click", function(){
-    outputTextElement.textContent += numberButtonElementDivide.textContent;
+    outputTextElement.textContent += "/";
   });
-
+  /* Button functions- As each button is clicked, the text content of the button is concatenated to the output string */
   numberButtonElement0.addEventListener("click", function(){
-    outputTextElement.textContent += numberButtonElement0.textContent;
+    outputTextElement.textContent += 0;
   });
   numberButtonElement1.addEventListener("click", function(){
-    outputTextElement.textContent += numberButtonElement1.textContent;
+    outputTextElement.textContent += 1;
   });
   numberButtonElement2.addEventListener("click", function(){
-    outputTextElement.textContent += numberButtonElement2.textContent;
+    outputTextElement.textContent += 2;
   });
   numberButtonElement3.addEventListener("click", function(){
-    outputTextElement.textContent += numberButtonElement3.textContent;
+    outputTextElement.textContent += 3;
   });
   numberButtonElement4.addEventListener("click", function(){
-    outputTextElement.textContent += numberButtonElement4.textContent;
+    outputTextElement.textContent += 4;
   });
   numberButtonElement5.addEventListener("click", function(){
-    outputTextElement.textContent += numberButtonElement5.textContent;
+    outputTextElement.textContent += 5;
   });
   numberButtonElement6.addEventListener("click", function(){
-    outputTextElement.textContent += numberButtonElement6.textContent;
+    outputTextElement.textContent += 6;
   });
   numberButtonElement7.addEventListener("click", function(){
-    outputTextElement.textContent += numberButtonElement7.textContent;
+    outputTextElement.textContent += 7;
   });
   numberButtonElement8.addEventListener("click", function(){
-    outputTextElement.textContent += numberButtonElement8.textContent;
+    outputTextElement.textContent += 8;
   });
   numberButtonElement9.addEventListener("click", function(){
-    outputTextElement.textContent += numberButtonElement9.textContent;
+    outputTextElement.textContent += 9;
   });
 
-
-/* using the Eval function to convert the entire string into a numberic expression to produce the answer */
+/* When Equal is clicked, the answer to the math is displayed in output window
+   using the Eval function to convert the entire string into a numberic expression to produce the answer */
 numberButtonElementEqual.addEventListener("click", function(){
           var answer = eval(outputTextElement.textContent);
           outputTextElement.textContent = answer.toFixed(3);
