@@ -1,12 +1,13 @@
 /***********************************************************************************************
-/**  This script will handle action of each button of a calculator when clicked.              **
+/**  This script will handle action of each button of a calculator when clicked.
 /***********************************************************************************************
 /* Operands are the numbers of the calculation, including decimals.
    Operators are the add, subtract, multiply, divide symbols.
-  Updates: Can not enter an operator without a number first.
+  Quality Improvements :
+           Can not enter an operator without a number first.
            Can not enter a decimal or operator multiple times in a row.
            Can not enter a decimal more than once inside one operand (Ex: 3.45.65).
-           Will auto clear output window after equal sign used if another number button is clicked.
+           Will auto clear output window after equal sign used if next button is number.
            Will auto clear output window after equal sign used if next button is decimal.
 */
 /* create event listener to wait until html fully loaded */
@@ -39,7 +40,7 @@ document.addEventListener("DOMContentLoaded", function (){
   /* when flag is false, only accepts number, equal sign, or clear                 */
   /* when flag is true, only accepts operator                                      */
   var flag = false;
-  /* when reset is true, need to auto clear output window for next calculation     */
+  /* when windowReset is true, need to auto clear output window for next calculation     */
   var windowReset = false;
   /* when oneDecimal is true, can enter decimal. If false, then no more decimals   */
   var oneDecimal = true;
@@ -47,38 +48,42 @@ document.addEventListener("DOMContentLoaded", function (){
   function checkReset(){
      if (windowReset === true){
          outputTextElement.textContent = "";
-         /* set reset back to false because output window now cleared                 */
+         /* set windowReset back to false because output window now cleared                 */
          windowReset = false;
          /* set oneDecimal to true because output window ready for number or decimal */
          oneDecimal = true;
      }
   }
-  /* CLEAR function- Sets the contents of output window to null */
+  /************************* Clear function-*******************************************************/
+  /* Sets the contents of output window to null
+  /****************************************************************************************************/
   numberButtonElementClear.addEventListener("click", function(){
     outputTextElement.textContent = "";
     flag=false;
   });
   /************************* Decimal function-*******************************************************/
-  /* when decimal button clicked, the decimal is added to output window and then reset and oneDecimal set to false to block auto clear and more decimals in same operand.                                      */
+  /* when decimal button clicked, the decimal is added to output window and then reset and oneDecimal set to false to block auto clear and more decimals in same operand.
+  /****************************************************************************************************/
   numberButtonElementDecimal.addEventListener("click", function(){
+    /* need to check if output display needs to be cleared */
     checkReset();
     if (oneDecimal === true){
       outputTextElement.textContent += ".";
-      /* setting reset to false-  do not want to auto clear at next number button because still creating an expression */
+      /* setting windowReset to false-  do not want to auto clear at next number button because still creating an expression */
       windowReset = false;
       /* now have a decimal, no more in this operand   */
       oneDecimal = false;
     }
   });
   /************************* Operator functions-*******************************************************
-  as each operator button is clicked, the corresponding operator is added to the output string and then flag and reset set to false to block more operators and auto clear */
-
+  as each operator button is clicked, the corresponding operator is added to the output string and then flag and reset set to false to block more operators and auto clear
+  /****************************************************************************************************/
   numberButtonElementAddition.addEventListener("click", function(){
     if (flag === true){
       outputTextElement.textContent += "+";
       /* setting flag to false-  already have operator now, dont do it again */
       flag=false;
-      /* setting reset to false-  do not want to auto clear at next number button because still creating an expression */
+      /* setting windowReset to false-  do not want to auto clear at next number button because still creating an expression */
       windowReset = false;
       /* now ok to have a decimal                */
       oneDecimal = true;
@@ -89,7 +94,7 @@ document.addEventListener("DOMContentLoaded", function (){
       outputTextElement.textContent += "-";
       /* setting flag to false-  already have operator now, dont do it again */
       flag=false;
-      /* setting reset to false-  do not want to auto clear at next number button because still creating an expression */
+      /* setting windowReset to false-  do not want to auto clear at next number button because still creating an expression */
       windowReset = false;
       /* now ok to have a decimal                */
       oneDecimal = true;
@@ -100,7 +105,7 @@ document.addEventListener("DOMContentLoaded", function (){
       outputTextElement.textContent += "*";
       /* setting flag to false-  already have operator now, dont do it again */
       flag=false;
-      /* setting reset to false-  do not want to auto clear at next number button because still creating an expression */
+      /* setting windowReset to false-  do not want to auto clear at next number button because still creating an expression */
       windowReset = false;
       /* now ok to have a decimal                */
       oneDecimal = true;
@@ -111,13 +116,15 @@ document.addEventListener("DOMContentLoaded", function (){
       outputTextElement.textContent += "/";
       /* setting flag to false-  already have operator now, dont do it again */
       flag=false;
-      /* setting reset to false-  do not want to auto clear at next number button because still creating an expression */
+      /* setting windowReset to false-  do not want to auto clear at next number button because still creating an expression */
       windowReset = false;
       /* now ok to have a decimal                */
       oneDecimal = true;
     }
   });
-  /* Button functions- As each button is clicked, the text content of the button is concatenated to the output string */
+  /************************* Number Button functions-*******************************************************
+  /* As each number button is clicked, the text content of the button is concatenated to the output string */
+  /********************************************************************************************************/
   numberButtonElement0.addEventListener("click", function(){
     /* need to check if output display needs to be cleared */
     checkReset();
@@ -188,13 +195,13 @@ document.addEventListener("DOMContentLoaded", function (){
     /* its ok now to hit equal button */
     flag=true;
   });
-  /* When Equal is clicked, the answer to the math is displayed in output window
+  /* When Equal is clicked, the solution to the expression is displayed in output window
    using the Eval function to convert the entire string into a numeric expression to produce the answer */
   numberButtonElementEqual.addEventListener("click", function(){
             if (flag === true){
               var answer = eval(outputTextElement.textContent);
               outputTextElement.textContent = answer.toFixed(3);
-              /* reset is set to true to set up auto clear when begininng a new expression  */
+              /* windowReset is set to true to set up auto clear when begininng a new expression  */
               windowReset = true;
             }
   });
