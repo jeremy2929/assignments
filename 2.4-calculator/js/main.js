@@ -1,7 +1,4 @@
-/* This script will handle action of each button when clicked
-1. First we need to define Events for when each number button 0 - 9 is clicked, and to put the number clicked into the output window.
-2.
-*/
+/* This script will handle action of each button of a calculator when clicked
 /* creat even listener to wait until html fully loaded */
 document.addEventListener("DOMContentLoaded", function (){
 
@@ -27,6 +24,16 @@ document.addEventListener("DOMContentLoaded", function (){
 /* defining variable for output window */
   var outputTextElement = document.querySelector("[data-js='outputText']");
 
+ /* flag variable for if ready to do = */
+ var flag = false;
+ var reset = false;
+ /* function to check if output window should be cleared for new calculation */
+ function checkReset(){
+   if (reset === true){
+       outputTextElement.textContent = "";
+       reset = false;
+   }
+ }
 
   /* CLEAR function- Sets the string variable of output window to null*/
   numberButtonElementClear.addEventListener("click", function(){
@@ -38,54 +45,84 @@ document.addEventListener("DOMContentLoaded", function (){
   });
   numberButtonElementAddition.addEventListener("click", function(){
     outputTextElement.textContent += "+";
+    flag=false;
+    reset=false;
   });
   numberButtonElementSubtract.addEventListener("click", function(){
     outputTextElement.textContent += "-";
+    flag=false;
+    reset=false;
   });
   numberButtonElementMultiply.addEventListener("click", function(){
     outputTextElement.textContent += "*";
+    flag=false;
+    reset=false;
   });
   numberButtonElementDivide.addEventListener("click", function(){
     outputTextElement.textContent += "/";
+    flag=false;
+    reset=false;
   });
   /* Button functions- As each button is clicked, the text content of the button is concatenated to the output string */
   numberButtonElement0.addEventListener("click", function(){
+    checkReset();
     outputTextElement.textContent += 0;
+    flag=true;
   });
   numberButtonElement1.addEventListener("click", function(){
+    checkReset();
     outputTextElement.textContent += 1;
+    flag=true;
   });
   numberButtonElement2.addEventListener("click", function(){
+    checkReset();
     outputTextElement.textContent += 2;
+    flag=true;
   });
   numberButtonElement3.addEventListener("click", function(){
+    checkReset();
     outputTextElement.textContent += 3;
+    flag=true;
   });
   numberButtonElement4.addEventListener("click", function(){
+    checkReset();
     outputTextElement.textContent += 4;
+    flag=true;
   });
   numberButtonElement5.addEventListener("click", function(){
+    checkReset();
     outputTextElement.textContent += 5;
+    flag=true;
   });
   numberButtonElement6.addEventListener("click", function(){
+    checkReset();
     outputTextElement.textContent += 6;
+    flag=true;
   });
   numberButtonElement7.addEventListener("click", function(){
+    checkReset();
     outputTextElement.textContent += 7;
+    flag=true;
   });
   numberButtonElement8.addEventListener("click", function(){
+    checkReset();
     outputTextElement.textContent += 8;
+    flag=true;
   });
   numberButtonElement9.addEventListener("click", function(){
+    checkReset();
     outputTextElement.textContent += 9;
+    flag=true;
   });
 
 /* When Equal is clicked, the answer to the math is displayed in output window
    using the Eval function to convert the entire string into a numberic expression to produce the answer */
 numberButtonElementEqual.addEventListener("click", function(){
-          var answer = eval(outputTextElement.textContent);
-          outputTextElement.textContent = answer.toFixed(3);
-
+          if (flag === true){
+            var answer = eval(outputTextElement.textContent);
+            outputTextElement.textContent = answer.toFixed(3);
+            reset = true;
+          }
   });
 
   }
