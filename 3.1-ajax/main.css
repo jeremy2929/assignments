@@ -1,0 +1,8 @@
+*{
+  box-sizing: border-box;
+}
+
+.avatar{
+  margin-left: 130px;
+  height: 220px;
+}

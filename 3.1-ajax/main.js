@@ -4,13 +4,27 @@ document.addEventListener("DOMContentLoaded",function(){
   var xhr = new XMLHttpRequest();
 
 
-  xhr.open("GET", "https://api.github.com/search/repositories?q=fall16-lecture");
+  xhr.open("GET", "https://api.github.com/users/jeremy2929");
   xhr.addEventListener("load", function(e){
 
     var xhrData = this.response;
-    console.log(xhrData);
     var JSONData = JSON.parse(xhrData);
-    console.log("JSON=",JSONData);
+    console.log(JSONData);
+    var lectureArticleHTML="<article>";
+    lectureArticleHTML += "<img src='";
+    lectureArticleHTML += JSONData.avatar_url;
+    lectureArticleHTML += "' alt='avatar image' class='avatar'>";
+    lectureArticleHTML += "created: ";
+    lectureArticleHTML += JSONData.created_at;
+    lectureArticleHTML += "</p>";
+
+    console.log ("Created", JSONData.created_at);
+    console.log ("login", JSONData.login);
+    console.log ("number of followers", JSONData.followers);
+    console.log ("Type", JSONData.type);
+    console.log ("Updated", JSONData.updated_at);
+    console.log ("URL", JSONData.url);
+    githubSectionElement.innerHTML +=lectureArticleHTML;
   });
   xhr.send();
 })
