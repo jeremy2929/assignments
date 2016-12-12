@@ -72,6 +72,7 @@ body{
    border-style: solid;
    border-color: white;
    border-width: thin;
+   color: white;
    display: inline-block;
    font-size: 40px;
    height: 70px;

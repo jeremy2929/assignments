@@ -62,7 +62,7 @@ document.addEventListener("DOMContentLoaded", function (){
     flag=false;
   });
   /************************* Decimal function-*******************************************************/
-  /* when decimal button clicked, the decimal is added to output window and then reset and oneDecimal set to false to block auto clear and more decimals in same operand.
+  /* when decimal button clicked, the decimal is added to output window and then windowReset and oneDecimal set to false to block auto clear and more decimals in same operand.
   /****************************************************************************************************/
   numberButtonElementDecimal.addEventListener("click", function(){
     /* need to check if output display needs to be cleared */
