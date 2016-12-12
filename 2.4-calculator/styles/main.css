@@ -10,7 +10,7 @@ body{
   width: 400px;
 }
 
-/* Most buttons have same properties here (except operands) */
+/* Most buttons have same properties here (except operators) */
 .buttonRegular{
   background-color: rgb(96,180,100);
   color: white;
@@ -20,7 +20,7 @@ body{
   width: 70px;
 }
 
-/* All buttons for operands are lighter in color */
+/* All buttons for operators are lighter in color */
 .buttonLite{
   background-color: rgb(125,193,128);
   color: rgb(75, 110, 69);
@@ -67,6 +67,7 @@ body{
    width: 294px;
 }
 
+/* properties needed to display output window properly  */
  .outputWindow{
    background-color: rgb(96,180,100);
    border-style: solid;
