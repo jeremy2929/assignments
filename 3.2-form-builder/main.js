@@ -7,11 +7,12 @@ document.addEventListener("DOMContentLoaded", function(){
   xhr.addEventListener("load", function(e){
     var xhrData = this.response;
     var JSONData = JSON.parse(xhrData);
-
-    console.log("test=",JSONData.icon);
-    console.log(JSONData);
+    for (var i = 0; i < JSONData.length; i++){
 
 
+    console.log("Data=",JSONData[i]);
+
+    }
   });
 
 
