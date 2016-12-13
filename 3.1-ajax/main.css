@@ -1,5 +1,13 @@
 *{
   box-sizing: border-box;
+  font-family: helvetica;
+}
+
+.addBio{
+  color: CornFlowerBlue;
+  font-size: 13px;
+  font-weight: bold;
+  margin-left: 130px;
 }
 
 .article{
@@ -10,29 +18,59 @@
 .avatar{
   display: inline-block;
   margin-left: 130px;
-  height: 220px;
+  height: 229px;
+  width: 230px;
+}
+
+.createdDate{
+  margin-left: 130px;
+  width: 250px;
+}
+
+.editProfile{
+  background-color: LimeGreen;
+  color: white;
+  float: right;
+  font-size: 12px;
+  font-weight: bolder;
+  height: 30px;
+  margin-top: 15px;
+  width: 100px;
+}
+
+.editProfileLower{
+  font-size: 14px;
+  height: 25px;
+  margin-left: 130px;
+  width: 230px;
 }
 
 .followersTitle{
   display: inline-block;
+  font-size: 12px;
   padding-left: 40px;
   padding-top: 50px;
 }
 
 .followingTitle{
   display: inline-block;
+  font-size: 12px;
   padding-left: 40px;
   padding-top: 50px;
 }
 
 .login_name{
+  color: #666;
   display: block;
-  font-size: 22px;
+  font-size: 20px;
+  font-style: normal;
   margin-left: 130px;
 }
 
-.overviewsTitle{
+.overviewTitle{
+  color: #333;
   display: inline-block;
+  font-size: 12px;
   padding-left: 40px;
   padding-top: 50px;
   width: 100px;
@@ -40,36 +78,52 @@
 
 .repositoriesTitle{
   display: inline-block;
+  font-size: 12px;
   padding-left: 40px;
   padding-top: 50px;
-  }
+}
+
+.spanTitle{
+  background-color: #eee;
+  border-radius: 20px;
+  color: #666;
+  display: inline-block;
+  padding: 2px 5px;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1;
+}
 
 .starsTitle{
   display: inline-block;
+  font-size: 12px;
   padding-left: 40px;
   padding-top: 50px;
 }
 
 .titlesBox{
+  border-bottom: 1px solid LightGrey;
   display: block;
   height: 100px;
   width: 750px;
 }
 
 .tipTitle{
-  height: 78px;
+  font-size: 14px;
   margin: 0;
   padding-left: 10px;
-  padding-top: 10px;
-  vertical-align: top;
+  padding-right: 30px;
+  padding-top: 20px;
 }
 
 .tipBox{
   background-color: rgb(241,246,251);
-  border: 1px solid black;
+  border: 1px solid LightBlue;
+  border-radius: 3px;
   display: inline-block;
   height: 80px;
   margin-left: 30px;
+  padding-right: 10px;
   vertical-align: top;
   width: 750px;
 }
