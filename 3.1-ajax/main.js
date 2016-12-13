@@ -15,22 +15,34 @@ document.addEventListener("DOMContentLoaded",function(){
     lectureArticleHTML += JSONData.avatar_url;
     lectureArticleHTML += "' alt='avatar image' class='avatar'>";
     lectureArticleHTML += "<div class=tipBox>";
-    lectureArticleHTML += "ProTip";
-
+      lectureArticleHTML += "<p class='tipTitle'>";
+      lectureArticleHTML += "ProTip";
+      lectureArticleHTML += "</p>";
+      lectureArticleHTML += "<article1 class=titlesBox>";
+        lectureArticleHTML += "<p class='overviewsTitle'>";
+        lectureArticleHTML += "Overviews    ";
+        lectureArticleHTML += "</p>";
+        lectureArticleHTML += "<p class='repositoriesTitle'>";
+        lectureArticleHTML += "Repositories   ";
+        lectureArticleHTML += JSONData.public_repos;
+        lectureArticleHTML += "</p>";
+        lectureArticleHTML += "<p class='starsTitle'>";
+        lectureArticleHTML += "Stars   ";
+        lectureArticleHTML += "</p>";
+        lectureArticleHTML += "<p class='followersTitle'>";
+        lectureArticleHTML += "Followers   ";
+        lectureArticleHTML += JSONData.followers;
+        lectureArticleHTML += "</p>";
+        lectureArticleHTML += "<p class='followingTitle'>";
+        lectureArticleHTML += "Following   ";
+        lectureArticleHTML += "</p>";
+      lectureArticleHTML += "</artile1>";
     lectureArticleHTML += "</div>";
 
 
-    lectureArticleHTML += "<p class='title'>";
-    lectureArticleHTML += "Overviews    ";
-    lectureArticleHTML += "Repositories   ";
-    lectureArticleHTML += JSONData.public_repos;
 
 
-    lectureArticleHTML += "Stars   ";
-    lectureArticleHTML += "Followers   ";
-    lectureArticleHTML += JSONData.followers;
 
-    lectureArticleHTML += "</p>";
     lectureArticleHTML += "<p class='login_name'>";
     lectureArticleHTML += JSONData.login;
     lectureArticleHTML += "</p>";
