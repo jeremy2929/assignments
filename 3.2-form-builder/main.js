@@ -6,33 +6,38 @@ document.addEventListener("DOMContentLoaded", function(){
   xhr.addEventListener("load", function(e){
     var xhrData = this.response;
     var JSONData = JSON.parse(xhrData);
-    var pieceHTML ="";
+
+    var textareaHTML ="";
+    var selectHTML ="";
+    var listHTML ="";
     for (var i = 0; i < JSONData.length; i++){
       var inputData = JSONData[i];
+      // dataFlag is
+      var dataFlag = true;
+      if (inputData.type === 'textarea'){
+        textareaHTML += '<textarea rows="4" cols="50">';
+        textareaHTML += '</textarea>';
+        dataFlag = false;
+      }
       if (inputData.type === 'select'){
-        pieceHTML += '<select name="select">';
-      /* console.log("JSONData=[]", inputData.options[2]);  */
+        selectHTML += '<select name="select">';
         for (var x = 0; x < inputData.options.length; x++){
           var optionData = inputData.options[x];
-          console.log("option=",optionData);
-          pieceHTML += `<option value='${optionData.value}'>${optionData.label}</option>`;
+          selectHTML += `<option value='${optionData.value}'>${optionData.label}</option>`;
         }
+        selectHTML += "</select>";
+        dataFlag = false;
       }
-        pieceHTML += "</select>";
-        console.log(pieceHTML);
+      if (dataFlag === true){
+        listHTML += `<p>${JSONData[i].id}"---"`;
+        listHTML += `${JSONData[i].icon}"---"`;
+        listHTML += `${JSONData[i].label}"---"</p>`;
+      }
     }
-      /*  console.log("this is a select",JSONData[i]); */
 
-
-    /*  pieceHTML = `
-          <form>
-          <input Icon: ${JSONData[i].icon}
-                 Id: ${JSONData[i].id}
-          <label> ${JSONData[i].label} </label>
-        </form>
-      `; */
-      allHTML.innerHTML += pieceHTML;
-
+  allHTML.innerHTML += textareaHTML;
+  allHTML.innerHTML += selectHTML;
+  allHTML.innerHTML += listHTML;
   });
   xhr.send();
 });
