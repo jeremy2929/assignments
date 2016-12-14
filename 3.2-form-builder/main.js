@@ -45,9 +45,9 @@ document.addEventListener("DOMContentLoaded", function(){
       }
       // if no value triggered dataFlag = false, then build 'list' HTML
       if (dataFlag === true){
-        listHTML += `<p>${JSONData[i].id}"---"`;
-        listHTML += `${JSONData[i].icon}"---"`;
-        listHTML += `${JSONData[i].label}"---"</p>`;
+        listHTML += `<p>${JSONData[i].label}___`;
+        listHTML += `${JSONData[i].icon}___`;
+        listHTML += `${JSONData[i].id}</p>`;
       }
     }
   // add each piece built to the variable we are using to define HTML
