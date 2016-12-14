@@ -45,15 +45,16 @@ document.addEventListener("DOMContentLoaded", function(){
       }
       // if no value triggered dataFlag = false, then build 'list' HTML
       if (dataFlag === true){
-        listHTML += `<p>${JSONData[i].label}___`;
-        listHTML += `${JSONData[i].icon}___`;
-        listHTML += `${JSONData[i].id}</p>`;
+        listHTML += `<form>${JSONData[i].label}`;
+        listHTML += `<input type='${JSONData[i].icon}'  `;
+        listHTML += `name=${JSONData[i].id}</form>`;
+        console.log(listHTML);
       }
     }
   // add each piece built to the variable we are using to define HTML
-  allHTML.innerHTML += textareaHTML;
-  allHTML.innerHTML += selectHTML;
   allHTML.innerHTML += listHTML;
+  allHTML.innerHTML += selectHTML;
+  allHTML.innerHTML += textareaHTML;
   });
   xhr.send();
 });
