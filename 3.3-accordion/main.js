@@ -1,0 +1,2 @@
+$.ajax();
+console.log(test);
