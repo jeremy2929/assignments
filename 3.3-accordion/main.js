@@ -1,9 +1,10 @@
 $(function(){
-  var $quotes = $("[data-js='quotes']");
-  $quotes.on("click",function(e){
-    var $clickedquotes = $(this);
-    console.log ($clickedquotes);
-
+  var $quotesElements = $("[data-js='quotes']");
+  $quotesElements.on("click",function(e){
+    var $clickedQuotes = $(this);
+    console.log ($clickedQuotes);
+    $quotesElements.filter(".quoteExpand").removeClass("quoteExpand");
+    $clickedQuotes.addClass("quoteExpand");
 
 
   });

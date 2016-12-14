@@ -5,5 +5,12 @@
 .quoteClass{
   height: 20px;
   overflow: hidden;
-  width: 100px;
+  width: 130px;
+}
+
+.quoteExpand{
+  height: 200px;
+  padding-bottom: 40px;
+  width: 400px;
+
 }
