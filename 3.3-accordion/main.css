@@ -1,0 +1,9 @@
+{
+  box-sizing: border-box;
+}
+
+.quoteClass{
+  height: 20px;
+  overflow: hidden;
+  width: 100px;
+}
