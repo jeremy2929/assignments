@@ -1,0 +1,32 @@
+*{
+  box-sizing: border-box;
+}
+
+/* This is default class of each element to hide description */
+.quoteClass{
+  border: 1px solid LightBlue;
+  height: 20px;
+  overflow: hidden;
+  width: 1000px;
+}
+
+/* This is the class to expand the window to allow the description to show */
+.quoteExpand{
+  background-color: grey;
+  border: 3px solid LightBlue;
+  height: 150px;
+  transition: height .5s ease-in-out;
+  width: 1000px;
+}
+
+.p1{
+  background-color: Beige;
+}
+
+.p2{
+  background-color: DarkKhaki;
+}
+
+.p3{
+  background-color: LightSteelBlue;
+}
