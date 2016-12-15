@@ -5,7 +5,7 @@
 .wholeArea{
   background-color: silver;
   display: inline-block;
-  height: 500px;
+  height: 700px;
   margin-left: 200px;
   margin-top: 50px;
   width: 800px;
@@ -21,9 +21,31 @@
 
 .itemBox {
     background-color: white;
-    height: 75%;
+    height: 400px;
     margin-left: 40px;
     margin-top: 50px;
     margin-bottom: 50px;
     width: 90%;
+}
+
+.itemInput{
+  height: 70px;
+  width: 720px;
+}
+
+.itemInputText{
+  display: inline-block;
+  height: 70px;
+  width: 600px;
+}
+
+.itemInputAdd{
+  background-color: green;
+  color: white;
+  display: inline-block;
+  height: 70px;
+  text-align: center;
+  padding-top: 25px;
+  vertical-align: top;
+  width: 116px;
 }
