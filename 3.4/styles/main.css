@@ -1,0 +1,29 @@
+*{
+  box-sizing: border-box;
+}
+
+.wholeArea{
+  background-color: silver;
+  display: inline-block;
+  height: 500px;
+  margin-left: 200px;
+  margin-top: 50px;
+  width: 800px;
+}
+
+.mainTitle{
+  font-size: 50px;
+  font-weight: lighter;
+  margin-top: 50px;
+  text-align: center;
+  width: 800px;
+}
+
+.itemBox {
+    background-color: white;
+    height: 75%;
+    margin-left: 40px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    width: 90%;
+}
