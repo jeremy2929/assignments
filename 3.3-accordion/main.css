@@ -1,19 +1,45 @@
-{
+*{
   box-sizing: border-box;
 }
 
+body{
+  margin-top: 100px;
+}
+/* This is default class of each element to hide description */
 .quoteClass{
-  border: 1px solid LightBlue;
-  height: 20px;
+  background-color: tan;
+  border: 1px solid black;
+  height: 30px;
   overflow: hidden;
-  width: 1000px;
+  margin-left: 350px;
+  text-align: center;
+  width: 400px;
 }
 
-.quoteExpand{
-  background-color: LightSteelBlue;
-  border: 3px solid LightBlue;
-/*  height: 150px;  */
-  padding-bottom: 40px;
-  width: 1000px;
+.quoteTitle{
+  font-size: 15px;
+  text-align: left;
+  text-decoration: underline;
+}
 
+/* This is the class to expand the window to allow the description to show */
+.quoteExpand{
+  background-color: Beige;
+  border: 3px solid LightBlue;
+  height: 200px;
+  margin-left: 50px;
+  transition: height .5s ease-in-out;
+  width: 1050px;
+}
+
+.p1{
+  background-color: Beige;
+}
+
+.p2{
+  background-color: Beige;
+}
+
+.p3{
+  background-color: Beige;
 }
