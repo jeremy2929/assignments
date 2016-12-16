@@ -28,15 +28,58 @@
     width: 90%;
 }
 
-.itemInput{
+.itemsList{
+  width: 720px;
+  margin: 0;
+}
+
+.itemsEach{
+  border: 2px solid black;
+  display: inline-block;
+  height: 40px;
+  margin-top: -2px;
+  width: 720px;
+}
+
+.itemsCheckbox{
+  align-items: center;
+  display: inline-block;
+  }
+
+.itemsDescription{
+  display: inline-block;
+  padding-top: 15px;
+  width: 78%;
+}
+
+.itemsAmount{
+  float: right;
+  height: 20px;
+  margin-bottom: 0;
+  text-align: right;
+  padding-right: 4px;
+  width: 15%;
+}
+
+.itemInputBox{
   height: 70px;
   width: 720px;
 }
 
+.itemInputAmt{
+  display: inline-block;
+  font-size: 20px;
+  height: 70px;
+  padding-top: 30px;
+  width: 75px;
+}
+
 .itemInputText{
   display: inline-block;
+  font-size: 20px;
   height: 70px;
-  width: 600px;
+  padding-top: 30px;
+  width: 520px;
 }
 
 .itemInputAdd{
@@ -47,5 +90,5 @@
   text-align: center;
   padding-top: 25px;
   vertical-align: top;
-  width: 116px;
+  width: 117px;
 }

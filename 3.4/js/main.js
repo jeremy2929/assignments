@@ -65,8 +65,19 @@
                 strike thru text of amount
     */
 $(function(){
+  var $body = $("body");
+  var $itemInputElement = $body.find("[data-js='itemInput']");
+  var $submitButton= $body.find("[data-js='submitButton']");
+  var $amountInputElement = $body.find("[data-js='amountInput']");
+  $submitButton.on("click",function(e){
+    var amountInput = $amountInputElement.val();
+    var itemInput = $itemInputElement.val()
+    console.log("amount=",itemInput,amountInput);
+
+  });
 
 
-  console.log("test");
+
+
 
 });
