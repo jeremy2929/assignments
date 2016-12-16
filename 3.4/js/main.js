@@ -66,7 +66,6 @@
     */
 $(function(){
   var $body = $("body");
-
   var $itemInputElement = $body.find("[data-js='itemInput']");
   var $submitButton= $body.find("[data-js='submitButton']");
   var $amountInputElement = $body.find("[data-js='amountInput']");
@@ -74,60 +73,43 @@ $(function(){
   $submitButton.on("click",function(e){
     var amountInput = $amountInputElement.val();
     var itemInput = $itemInputElement.val();
-    var $newCheckBoxElement = $("<input>")
+//
+    if (itemInput != "" && amountInput != ""){
+      var $newCheckBoxElement = $("<input>")
         .attr({
           class: "itemsCheckBox",
           type: "checkbox"
         })
-    ;
-    var $newitemsDescriptionElement = $("<text>")
+      ;
+      var $newitemsDescriptionElement = $("<text>")
         .attr({
-          class: "itemsDescription",
+          class: "itemsDescription"
         })
         .text(itemInput)
-    ;
-    var $newAmountInputElement = $("<p>")
+      ;
+      var $newAmountInputElement = $("<p>")
         .attr({
-          class: "itemsAmount",
+          class: "itemsAmount"
         })
-        .text(amountInput)
-    ;
-    var $newArticleHTML = $("<article>")
+        .text("$"+amountInput)
+      ;
+      var $newArticleHTML = $("<article>")
         .attr({
           class: "itemsEach"
         })
         .append($newCheckBoxElement)
         .append($newitemsDescriptionElement)
         .append($newAmountInputElement)
-    ;
-    var $newSectionHTML = $("<section>")
-      .append($newArticleHTML)
       ;
+      var $newSectionHTML = $("<section>")
+        .append($newArticleHTML)
+      ;
+// need running total of amountInput
     $sectionElementAdd.append($newSectionHTML);
-    $itemInputElement.text="";
-    $amountInputElement.text("");
+    $itemInputElement.val("");
+    $amountInputElement.val("");
+    }
+
 
   });
-
 });
-
-/*
-<section class="itemsList">
-    <article class="itemsEach">
-      <input class="itemsCheckbox"
-            type = "checkbox">
-      </input>
-      <text class="itemsDescription"> Item name here
-      </text>
-      <p class="itemsAmount">$nn.nn</p>
-    </article>
-    <article class="itemsEach">
-      <input class="itemsCheckbox"
-            type = "checkbox">
-      </input>
-      <text class="itemsDescription"> Item name here
-      </text>
-      <p class="itemsAmount">$nn.nn</p>
-    </article>
-  </section>
-*/
