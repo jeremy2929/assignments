@@ -72,9 +72,10 @@ $(function(){
   var $sectionElementAdd = $body.find("[data-js='itemsSection']")
   $submitButton.on("click",function(e){
     var amountInput = $amountInputElement.val();
+    console.log($.isNumeric(amountInput));
     var itemInput = $itemInputElement.val();
 //
-    if (itemInput != "" && amountInput != ""){
+    if (itemInput != "" && $.isNumeric(amountInput) === true){
       var $newCheckBoxElement = $("<input>")
         .attr({
           class: "itemsCheckBox",
@@ -108,7 +109,10 @@ $(function(){
     $sectionElementAdd.append($newSectionHTML);
     $itemInputElement.val("");
     $amountInputElement.val("");
-    }
+  } else {
+    $itemInputElement.val("");
+    $amountInputElement.val("");
+  }
 
 
   });
