@@ -19,7 +19,7 @@
   width: 800px;
 }
 
-.itemBox {
+.listBox {
     background-color: white;
     height: 400px;
     margin-left: 40px;
@@ -61,7 +61,7 @@
   width: 15%;
 }
 
-.itemInputBox{
+.formBox{
   height: 70px;
   width: 720px;
 }

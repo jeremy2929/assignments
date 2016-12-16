@@ -8,24 +8,26 @@
     <script src="js/main.js"></script>
   </head>
   <body>
-    <main class="wholeArea">
+    <main class="wholeArea"
+          data-js="mainElement">
       <h1 class="mainTitle"> GIFTS TO BUY
       </h1>
-      <div class="itemBox">
-        <form class="itemInputBox">
-          <textarea class="itemInputText" data-js="itemInput">
-          </textarea>
-          <textarea class="itemInputAmt"
-                    data-js="amountInput">
-          </textarea>
-          <a href ="#"
-          <submit class="itemInputAdd"
-                  data-js="submitButton">ADD
-          </submit>
-        </a>
-        </form>
-        <section class="itemsList">
-          <article class="itemsEach">
+      <div class="listBox">
+      <form class="formBox">
+        <textarea class="itemInputText" data-js="itemInput">
+        </textarea>
+        <textarea class="itemInputAmt"
+                  data-js="amountInput">
+        </textarea>
+        <a href ="#"
+        <submit class="itemInputAdd"
+                data-js="submitButton">ADD
+        </submit>
+      </a>
+      </form>
+      <section class="itemsList"
+               data-js="itemsSection">
+          <!-- <article class="itemsEach">
             <input class="itemsCheckbox"
                   type = "checkbox">
             </input>
@@ -39,8 +41,8 @@
             </input>
             <text class="itemsDescription"> Item name here
             </text>
-            <p class="itemsAmount" title="$34.34">$nn.nn</p>
-          </article>
+            <p class="itemsAmount">$nn.nn</p>
+          </article>   -->
         </section>
       </div>
     </main>
