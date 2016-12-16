@@ -67,18 +67,19 @@
 $(function(){
   var $body = $("body");
   var $itemInputElement = $body.find("[data-js='itemInput']");
-  var $submitButton= $body.find("[data-js='submitButton']");
   var $amountInputElement = $body.find("[data-js='amountInput']");
   var $sectionElementAdd = $body.find("[data-js='itemsSection']")
+  var $submitButton= $body.find("[data-js='submitButton']");
+  var $checkboxElement= $body.find("[data-js='checkbox']");
   $submitButton.on("click",function(e){
     var amountInput = $amountInputElement.val();
-    console.log($.isNumeric(amountInput));
     var itemInput = $itemInputElement.val();
 //
     if (itemInput != "" && $.isNumeric(amountInput) === true){
       var $newCheckBoxElement = $("<input>")
         .attr({
           class: "itemsCheckBox",
+          "data-js": "checkbox",
           type: "checkbox"
         })
       ;
@@ -115,6 +116,8 @@ $(function(){
   }
 
 
+  });
+  $body.on("click","[data-js='checkbox']",function(e){
   });
 });
 

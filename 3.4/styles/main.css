@@ -41,6 +41,15 @@
   width: 720px;
 }
 
+.itemsEachStrike{
+  border: 2px solid black;
+  display: inline-block;
+  height: 40px;
+  margin-top: -2px;
+  text-decoration: line-through;
+  width: 720px;
+}
+
 .itemsCheckbox{
   align-items: center;
   display: inline-block;
