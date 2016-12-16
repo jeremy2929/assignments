@@ -117,3 +117,10 @@ $(function(){
 
   });
 });
+
+/* below is adding "data-js" to attrb of element for click checkbox event
+/*    var $newArticleHTML = $("<article>")
+    .attr({
+      class: "itemsEach"
+      "data-js": "name of data-js"
+    })   */

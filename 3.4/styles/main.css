@@ -5,7 +5,7 @@
 .wholeArea{
   background-color: silver;
   display: inline-block;
-  height: 700px;
+  height: auto;
   margin-left: 200px;
   margin-top: 50px;
   width: 800px;
@@ -21,7 +21,7 @@
 
 .listBox {
     background-color: white;
-    height: 400px;
+    height: auto;
     margin-left: 40px;
     margin-top: 50px;
     margin-bottom: 50px;
