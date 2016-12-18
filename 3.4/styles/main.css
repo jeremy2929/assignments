@@ -28,6 +28,11 @@
     width: 90%;
 }
 
+.itemAmount{
+  float: right;
+  padding-right: 5px;
+  padding-top: 15px;
+}
 .itemsList{
   width: 720px;
   margin: 0;
@@ -38,15 +43,6 @@
   display: inline-block;
   height: 40px;
   margin-top: -2px;
-  width: 720px;
-}
-
-.itemsEachStrike{
-  border: 2px solid black;
-  display: inline-block;
-  height: 40px;
-  margin-top: -2px;
-  text-decoration: line-through;
   width: 720px;
 }
 
@@ -61,13 +57,12 @@
   width: 78%;
 }
 
-.itemsAmount{
-  float: right;
-  height: 20px;
-  margin-bottom: 0;
-  text-align: right;
-  padding-right: 4px;
-  width: 15%;
+.itemsStrike > text{
+  text-decoration: line-through;
+}
+
+.itemsNoStrike > text{
+  text-decoration: none;
 }
 
 .formBox{
@@ -75,20 +70,12 @@
   width: 720px;
 }
 
-.itemInputAmt{
-  display: inline-block;
-  font-size: 20px;
-  height: 70px;
-  padding-top: 30px;
-  width: 75px;
-}
-
 .itemInputText{
   display: inline-block;
   font-size: 20px;
   height: 70px;
   padding-top: 30px;
-  width: 520px;
+  width: 599px;
 }
 
 .itemInputAdd{
@@ -100,4 +87,15 @@
   padding-top: 25px;
   vertical-align: top;
   width: 117px;
+}
+
+.totalAmount{
+  border: 2px solid black;
+  height: 40px;
+  margin: 0;
+  margin-top: -2px;
+  padding-right: 5px;
+  padding-top: 18px;
+  text-align: right;
+  width: 100%;
 }

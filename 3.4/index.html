@@ -12,23 +12,24 @@
           data-js="mainElement">
       <h1 class="mainTitle"> GIFTS TO BUY
       </h1>
-      <div class="listBox">
-      <form class="formBox">
-        <textarea class="itemInputText" data-js="itemInput">
-        </textarea>
-        <textarea class="itemInputAmt"
-                  data-js="amountInput"></textarea>
-        <a href ="#">
-        <submit class="itemInputAdd"
-                data-js="submitButton">ADD
-        </submit>
-      </a>
-      </form>
-      <section class="itemsList"
-               data-js="itemsSection">
-      </section>
-      </div>
+      <div class="listBox"
+            data-js="theList">
+          <form class="formBox">
+            <textarea class="itemInputText" data-js="itemInput"></textarea>
+            <a href ="#">
+            <submit class="itemInputAdd"
+                    data-js="submitButton">ADD
+            </submit>
+          </a>
+          </form>
+          <section class="itemsList"
+                   data-js="itemsSection">
+              <article data-js="itemArticle"></article>
+          </section>
+          <p class="totalAmount"
+             data-js="total">
+        TOTAL=$0</p>
+    </div>
     </main>
-
   </body>
 </html>

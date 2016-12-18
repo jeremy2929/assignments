@@ -66,16 +66,24 @@
     */
 $(function(){
   var $body = $("body");
+//  var checkedFlag = false;
+  var totalAmount = 0;
   var $itemInputElement = $body.find("[data-js='itemInput']");
-  var $amountInputElement = $body.find("[data-js='amountInput']");
-  var $sectionElementAdd = $body.find("[data-js='itemsSection']")
+//  var $amountInputElement = $body.find("[data-js='amountInput']");
+  var $articleElementAdd = $body.find("[data-js='itemArticle']");
+//  var $sectionElementAdd = $body.find("[data-js='itemsSection']");
+//  var $divElementAdd = $body.find("[data-js='theList']");
+  var $pElement = $body.find("[data-js='total']");
   var $submitButton= $body.find("[data-js='submitButton']");
-  var $checkboxElement= $body.find("[data-js='checkbox']");
+//  var $checkBoxElement= $body.find("[data-js='checkbox']");
   $submitButton.on("click",function(e){
-    var amountInput = $amountInputElement.val();
+    //
     var itemInput = $itemInputElement.val();
-//
-    if (itemInput != "" && $.isNumeric(amountInput) === true){
+    var itemInputArray = itemInput.split(",");
+    var itemDescription = itemInputArray[0];
+    var itemAmount =itemInputArray[1];
+    totalAmount += eval(itemAmount);
+    if (itemInput != ""){
       var $newCheckBoxElement = $("<input>")
         .attr({
           class: "itemsCheckBox",
@@ -83,47 +91,33 @@ $(function(){
           type: "checkbox"
         })
       ;
-      var $newitemsDescriptionElement = $("<text>")
+      var $newItemsDescriptionElement = $("<text>")
         .attr({
           class: "itemsDescription"
         })
-        .text(itemInput)
+        .text(itemDescription)
       ;
-      var $newAmountInputElement = $("<p>")
+      var $newItemsAmountElement = $("<text>")
         .attr({
-          class: "itemsAmount"
+          class: "itemAmount"
         })
-        .text("$"+amountInput)
+        .text("$"+itemAmount)
       ;
       var $newArticleHTML = $("<article>")
         .attr({
           class: "itemsEach"
         })
         .append($newCheckBoxElement)
-        .append($newitemsDescriptionElement)
-        .append($newAmountInputElement)
+        .append($newItemsDescriptionElement)
+        .append($newItemsAmountElement)
       ;
-      var $newSectionHTML = $("<section>")
-        .append($newArticleHTML)
-      ;
-// need running total of amountInput
-    $sectionElementAdd.append($newSectionHTML);
-    $itemInputElement.val("");
-    $amountInputElement.val("");
-  } else {
-    $itemInputElement.val("");
-    $amountInputElement.val("");
+      $articleElementAdd.prepend($newArticleHTML);
+      $pElement.text("TOTAL="+"$"+totalAmount);
+      $itemInputElement.val("");
   }
-
-
-  });
-  $body.on("click","[data-js='checkbox']",function(e){
-  });
 });
+  $body.on("click","[data-js='checkbox']",function(e){
+    $(this).parent().addClass("itemsStrike");
+  });
 
-/* below is adding "data-js" to attrb of element for click checkbox event
-/*    var $newArticleHTML = $("<article>")
-    .attr({
-      class: "itemsEach"
-      "data-js": "name of data-js"
-    })   */
+});
