@@ -1,4 +1,6 @@
-/*  ___ Create template files HTML, CSS, JS
+/*  This script creates a GIFTS TO BUY box for user to enter items and amounts to add to a gift list. The user must eneter item description follwed by a comma followed by the amount then click ADD to add item to list. Once the item is in list, user has option to click check box to strike through the item description and amount. A cumulative TOTAL is displayed for all items in list, whether checked off or not, at the bottom.
+
+___ Create template files HTML, CSS, JS
     ___ Draw a wire frame based on given image
     ___ name each element in wire frame
     ___ build HTML based on wire frame and names
@@ -64,60 +66,80 @@
                 strike thru text of item description
                 strike thru text of amount
     */
+    // Using jquery to call function to wait for document load
 $(function(){
+  // declaring variable to reference body element of HTML
   var $body = $("body");
-//  var checkedFlag = false;
+  // declaring a varaible to use for total amount as each item added
   var totalAmount = 0;
+  // declaring variable for HTML element that contains item description  to be added to list
   var $itemInputElement = $body.find("[data-js='itemInput']");
-//  var $amountInputElement = $body.find("[data-js='amountInput']");
+  // declaring variable for HTML element that contains elements for items in list
   var $articleElementAdd = $body.find("[data-js='itemArticle']");
-//  var $sectionElementAdd = $body.find("[data-js='itemsSection']");
-//  var $divElementAdd = $body.find("[data-js='theList']");
+  // declaring variable for HTML element that contains TOTAL at bottom of list
   var $pElement = $body.find("[data-js='total']");
+  // declaring variable for HTML element for ADD button
   var $submitButton= $body.find("[data-js='submitButton']");
-//  var $checkBoxElement= $body.find("[data-js='checkbox']");
+  // declaring variable for building HTML element for checkbox of added item
+  var $checkBoxElement= $body.find("[data-js='checkbox']");
+// event listener for when ADD button clicked
   $submitButton.on("click",function(e){
-    //
+    // assigning value of item added to a holding place
     var itemInput = $itemInputElement.val();
+    // converting input text to array to separate text from amount
     var itemInputArray = itemInput.split(",");
+    // assigning text part of array to itemDescription variable
     var itemDescription = itemInputArray[0];
+    // assigning amount part of array to itemAmount variable
     var itemAmount =itemInputArray[1];
+    // converting amount part of input to numeric
     totalAmount += eval(itemAmount);
+    // blocking ADD button if nothing entered
     if (itemInput != ""){
-      var $newCheckBoxElement = $("<input>")
-        .attr({
-          class: "itemsCheckBox",
-          "data-js": "checkbox",
-          type: "checkbox"
-        })
-      ;
+      // building HTML element for checkbox
+      var $newCheckBoxElement = $("<checkbox>")
+          .attr({
+            class: "itemsCheckBox",
+            "data-js": "checkbox",
+            type: "checkbox"
+          })
+        ;
+      // building HTML element for item description element
       var $newItemsDescriptionElement = $("<text>")
         .attr({
           class: "itemsDescription"
         })
         .text(itemDescription)
       ;
+      // building HTML element for item amount element
       var $newItemsAmountElement = $("<text>")
         .attr({
           class: "itemAmount"
         })
         .text("$"+itemAmount)
       ;
+      // building HTML element that contains checkbox, description, and amount
       var $newArticleHTML = $("<article>")
         .attr({
           class: "itemsEach"
         })
+        // appending all 3 parts to article for item in list
         .append($newCheckBoxElement)
         .append($newItemsDescriptionElement)
         .append($newItemsAmountElement)
       ;
+      // inserting new item (article) in top of list
       $articleElementAdd.prepend($newArticleHTML);
-      $pElement.text("TOTAL="+"$"+totalAmount);
+      // updating TOTAL amount in the TOTAL HTML element
+      $pElement.text("TOTAL   $"+totalAmount);
+      // clering input box for next item
       $itemInputElement.val("");
   }
 });
+  // event listener for if checkbox of item clicked
   $body.on("click","[data-js='checkbox']",function(e){
-    $(this).parent().addClass("itemsStrike");
+    // sriking thru item and amount if checkboxk clicked
+    $(this).parent("article").attr({class: "itemsStrike"});
   });
 
 });

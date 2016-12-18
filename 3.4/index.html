@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<!-- This HTML builds a an empty list of GIFTS TO BUY and links to javascript that allows user to enter item description and amount to be added to the list, with a TOTAL at the bottom. It links to jquery to uitilize jquery functions -->
 <html>
   <head>
     <meta charset="utf-8">
@@ -15,7 +16,8 @@
       <div class="listBox"
             data-js="theList">
           <form class="formBox">
-            <textarea class="itemInputText" data-js="itemInput"></textarea>
+            <textarea class="itemInputText" data-js="itemInput"
+            placeholder="Enter item description, amount"></textarea>
             <a href ="#">
             <submit class="itemInputAdd"
                     data-js="submitButton">ADD
@@ -24,11 +26,13 @@
           </form>
           <section class="itemsList"
                    data-js="itemsSection">
-              <article data-js="itemArticle"></article>
+              <article class="article"
+                       data-js="itemArticle">
+              </article>
           </section>
           <p class="totalAmount"
              data-js="total">
-        TOTAL=$0</p>
+        TOTAL   $0</p>
     </div>
     </main>
   </body>
