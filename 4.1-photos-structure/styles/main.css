@@ -1,0 +1,33 @@
+*{
+  box-sizing: border-box;
+}
+
+.mainTitle{
+  background-color: gray;
+  font-size: 80px;
+  text-align: center;
+  height: 120px;
+  width: 100%;
+}
+
+.albumRow{
+  display: inline-block;
+  width: 100%;
+}
+
+.albumEach{
+  display: inline-block;
+  margin-left: 150px;
+  height: 200px;
+  width: 200px;
+}
+
+.albumImage{
+  height: 120px;
+  width: 100%;
+}
+
+.albumTitle{
+  height: 30px;
+  width: 100%;
+}
