@@ -7,27 +7,34 @@
   font-size: 80px;
   text-align: center;
   height: 120px;
+  margin: 0;
+  margin-bottom: 40px;
   width: 100%;
 }
 
+.albumSection{
+  width: 100%;
+}
 .albumRow{
   display: inline-block;
-  width: 100%;
+  margin-left: 15%;
+  width: 80%;
 }
 
 .albumEach{
   display: inline-block;
-  margin-left: 150px;
-  height: 200px;
-  width: 200px;
+  height: 250px;
+  width: 250px;
 }
 
 .albumImage{
-  height: 120px;
-  width: 100%;
+  height: 80%;
+  padding-left: 30px;
+  width: 250px;
 }
 
 .albumTitle{
-  height: 30px;
-  width: 100%;
+  height: 20%;
+  text-align: center;
+  width: 250px;
 }
