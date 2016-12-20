@@ -90,6 +90,7 @@
 }
 
 .photoPage{
+  display: none;
   background-color: grey;
   height: 800px;
 }
