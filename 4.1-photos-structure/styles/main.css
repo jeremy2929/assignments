@@ -42,6 +42,13 @@
   padding-top: 110px;
 }
 
+.indexPageShow{
+}
+
+.indexPageNoShow{
+  display: none;
+}
+
 .listAlbums{
   background-color: grey;
   display: inline-block;
@@ -90,6 +97,11 @@
 }
 
 .photoPage{
+  background-color: grey;
+  height: 800px;
+}
+
+.photoNoPage{
   display: none;
   background-color: grey;
   height: 800px;
