@@ -4,6 +4,7 @@
 
 .mainTitle{
   background-color: gray;
+  display: inline-block;
   font-size: 80px;
   text-align: center;
   height: 120px;
@@ -12,13 +13,19 @@
   width: 100%;
 }
 
-.albumSection{
-  width: 100%;
+.albumButton{
+  display: inline-block;
+  height: 40px;
+  margin-left: 30px;
+  margin-top: 40px;
+  width: 130px;
 }
+.albumSection{
+}
+
 .albumRow{
   display: inline-block;
-  margin-left: 15%;
-  width: 80%;
+  padding-top: 20px;
 }
 
 .albumEach{
@@ -27,14 +34,43 @@
   width: 250px;
 }
 
+.listAlbums{
+  display: inline-block;
+  margin-bottom: 0;
+}
+
 .albumImage{
+  display: inline-block;
   height: 80%;
-  padding-left: 30px;
-  width: 250px;
+  width: 100%;
 }
 
 .albumTitle{
-  height: 20%;
+  background-color: black;
+  color: white;
+  height: 50px;
   text-align: center;
-  width: 250px;
+  padding-top: 15px;
+  margin-top: 0;
+}
+
+.mainSection{
+  display: inline-block;
+  width: 80%
+}
+
+.sideAlbums{
+  background-color: gray;
+  display: inline-block;
+  height: 600px;
+  margin-bottom: 0;
+  width: 200px;
+}
+
+.sideMain{
+}
+
+.titleAlbum{
+  display: inline-block;
+  padding-left: 450px;
 }
