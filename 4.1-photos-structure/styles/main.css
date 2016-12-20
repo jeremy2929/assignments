@@ -2,37 +2,70 @@
   box-sizing: border-box;
 }
 
-.mainTitle{
-  background-color: gray;
-  display: inline-block;
-  font-size: 80px;
-  text-align: center;
-  height: 120px;
-  margin: 0;
-  margin-bottom: 40px;
-  width: 100%;
-}
 
 .albumButton{
-  display: inline-block;
   height: 40px;
   margin-left: 30px;
-  margin-top: 40px;
+  margin-top: 30px;
   width: 130px;
-}
-.albumSection{
-}
-
-.albumRow{
-  display: inline-block;
-  margin-left: 220px;
-  padding-top: 20px;
 }
 
 .albumEach{
   display: inline-block;
   height: 250px;
+  margin-left: 30px;
   width: 250px;
+}
+
+.albumImage{
+  display: inline-block;
+  height: 80%;
+  width: 100%;
+}
+
+.albumRow{
+  display: inline-block;
+  margin-left: 180px;
+  padding-top: 50px;
+}
+
+.albumTitle{
+  background-color: black;
+  color: white;
+  height: 50px;
+  padding-top: 15px;
+  text-align: center;
+  margin-top: 0;
+}
+
+.buttonsAlbum{
+  padding-top: 110px;
+}
+
+.listAlbums{
+  background-color: grey;
+  display: inline-block;
+  float: left;
+  height: 800px;
+  width: 200px;
+  margin-bottom: 0;
+}
+
+.mainSection{
+  display: inline-block;
+  width: 80%
+}
+
+.mainTitle{
+  background-color: gray;
+  display: inline-block;
+  font-size: 80px;
+  height: 120px;
+  margin: 0;
+  margin-bottom: 40px;
+  padding-left: 430px;
+  padding-top: 20px;
+  width: 100%;
 }
 
 .photoButton{
@@ -44,29 +77,16 @@
   width: 150px;
 }
 
-.listAlbums{
-  display: inline-block;
-  margin-bottom: 0;
+.photoImage{
+  height: 500px;
+  margin-left: 270px;
+  width: 700px;
 }
 
-.albumImage{
+.photoRow{
   display: inline-block;
-  height: 80%;
-  width: 100%;
-}
-
-.albumTitle{
-  background-color: black;
-  color: white;
-  height: 50px;
-  text-align: center;
-  padding-top: 15px;
-  margin-top: 0;
-}
-
-.mainSection{
-  display: inline-block;
-  width: 80%
+  margin-left: 70px;
+  padding-top: 50px;
 }
 
 .photoPage{
@@ -74,33 +94,21 @@
   height: 800px;
 }
 
-.titlePhoto{
-  display: inline-block;
-  padding-left: 160px;
-}
-.photo{
-  height: 500px;
-  margin-left: 270px;
-  width: 700px;
-}
 .sideAlbums{
   background-color: gray;
   display: inline-block;
-  height: 600px;
-  margin-bottom: 0;
-  width: 200px;
-}
-
-.sideMain{
+  height: 400px;
+  width: 50px;
 }
 
 .titleAlbum{
   display: inline-block;
-  padding-left: 450px;
+  font-size: 60px;
+  margin: 0;
+  padding-left: 400px;
 }
 
-.titlePhoto {
-  margin-left: 200px;
+.titlePhoto{
+  display: inline-block;
+  padding-left: 360px;
 }
-
-.image
