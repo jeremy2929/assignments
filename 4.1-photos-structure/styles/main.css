@@ -25,6 +25,7 @@
 
 .albumRow{
   display: inline-block;
+  margin-left: 220px;
   padding-top: 20px;
 }
 
@@ -32,6 +33,15 @@
   display: inline-block;
   height: 250px;
   width: 250px;
+}
+
+.photoButton{
+  border-radius: 10px;
+  display: inline-block;
+  height: 30px;
+  margin-left: 30px;
+  margin-top: 10px;
+  width: 150px;
 }
 
 .listAlbums{
@@ -59,6 +69,20 @@
   width: 80%
 }
 
+.photoPage{
+  background-color: grey;
+  height: 800px;
+}
+
+.titlePhoto{
+  display: inline-block;
+  padding-left: 160px;
+}
+.photo{
+  height: 500px;
+  margin-left: 270px;
+  width: 700px;
+}
 .sideAlbums{
   background-color: gray;
   display: inline-block;
@@ -74,3 +98,9 @@
   display: inline-block;
   padding-left: 450px;
 }
+
+.titlePhoto {
+  margin-left: 200px;
+}
+
+.image
