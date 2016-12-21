@@ -1,7 +1,5 @@
 var $ = require("jquery");
 var modal = require("./modal");
-
-
 $(function(){
   var $body = $("body");
   var $indexElement = $body.find("[data-js='indexHTML']");
@@ -91,5 +89,4 @@ $(function(){
           $modalElement6.addClass("photoNoPage6");
       });
   });
-
 });
