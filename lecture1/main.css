@@ -1,0 +1,45 @@
+
+.thumbnails{
+  padding-left: 0;
+}
+
+.thumbnail{
+  display: inline-block;
+  list-style: none;
+  margin-right: 10px;
+  width: 200px;
+}
+
+.thumbnailImage{
+  width: 200px;
+}
+
+.thumbnailTitle{
+  text-align: center;
+  width: 200px;
+}
+
+.body{
+  margin: 0 auto;
+  width 700px;
+}
+
+.modal {
+  background-color: white;
+  display: none;
+  position: absolute;
+  top:0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  text-align: center;
+}
+
+.modalImage{
+  width: 400px;
+}
+
+/* use -- to show a modifying selector */
+.modal--ShowImage{
+  display: block;
+}
