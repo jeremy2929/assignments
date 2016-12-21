@@ -101,6 +101,42 @@
   height: 800px;
 }
 
+.photoNoPage1{
+  display: none;
+  background-color: grey;
+  height: 800px;
+}
+
+.photoNoPage5{
+  display: none;
+  background-color: grey;
+  height: 800px;
+}
+
+.photoNoPage6{
+  display: none;
+  background-color: grey;
+  height: 800px;
+}
+
+.photoNoPage2{
+  display: none;
+  background-color: grey;
+  height: 800px;
+}
+
+.photoNoPage3{
+  display: none;
+  background-color: grey;
+  height: 800px;
+}
+
+.photoNoPage4{
+  display: none;
+  background-color: grey;
+  height: 800px;
+}
+
 .photoNoPage{
   display: none;
   background-color: grey;
