@@ -40,6 +40,7 @@ $(function(){  /* declaring all variables to reference each button defined in HT
   /* declaring variable for output window, setting to null                               */
   var $outputTextElement = $body.find("[data-js='outputText']");
   $outputTextElement.val("");
+  var outputTotal ="";
   /*                                                                                     */
   /*                                                                                     */
   /* when flag is false, only accepts number, equal sign, or clear                       */
@@ -64,8 +65,8 @@ $(function(){  /* declaring all variables to reference each button defined in HT
   /* function to check if output string larger than 10 characters                         */
   function overFlow(){
     //+++++++   output = $outputTextElement.textContent;
-    output = $outputTextElement.str;
-    outputLength = $output.length + 1;
+    output = $outputTextElement.text;
+    outputLength = output.length + 1;
     if (outputLength > 10){
       outputMore = false;
     }
@@ -88,8 +89,10 @@ $(function(){  /* declaring all variables to reference each button defined in HT
     /* need to check length of output string to see if maximum  */
     overFlow();
     if (oneDecimal === true && outputMore === true){
-      $outputTextElement.textContent += ".";
-      /* setting windowReset to false-  do not want to auto clear at next number button because still creating an expression */
+//+++++      $outputTextElement.text += ".";
+      outputTotal += ".";
+      $outputTextElement.text(outputTotal);
+/* setting windowReset to false-  do not want to auto clear at next number button because still creating an expression */
       windowReset = false;
       /* now have a decimal, no more in this operand   */
       oneDecimal = false;
@@ -106,7 +109,9 @@ $(function(){  /* declaring all variables to reference each button defined in HT
     /* need to check length of output string to see if maximum  */
     overFlow();
     if (flag === true && outputMore === true){
-      $outputTextElement.textContent += "+";
+      //++++++++++++    $outputTextElement.textContent += "+";
+      outputTotal += "+";
+      $outputTextElement.text(outputTotal);
       /* setting flag to false-  already have operator now, dont do it again */
       flag=false;
       /* setting windowReset to false-  do not want to auto clear at next number button because still creating an expression */
@@ -122,7 +127,9 @@ $(function(){  /* declaring all variables to reference each button defined in HT
     /* need to check length of output string to see if maximum  */
     overFlow();
     if (flag === true && outputMore === true){
-      $outputTextElement.textContent += "-";
+      //++++++++   $outputTextElement.textContent += "-";
+      outputTotal += "-";
+      $outputTextElement.text(outputTotal);
       /* setting flag to false-  already have operator now, dont do it again */
       flag=false;
       /* setting windowReset to false-  do not want to auto clear at next number button because still creating an expression */
@@ -138,7 +145,9 @@ $(function(){  /* declaring all variables to reference each button defined in HT
     /* need to check length of output string to see if maximum  */
     overFlow();
     if (flag === true && outputMore === true){
-      $outputTextElement.textContent += "*";
+      //+++++++    $outputTextElement.textContent += "*";
+      outputTotal += "*";
+      $outputTextElement.text(outputTotal);
       /* setting flag to false-  already have operator now, dont do it again */
       flag=false;
       /* setting windowReset to false-  do not want to auto clear at next number button because still creating an expression */
@@ -154,7 +163,9 @@ $(function(){  /* declaring all variables to reference each button defined in HT
     /* need to check length of output string to see if maximum  */
     overFlow();
     if (flag === true && outputMore === true){
-      $outputTextElement.textContent += "/";
+      //+++++   $outputTextElement.textContent += "/";
+      outputTotal += "/";
+      $outputTextElement.text(outputTotal);
       /* setting flag to false-  already have operator now, dont do it again */
       flag=false;
       /* setting windowReset to false-  do not want to auto clear at next number button because still creating an expression */
@@ -175,7 +186,9 @@ $(function(){  /* declaring all variables to reference each button defined in HT
     /* need to check length of output string to see if maximum  */
     overFlow();
     if (outputMore === true){
-      $outputTextElement.textContent += 0;
+      //++++   $outputTextElement.textContent += 0;
+      outputTotal += "0";
+      $outputTextElement.text(outputTotal);
       /* its ok now to hit equal button */
       flag=true;
     }
@@ -186,7 +199,8 @@ $(function(){  /* declaring all variables to reference each button defined in HT
     /* need to check length of output string to see if maximum  */
     overFlow();
     if (outputMore === true){
-      $outputTextElement.textContent += 1;
+      outputTotal += "1";
+      $outputTextElement.text(outputTotal);
       /* its ok now to hit equal button */
       flag=true;
     }
@@ -197,7 +211,9 @@ $(function(){  /* declaring all variables to reference each button defined in HT
     /* need to check length of output string to see if maximum  */
     overFlow();
     if (outputMore === true){
-      $outputTextElement.textContent += 2;
+      outputTotal += "2";
+      $outputTextElement.text(outputTotal);
+//+++++      $outputTextElement.textContent += 2;
       /* its ok now to hit equal button */
       flag=true;
     }
@@ -208,7 +224,9 @@ $(function(){  /* declaring all variables to reference each button defined in HT
     /* need to check length of output string to see if maximum  */
     overFlow();
     if (outputMore === true){
-      $outputTextElement.textContent += 3;
+      outputTotal += "3";
+      $outputTextElement.text(outputTotal);
+//++++++      $outputTextElement.textContent += 3;
       /* its ok now to hit equal button */
       flag=true;
     }
@@ -219,7 +237,9 @@ $(function(){  /* declaring all variables to reference each button defined in HT
     /* need to check length of output string to see if maximum  */
     overFlow();
     if (outputMore === true){
-      $outputTextElement.textContent += 4;
+      //+++++++   $outputTextElement.textContent += 4;
+      outputTotal += "4";
+      $outputTextElement.text(outputTotal);
       /* its ok now to hit equal button */
       flag=true;
     }  });
@@ -229,7 +249,9 @@ $(function(){  /* declaring all variables to reference each button defined in HT
     /* need to check length of output string to see if maximum  */
     overFlow();
     if (outputMore === true){
-      $outputTextElement.textContent += 5;
+  //+++++++++    $outputTextElement.textContent += 5;
+      outputTotal += "5";
+      $outputTextElement.text(outputTotal);
       /* its ok now to hit equal button */
       flag=true;
     }
@@ -240,7 +262,9 @@ $(function(){  /* declaring all variables to reference each button defined in HT
     /* need to check length of output string to see if maximum  */
     overFlow();
     if (outputMore === true){
-      $outputTextElement.textContent += 6;
+  //+++++++    $outputTextElement.textContent += 6;
+      outputTotal += "6";
+      $outputTextElement.text(outputTotal);
       /* its ok now to hit equal button */
       flag=true;
     }
@@ -251,7 +275,9 @@ $(function(){  /* declaring all variables to reference each button defined in HT
     /* need to check length of output string to see if maximum  */
     overFlow();
     if (outputMore === true){
-      $outputTextElement.textContent += 7;
+      //++++   $outputTextElement.textContent += 7;
+      outputTotal += "7";
+      $outputTextElement.text(outputTotal);
       /* its ok now to hit equal button */
       flag=true;
     }
@@ -262,7 +288,9 @@ $(function(){  /* declaring all variables to reference each button defined in HT
     /* need to check length of output string to see if maximum  */
     overFlow();
     if (outputMore === true){
-      $outputTextElement.textContent += 8;
+      //++++++++++++$outputTextElement.textContent += 8;
+      outputTotal += "8";
+      $outputTextElement.text(outputTotal);
       /* its ok now to hit equal button */
       flag=true;
     }
@@ -273,7 +301,9 @@ $(function(){  /* declaring all variables to reference each button defined in HT
     /* need to check length of output string to see if maximum  */
     overFlow();
     if (outputMore === true){
-      $outputTextElement.textContent += 9;
+  //+++++++++++    $outputTextElement.textContent += 9;
+      outputTotal += "9";
+      $outputTextElement.text(outputTotal);
       /* its ok now to hit equal button */
       flag=true;
     }
@@ -282,8 +312,21 @@ $(function(){  /* declaring all variables to reference each button defined in HT
    using the Eval function to convert the entire string into a numeric expression to produce the answer */
   $numberButtonElementEqual.on("click", function(){
             if (flag === true){
-              var answer = eval($outputTextElement.textContent);
-              $outputTextElement.textContent = answer.toFixed(1);
+  //++++++++            var answer = eval($outputTextElement.textContent);
+
+              console.log("outputstring",outputTotal);
+              var answer = eval(outputTotal);
+              console.log("answer=",answer);
+              //   convert answer back to string!!!!!!!
+
+
+
+
+  //+++++++            $outputTextElement.textContent = answer.toFixed(1);
+
+
+//              outputTotal = answer.toPrecision(1);
+
               /* windowReset is set to true to set up auto clear when begininng a new expression  */
               windowReset = true;
               /* outputMore reset because? */
