@@ -55,7 +55,9 @@ $(function(){  /* declaring all variables to reference each button defined in HT
   /* function to check if output window should be auto cleared for new calculation       */
   function checkReset(){
      if (windowReset === true){
-         $outputTextElement.textContent = "";
+         outputTotal = "";
+         $outputTextElement.text(outputTotal);
+         console.log($outputTextElement);
          /* set windowReset back to false because output window now cleared               */
          windowReset = false;
          /* set oneDecimal to true because output window ready for number or decimal      */
@@ -75,7 +77,7 @@ $(function(){  /* declaring all variables to reference each button defined in HT
   /* Sets the contents of output window to null
   /************************************************************************************************/
   $numberButtonElementClear.on("click", function(){
-    $outputTextElement.textContent = "";
+    $outputTextElement.text("");
     flag=false;
     /* reset outputMore more because output string length now 0  */
     outputMore=true;
@@ -303,7 +305,7 @@ $(function(){  /* declaring all variables to reference each button defined in HT
     if (outputMore === true){
   //+++++++++++    $outputTextElement.textContent += 9;
       outputTotal += "9";
-      $outputTextElement.text(outputTotal);
+      $outputTextElement.text("9");
       /* its ok now to hit equal button */
       flag=true;
     }
@@ -312,15 +314,10 @@ $(function(){  /* declaring all variables to reference each button defined in HT
    using the Eval function to convert the entire string into a numeric expression to produce the answer */
   $numberButtonElementEqual.on("click", function(){
             if (flag === true){
-  //++++++++            var answer = eval($outputTextElement.textContent);
-
-              console.log("outputstring",outputTotal);
+//           var answer = eval($outputTextElement.textContent);
               var answer = eval(outputTotal);
-              console.log("answer=",answer);
-              //   convert answer back to string!!!!!!!
-
-
-
+              $outputTextElement.text(answer);
+              outputTotal = answer;
 
   //+++++++            $outputTextElement.textContent = answer.toFixed(1);
 
