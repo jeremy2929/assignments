@@ -85,7 +85,7 @@
 	  /*                                                                                     */
 	  /* declaring variable for output window, setting to null                               */
 	  var $outputTextElement = $body.find("[data-js='outputText']");
-	  $outputTextElement.val("");
+	  $outputTextElement.text(null);
 	  var outputTotal ="";
 	  /*                                                                                     */
 	  /*                                                                                     */
@@ -96,12 +96,16 @@
 	  var windowReset = false;
 	  /* when oneDecimal is true, can enter decimal. If false, then no more decimals         */
 	  var oneDecimal = true;
-	  /* flag to check if can have more output                                               */
+	  //  flag to check if can have more number output
 	  var outputMore = true;
+	  // allows operator or not
+	  var operatorOK = false;
 	  /* function to check if output window should be auto cleared for new calculation       */
 	  function checkReset(){
 	     if (windowReset === true){
-	         $outputTextElement.textContent = "";
+	         // setting output display to null to clear it
+	         outputTotal = "";
+	         $outputTextElement.text(outputTotal);
 	         /* set windowReset back to false because output window now cleared               */
 	         windowReset = false;
 	         /* set oneDecimal to true because output window ready for number or decimal      */
@@ -110,21 +114,27 @@
 	  }
 	  /* function to check if output string larger than 10 characters                         */
 	  function overFlow(){
-	    //+++++++   output = $outputTextElement.textContent;
-	    output = $outputTextElement.text;
-	    outputLength = output.length + 1;
-	    if (outputLength > 10){
-	      outputMore = false;
+	    //   finding numeric of $outputTextElement
+	    output = $outputTextElement.text();
+	    if (output != ""){
+	      outputLength = output.length + 1;
+	      if (outputLength > 8){
+	       outputMore = false;
+	       operatorOK = true;
+	      }
 	    }
 	  }
 	  /************************* Clear function-*******************************************************/
 	  /* Sets the contents of output window to null
 	  /************************************************************************************************/
 	  $numberButtonElementClear.on("click", function(){
-	    $outputTextElement.textContent = "";
+	    $outputTextElement.text("");
 	    flag=false;
+	    outputTotal = "";
+	    $outputTextElement.text(outputTotal);
 	    /* reset outputMore more because output string length now 0  */
 	    outputMore=true;
+	    operatorOK=false;
 	  });
 	  /************************* Decimal function-**************************************************************/
 	  /* when decimal button clicked, the decimal is added to output window and then windowReset and oneDecimal set to false to block auto clear and more decimals in same operand.
@@ -135,13 +145,14 @@
 	    /* need to check length of output string to see if maximum  */
 	    overFlow();
 	    if (oneDecimal === true && outputMore === true){
-	//+++++      $outputTextElement.text += ".";
+	      //   adding  "." to $outputTextElement
 	      outputTotal += ".";
 	      $outputTextElement.text(outputTotal);
 	/* setting windowReset to false-  do not want to auto clear at next number button because still creating an expression */
 	      windowReset = false;
 	      /* now have a decimal, no more in this operand   */
 	      oneDecimal = false;
+	      operatorOK=false;
 	    }
 	  });
 	  /************************* Operator functions-*******************************************************
@@ -155,7 +166,7 @@
 	    /* need to check length of output string to see if maximum  */
 	    overFlow();
 	    if (flag === true && outputMore === true){
-	      //++++++++++++    $outputTextElement.textContent += "+";
+	      //   adding  "+" to $outputTextElement
 	      outputTotal += "+";
 	      $outputTextElement.text(outputTotal);
 	      /* setting flag to false-  already have operator now, dont do it again */
@@ -164,6 +175,7 @@
 	      windowReset = false;
 	      /* now ok to have a decimal                */
 	      oneDecimal = true;
+	      operatorOK=false;
 	      /* need to set outputMore to true in case a new expression begins */
 	    } else {
 	      outputMore = true;
@@ -173,7 +185,7 @@
 	    /* need to check length of output string to see if maximum  */
 	    overFlow();
 	    if (flag === true && outputMore === true){
-	      //++++++++   $outputTextElement.textContent += "-";
+	      //   adding  "-" to $outputTextElement
 	      outputTotal += "-";
 	      $outputTextElement.text(outputTotal);
 	      /* setting flag to false-  already have operator now, dont do it again */
@@ -182,6 +194,7 @@
 	      windowReset = false;
 	      /* now ok to have a decimal                */
 	      oneDecimal = true;
+	      operatorOK=false;
 	      /* need to set outputMore to true in case a new expression begins */
 	    } else {
 	      outputMore = true;
@@ -191,7 +204,7 @@
 	    /* need to check length of output string to see if maximum  */
 	    overFlow();
 	    if (flag === true && outputMore === true){
-	      //+++++++    $outputTextElement.textContent += "*";
+	      //   adding  "*" to $outputTextElement
 	      outputTotal += "*";
 	      $outputTextElement.text(outputTotal);
 	      /* setting flag to false-  already have operator now, dont do it again */
@@ -200,6 +213,7 @@
 	      windowReset = false;
 	      /* now ok to have a decimal                */
 	      oneDecimal = true;
+	      operatorOK=false;
 	      /* need to set outputMore to true in case a new expression begins */
 	    } else {
 	      outputMore = true;
@@ -218,6 +232,7 @@
 	      windowReset = false;
 	      /* now ok to have a decimal                */
 	      oneDecimal = true;
+	      operatorOK=false;
 	      /* need to set outputMore to true in case a new expression begins */
 	    } else {
 	      outputMore = true;
@@ -358,26 +373,19 @@
 	   using the Eval function to convert the entire string into a numeric expression to produce the answer */
 	  $numberButtonElementEqual.on("click", function(){
 	            if (flag === true){
-	  //++++++++            var answer = eval($outputTextElement.textContent);
-	
-	              console.log("outputstring",outputTotal);
+	              // converting string to numeric which solves expression too
 	              var answer = eval(outputTotal);
-	              console.log("answer=",answer);
-	              //   convert answer back to string!!!!!!!
-	
-	
-	
-	
-	  //+++++++            $outputTextElement.textContent = answer.toFixed(1);
-	
-	
-	//              outputTotal = answer.toPrecision(1);
-	
+	              // restrict answer decimals to only two
+	              var hold = answer.toFixed(2);
+	              // convert numeric answer back to string
+	              outputTotal = hold.toString();
+	              $outputTextElement.text(outputTotal);
 	              /* windowReset is set to true to set up auto clear when begininng a new expression  */
 	              windowReset = true;
-	              /* outputMore reset because? */
-	              outputMore = true;
-	              flag=false;
+	              // operatorOK reset because may begin new expression so operator is ok
+	              operatorOK = true;
+	              // no decimals allowed to be added to answer because might have one already
+	              oneDecimal = false;
 	            }
 	  });
 	})
