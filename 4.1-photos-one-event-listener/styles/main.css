@@ -1,0 +1,163 @@
+*{
+  box-sizing: border-box;
+}
+
+
+.albumButton{
+  height: 40px;
+  margin-left: 30px;
+  margin-top: 30px;
+  width: 130px;
+}
+
+.albumEach{
+  display: inline-block;
+  height: 250px;
+  margin-left: 30px;
+  width: 250px;
+}
+
+.albumImage{
+  display: inline-block;
+  height: 80%;
+  width: 100%;
+}
+
+.albumRow{
+  display: inline-block;
+  margin-left: 180px;
+  padding-top: 50px;
+}
+
+.albumTitle{
+  background-color: black;
+  color: white;
+  height: 50px;
+  padding-top: 15px;
+  text-align: center;
+  margin-top: 0;
+}
+
+.buttonsAlbum{
+  padding-top: 110px;
+}
+
+.indexPageShow{
+}
+
+.indexPageNoShow{
+  display: none;
+}
+
+.listAlbums{
+  background-color: grey;
+  display: inline-block;
+  float: left;
+  height: 800px;
+  width: 200px;
+  margin-bottom: 0;
+}
+
+.mainSection{
+  display: inline-block;
+  width: 80%
+}
+
+.mainTitle{
+  background-color: gray;
+  display: inline-block;
+  font-size: 80px;
+  height: 120px;
+  margin: 0;
+  margin-bottom: 40px;
+  padding-left: 430px;
+  padding-top: 20px;
+  width: 100%;
+}
+
+.photoButton{
+  border-radius: 10px;
+  display: inline-block;
+  height: 30px;
+  margin-left: 30px;
+  margin-top: 10px;
+  width: 150px;
+}
+
+.photoImage{
+  height: 500px;
+  margin-left: 270px;
+  width: 700px;
+}
+
+.photoRow{
+  display: inline-block;
+  margin-left: 70px;
+  padding-top: 50px;
+}
+
+.photoPage{
+  background-color: grey;
+  height: 800px;
+}
+
+.photoNoPage{
+  display: none;
+  background-color: grey;
+  height: 800px;
+}
+
+.photoNoPage5{
+  display: none;
+  background-color: grey;
+  height: 800px;
+}
+
+.photoNoPage6{
+  display: none;
+  background-color: grey;
+  height: 800px;
+}
+
+.photoNoPage2{
+  display: none;
+  background-color: grey;
+  height: 800px;
+}
+
+.photoNoPage3{
+  display: none;
+  background-color: grey;
+  height: 800px;
+}
+
+.photoNoPage4{
+  display: none;
+  background-color: grey;
+  height: 800px;
+}
+
+.photoNoPage{
+  display: none;
+  background-color: grey;
+  height: 800px;
+}
+
+.sideAlbums{
+  background-color: gray;
+  display: inline-block;
+  height: 400px;
+  width: 50px;
+}
+
+.titleAlbum{
+  display: inline-block;
+  font-size: 60px;
+  margin: 0;
+  padding-left: 400px;
+}
+
+.titlePhoto{
+  display: inline-block;
+  padding-left: 360px;
+}
