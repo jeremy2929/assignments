@@ -1,0 +1,122 @@
+*{
+  box-sizing: border-box;
+}
+
+/* main box area around list */
+.wholeArea{
+  background-color: rgb(240,240,240);
+  color: rgb(135,125,120);
+  display: inline-block;
+  height: auto;
+  margin-left: 200px;
+  margin-top: 50px;
+  width: 800px;
+}
+
+/* title of box GIFTS TO BUY */
+.mainTitle{
+  font-size: 50px;
+  font-weight: lighter;
+  margin-top: 50px;
+  text-align: center;
+  width: 800px;
+}
+
+/* the white box containing the entire app inside the grey box */
+.listBox {
+    background-color: white;
+    color: black;
+    height: auto;
+    margin-left: 40px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    width: 90%;
+}
+
+/* area controlling element of Amount in list of items */
+.itemAmount{
+  float: right;
+  font-size: 30px;
+  padding-right: 5px;
+}
+
+/* area containing all items added below input area  */
+.itemsList{
+  width: 720px;
+  margin: 0;
+}
+
+/* the area containing entire line of item added: checkbox, item description, item amount */
+.itemsEach{
+  border: 1px solid rgb(245,245,245);
+  display: inline-block;
+  height: 40px;
+  margin-top: -2px;
+  width: 720px;
+}
+
+/*defines properties of checkbox for an item in list*/
+.itemsCheckBox{
+  background-color: grey;
+  border-radius: 20px;
+  display: inline-block;
+  height: 20px;
+  width: 20px;
+}
+
+ /*defines properties for description area of an item in list */
+.itemsDescription{
+  display: inline-block;
+  font-size: 30px;
+  padding-left  : 20px;
+  width: 78%;
+}
+
+/* adding a strike through for an item and amunt being checked */
+.itemsStrike > text{
+  color: rgb(125,196,118);
+  font-size: 30px;
+  font-style: italic;
+  text-decoration: line-through;
+}
+
+/* area that contains the input box and ADD button */
+.formBox{
+  height: 70px;
+  width: 720px;
+}
+
+/* area to enter an item and amount  */
+.itemInputText{
+  border-color: rgb(245,245,245);
+  display: inline-block;
+  font-size: 30px;
+  height: 70px;
+  padding-top: 30px;
+  width: 599px;
+}
+
+/* area of the ADD button */
+.itemInputAdd{
+  background-color: rgb(125,196,118);
+  color: white;
+  display: inline-block;
+  font-size: 30px;
+  height: 70px;
+  text-align: center;
+  padding-top: 20px;
+  vertical-align: top;
+  width: 117px;
+}
+
+/* area at bottom of list controlling TOTAL amount */
+.totalAmount{
+  border: 1px solid rgb(245,245,245);
+  height: 40px;
+  font-size: 20px;
+  margin: 0;
+  margin-top: -2px;
+  padding-top: 5px;
+  text-align: right;
+  width: 100%;
+}

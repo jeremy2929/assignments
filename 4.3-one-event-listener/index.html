@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<!-- This HTML defines elements for buttons on a calculator -->
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel = "stylesheet" href = "styles/main.css"></link>
+    <script src = "dist/bundle.js"></script>
+  </head>
+  <body>
+    <!-- first row of elements across top are CLEAR button and output display -->
+    <section1 class="rowOne"
+              data-js="buttonClicked">
+        <button class="buttonRegular"
+                data-js="numberButton">C</button>
+      <p class="outputWindow"
+         data-js="outputText">
+      </p>
+    </section1>
+    <!-- row two of elements are buttons 7 8 9 / -->
+    <section2 class="rowTwo"
+    data-js="buttonClicked">
+      <button
+          class="buttonRegular"
+          data-js="numberButton">7</button>
+      <button class="buttonRegular"
+              data-js="numberButton">8</button>
+      <button class="buttonRegular"
+      data-js="numberButton">9</button>
+      </button>
+      <button class="buttonLite"
+      data-js="numberButton">/</button>
+    </section2>
+    <!-- row three of elements are buttons 4 5 6 * -->
+    <section3 class="rowThree"
+    data-js="buttonClicked">
+      <button class="buttonRegular"
+      data-js="numberButton">4</button>
+      <button class="buttonRegular"
+      data-js="numberButton">5</button>
+      <button class="buttonRegular"
+      data-js="numberButton">6</button>
+      <button class="buttonLite"
+      data-js="numberButton">*</button>
+    </section3>
+    <!-- row four of elements are buttons 1 2 3 - -->
+    <section4 class="rowFour"
+    data-js="buttonClicked">
+      <button class="buttonRegular"
+      data-js="numberButton">1</button>
+      <button class="buttonRegular"
+      data-js="numberButton">2</button>
+      <button class="buttonRegular"
+      data-js="numberButton">3</button>
+      <button class="buttonLite"
+      data-js="numberButton">-</button>
+    </section4>
+    <!-- row five of elements are buttons 0 . = + -->
+    <section5 class="rowFive"
+    data-js="buttonClicked">
+      <button class="buttonRegular"
+      data-js="numberButton">0</button>
+      <button class="buttonRegular"
+      data-js="numberButton">.</button>
+      <button class="buttonRegular"
+      data-js="numberButton">=</button>
+      <button class="buttonLite"
+      data-js="numberButton">+</button>
+    </section5>
+  </body>
+</html>

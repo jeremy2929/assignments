@@ -1,0 +1,126 @@
+*{
+  box-sizing: border-box;
+}
+
+.wholeArea{
+  background-color: rgb(245,245,245);
+  color: rgb(135,125,120);
+  display: inline-block;
+  height: auto;
+  margin-left: 200px;
+  margin-top: 50px;
+  width: 800px;
+}
+
+.mainTitle{
+  font-size: 50px;
+  font-weight: lighter;
+  margin-top: 50px;
+  text-align: center;
+  width: 800px;
+}
+
+.listBox {
+    background-color: white;
+    color: black;
+    height: auto;
+    margin-left: 40px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    width: 90%;
+}
+
+.itemAmount{
+  float: right;
+  font-size: 30px;
+  padding-right: 5px;
+}
+.itemsList{
+  width: 720px;
+  margin: 0;
+}
+
+.itemsEach{
+  border: 1px solid rgb(245,245,245);
+  display: inline-block;
+  height: 40px;
+  margin-top: -2px;
+  width: 720px;
+}
+
+/* old
+.itemsCheckBox{
+  align-items: center;
+  background-color: white;
+  border-radius: 20px;
+  color: green;
+  display: inline-block;
+  height: 30px;
+  margin-right: 10px;
+  width: 30px;
+  }
+*/
+
+.itemsCheckBox{
+  height: 20px;
+  width: 20px;
+}
+.itemsDescription{
+  display: inline-block;
+  font-size: 30px;
+  padding-left  : 20px;
+  width: 78%;
+}
+
+.itemsStrike > text{
+  color: rgb(125,196,118);
+  font-size: 30px;
+  font-style: italic;
+  text-decoration: line-through;
+}
+
+.itemsNoStrike > text{
+  text-decoration: none;
+}
+
+.formBox{
+  height: 70px;
+  width: 720px;
+}
+
+.itemInputText{
+  border-color: rgb(245,245,245);
+  display: inline-block;
+  font-size: 30px;
+  height: 70px;
+  padding-top: 30px;
+  width: 599px;
+}
+
+.itemInputAdd{
+  background-color: rgb(125,196,118);
+  color: white;
+  display: inline-block;
+  font-size: 30px;
+  height: 70px;
+  text-align: center;
+  padding-top: 20px;
+  vertical-align: top;
+  width: 117px;
+}
+
+.totalAmount{
+  border: 1px solid rgb(245,245,245);
+  height: 40px;
+  font-size: 20px;
+  margin: 0;
+  margin-top: -2px;
+  padding-top: 5px;
+  text-align: right;
+  width: 100%;
+}
+
+.imageNoCheck{
+  height: 20px;
+  width: 20px;
+}
