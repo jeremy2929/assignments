@@ -24,7 +24,7 @@ $(function(){
     var srcImage=$clickedElement.attr("src");
     // inserting image source into modal
     $photoImageElement.attr("src",srcImage);
-    // tting value of title of thumbnail clicked
+    // getting value of title of thumbnail clicked
     var altImage=$clickedElement.attr("alt");
     // inserting photo title into modal
     $titlePhotoElement.text(altImage);
