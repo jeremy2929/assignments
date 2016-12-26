@@ -85,9 +85,9 @@
 }
 
 .photoImage{
-  height: 500px;
-  margin-left: 270px;
-  width: 700px;
+  height: 600px;
+  margin-left: 100px;
+  width: 800px;
 }
 
 .photoRow{
@@ -102,36 +102,6 @@
 }
 
 .photoNoPage{
-  display: none;
-  background-color: grey;
-  height: 800px;
-}
-
-.photoNoPage5{
-  display: none;
-  background-color: grey;
-  height: 800px;
-}
-
-.photoNoPage6{
-  display: none;
-  background-color: grey;
-  height: 800px;
-}
-
-.photoNoPage2{
-  display: none;
-  background-color: grey;
-  height: 800px;
-}
-
-.photoNoPage3{
-  display: none;
-  background-color: grey;
-  height: 800px;
-}
-
-.photoNoPage4{
   display: none;
   background-color: grey;
   height: 800px;
@@ -158,6 +128,5 @@
 }
 
 .titlePhoto{
-  display: inline-block;
-  padding-left: 360px;
+  text-align: center;
 }

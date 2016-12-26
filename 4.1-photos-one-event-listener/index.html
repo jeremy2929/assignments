@@ -35,64 +35,79 @@
       <h1 class= "titleAlbum">Album #</h1>
       <article class = "photoRow"
                data-js="articleHTML">
-        <div class = "albumEach"
-             data-js = "indexHTML">
-          <img class = "albumImage"
+        <li class = "albumEach"
+            data-js = "indexHTML">
+          <img alt="Bluebonnets at sunset"
+               class = "albumImage"
                src = "photo1.jpg"
                data-js = "imageHTML">
           </img>
           <p class = "albumTitle">These photos</p>
-        </div>
-        <div class = "albumEach"
-             data-js = "indexHTML">
-          <img class = "albumImage"
+        </li>
+        <li class = "albumEach"
+            data-js = "indexHTML">
+          <img alt="Texas canyons"
+               class = "albumImage"
                src = "photo2.jpg"
                data-js = "imageHTML">
           </img>
-          <p class = "albumTitle">Those photos</p>
-        </div>
+          <p class = "albumTitle">Texas canyons</p>
+        </li>
         <div class = "albumEach"
-             data-js = "imageHTML">
-          <img class = "albumImage"
-               src = "photo3.jpg">
+             data-js = "indexHTML">
+          <img alt="West Texas rivers"
+               class = "albumImage"
+               src = "photo3.jpg"
+               data-js = "imageHTML">
           </img>
-          <p class = "albumTitle">More photos</p>
+          <p class = "albumTitle">West Texas rivers</p>
         </div>
       </article>
       <article class = "photoRow"
                data-js="articleHTML">
         <div class = "albumEach"
-             data-js = "imageHTML">
-          <img class = "albumImage"
+             data-js = "indexHTML">
+          <img alt="Downtown Houston"
+               class="albumImage"
+               data-js = "imageHTML"
                src = "photo4.jpg">
           </img>
-          <p class = "albumTitle">More photos</p>
+          <p class="albumTitle">Downtown Houston</p>
         </div>
-        <div class = "albumEach"
-            data-js = "imageHTML">
-          <img class = "albumImage"
-               src = "photo5.jpg">
+        <div class="albumEach"
+             data-js="indexHTML">
+          <img alt="Cowboy Dinner"
+               class="albumImage"
+               data-js="imageHTML"
+               src="photo5.jpg">
           </img>
-          <p class = "albumTitle">Those photos</p>
+          <p class="albumTitle">Cowboy Dinner</p>
         </div>
-        <div class = "albumEach"
-             data-js = "imageHTML">
-          <img class = "albumImage"
-               src = "photo6.jpg">
+        <div class="albumEach"
+             data-js="indexHTML">
+          <img alt="West Texas Landscape"
+               class="albumImage"
+               data-js="imageHTML"
+               src="photo6.jpg">
           </img>
-          <p class = "albumTitle">More photos</p>
+          <p class="albumTitle">West Texas Landscape</p>
         </div>
       </article>
     </div>
     <article class="photoNoPage"
-          data-js="modalHTML">
+             data-js="modalHTML">
       <a  href="#">
-        <button class = "photoButton" data-js = "backButton">Back to Index</button>
+        <button class = "photoButton"
+                data-js = "backButton">Back to Index</button>
       </a>
-      <h1 class = "titlePhoto">Photo #<h1>
+      <div class = "titlePhoto">
+       <h1 class = "titlePhoto"
+           data-js="titlePhotoHTML"><h1>
         <img class = "photoImage"
-             data-js = "photoHTML">
+             data-js = "photoHTML"
+             src="">
         </img>
+      <div>
     </article>
   </body>
 </html>
