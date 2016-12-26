@@ -13,6 +13,11 @@
   width: 800px;
 }
 
+/* area containting input text and ADD button  */
+.formBox{
+  margin-bottom: 0;
+}
+
 /* title of box GIFTS TO BUY */
 .mainTitle{
   font-size: 50px;

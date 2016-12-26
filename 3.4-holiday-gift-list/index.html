@@ -12,8 +12,10 @@
           data-js="mainElement">
       <h1 class="mainTitle"> GIFTS TO BUY
       </h1>
+      <!-- white box containing input field and list of items -->
       <div class="listBox"
             data-js="theList">
+          <!-- <form> is area containing input text and ADD button -->
           <form class="formBox">
             <textarea class="itemInputText" data-js="itemInput"
             placeholder="Enter item description, amount"></textarea>
@@ -23,12 +25,15 @@
             </submit>
           </a>
           </form>
+          <!-- area containg list of items -->
           <section class="itemsList"
                    data-js="itemsSection">
+              <!-- area conatining each item- checkbox, description, and amount -->
               <article class="article"
                        data-js="itemArticle">
               </article>
           </section>
+          <!-- area at bottom of list containing TOTAL anount -->
           <p class="totalAmount"
              data-js="total">
         TOTAL   $0</p>

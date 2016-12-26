@@ -96,13 +96,13 @@ $(function(){
     // blocking ADD button if nothing entered
     if (itemInput != ""){
       // building HTML element for checkbox
-      var $newCheckBoxElement = $("<checkbox>")
-          .attr({
-            class: "itemsCheckBox",
-            "data-js": "checkbox",
-            type: "checkbox"
-          })
-        ;
+      var $newCheckBoxElement = $("<img>")
+        .attr({
+          class: "itemsCheckBox",
+          "data-js": "checkbox"
+        })
+      // using empty circle for image of checkbox
+      $newCheckBoxElement.attr("src","nocheck.jpg");
       // building HTML element for item description element
       var $newItemsDescriptionElement = $("<text>")
         .attr({
@@ -139,5 +139,7 @@ $(function(){
   $body.on("click","[data-js='checkbox']",function(e){
     // sriking thru item and amount if checkbox clicked
     $(this).parent("article").attr({class: "itemsStrike"});
+    // changing image of empty circle to checked circle
+    $(this).attr("src","check.jpg");
   });
 });
