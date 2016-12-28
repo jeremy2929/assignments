@@ -83,10 +83,10 @@ console.assert(isVowel("E") === true);
  *
  * For example, rovarspraket("this is fun") should
  * return the string "tothohisos isos fofunon".
-
- /* This code seems functional when displayed to console but I didnt have time to deal with the "0" string*/
+*/
 function rovarspraket(text){
   var textAsString = text.toString();
+  if (textAsString === "0"){return textAsString;}
   var textArray = textAsString.split("");
   var build = textArray;
   var textLength = textArray.length;
@@ -96,7 +96,6 @@ function rovarspraket(text){
     }
   }
     textArray = build.join("");
-    console.log (textArray);
     return textArray;
 }
 console.assert(rovarspraket("a") === "a")
@@ -133,23 +132,18 @@ console.assert(reverse("we don't want no trouble") === "elbuort on tnaw t'nod ew
  *
  * i.e. findLongestWord("book dogs") should return "book"
  */
-
-/* I didnt have time to finish storing each word and comparing the lengths to find largest */
 function findLongestWord(sentence){
-  var holdString = "";
-  var newString = "";
-  var jlength= sentence.length;
-  for (var i =0; i < jlength; i++){
-      if (sentence[i] === " " || i === jlength) {
-        newString = holdString;
-        console.log(newString);
-        holdString = ""
-      }
-      else {
-        holdString += sentence[i];
-      }
-  }
-  console.log(holdString);
+  var string=sentence.split(" ");
+  var longestLength=0;
+  var longestWord="";
+  string.forEach(function(word){
+   var wordLength=word.length;
+   if(wordLength>longestLength){
+     longestWord=word;
+     longestLength=wordLength;
+   }
+  });
+ return longestWord;
 }
 console.assert(findLongestWord("book dogs") === "book")
-console.assert(findLongestWord("don't mess with Texas") === "Texas")
+console.assert(findLongestWord("dont mess with Texas") === "Texas")

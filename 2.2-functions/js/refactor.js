@@ -23,11 +23,17 @@
 // to a variable containing an anonymous
 // function
 
+
 function doSomethingCool() {
   console.log("Something Cool!");
 }
 
+
 // Put your answer below -------------------------
+var hello = function(){
+  console.log("Something Anonymous!");
+}
+hello();
 
 
 // -----------------------------------------------
@@ -41,14 +47,20 @@ function doSomethingCool() {
 // after 2 seconds. Refactor to use an anonymous
 // function
 
+/*
 function sayHi() {
   alert("Hello, World!");
 }
-
 setTimeout(sayHi, 2000);
+*/
 
 // Put your answer below -------------------------
-
+var hiFunction=function(){
+  setTimeout(function(){
+  alert("I've been waiting 2000 milliseconds to say: Hello, World!");
+  },2000);
+}
+hiFunction();
 
 // -----------------------------------------------
 
@@ -78,6 +90,10 @@ letter = "z";
 console.log("The letter is", letter);
 
 // Put your answer below -------------------------
+/* Answer is C. The variable LETTER is originally "x" but is never used in console.log.
+Then the value of LETTER is changed to "y" and "z", but the "y" code has a delay of one second.
+So the "z" value of LETTER will execute immediately, and then the "y" value of LETTER will execute
+one second later.   */
 
 
 // -----------------------------------------------
@@ -100,7 +116,10 @@ var reverseStr = function(str) {
 };
 
 // Put your answer below -------------------------
-
+var text = "Hello";
+function reverseString(string){
+  return string.split("").reverse().join("");
+}
 
 // -----------------------------------------------
 
@@ -131,7 +150,14 @@ var spanishColor = function(colorName) {
 };
 
 // Put your answer below -------------------------
-
+var colorName="verde"
+var spanishColor = {
+  rojo: "#ff0000",
+  blanco: "#ffffff",
+  azul: "#0000ff",
+  verde: "#00ff00"
+}
+var hexValue=spanishColor[colorName];
 
 // -----------------------------------------------
 
@@ -148,6 +174,8 @@ var spanishColor = function(colorName) {
 var foo = "bar";
 
 // Put your answer below -------------------------
+var foo;
+foo = "bar";
 
 
 // -----------------------------------------------
@@ -170,7 +198,11 @@ var callTenTimes = function(callback) {
 };
 
 // Put your answer below -------------------------
-
+var freq = 5
+var callNtimes = function(callback) {
+  var range = _.range(freq);
+  _.each(range, callback);
+};
 
 // -----------------------------------------------
 
@@ -198,8 +230,21 @@ var decreaseScore = function() {
 };
 
 // Put your answer below -------------------------
+var totalScore = 5;
+function increaseScore() {
+  totalScore++;
+  console.log("here",totalScore);
+  return totalScore;
+}
+function decreaseScore() {
+  totalScore--;
+  return totalScore;
+}
 
-
+increaseScore
+increaseScore
+decreaseScore
+console.log("new score=",totalScore);
 // -----------------------------------------------
 
 //////////////////////////////////////////////////
@@ -216,9 +261,15 @@ var addNumbers = function(numberA, numberB) {
 };
 
 var twoPlusTwo = addNumbers(2,2);
-
 // Put your answer below -------------------------
+var addNumbers = function(numberA, numberB) {
+  console.log(numberA + numberB);
+  answer=numberA+numberB;
+  return answer;
+};
 
+var twoPlusTwo = addNumbers(2,2);
+console.log("answer=",twoPlusTwo);
 
 // -----------------------------------------------
 
@@ -244,8 +295,17 @@ var accelerate = function(amount) {
 };
 
 // Put your answer below -------------------------
-
-
+// In javascript, anytime a numeric is added to a NaN, it produces a NaN.
+var speed = 19;
+var accelerate = function(amount) {
+  if(isNaN(amount)===true){
+    amount=1
+  }
+  speed+=amount;
+};
+amount=NaN;
+accelerate(amount);
+console.log("speed=",speed);
 // -----------------------------------------------
 
 //////////////////////////////////////////////////
@@ -287,6 +347,19 @@ var callLater = function(timeout, callback) {
 };
 
 // Put your answer below -------------------------
+// isNum not working, need to validate if timeout is number or not
+// what if function expects two arguments but only one is passed?
+var display = function(pause){
+  console.log("Display after pause of",pause+" seconds.");
+}
+var callLater = function(timeout, callback) {
+  console.log("callback=",callback);
+  console.log("timeoutNaN?=",timeout.isNumeric);
+  if (timeout.isNum!=true){callback=timeout}
+  if (isNaN(timeout)===true){timeout=3000}
+  setTimeout(callback, timeout, timeout);
+};
+callLater(display);
 
 
 // -----------------------------------------------
