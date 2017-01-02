@@ -210,7 +210,6 @@ console.assert(NUMBER === 96)
 // Make the following assertion work:
 var factory = function() {
     var innerFunc = function() {
-        console.log('hello world');
         return 'hello world'
     }
     return innerFunc}
@@ -224,16 +223,24 @@ console.assert(factory()() === 'hello world')  // INCEPTION!
 // Want more?
 var factory2 = function() {
     var innerFunc = function(x) {
-        console.log('hello world');
         return x
     }
     return innerFunc}
 console.assert(factory2()('you sly dog') === 'you sly dog')
 console.assert(factory2()(999) === 999)
 
+
+
 // Part 12
+var factory3 = function(x) {
+    var innerFunc = function() {
+        return x
+    }
+
+    return innerFunc;
+
+    }
 
 // This can't be healthy...
-
 console.assert(factory3('i have reached function nirvana')() === 'i have reached function nirvana')
 console.assert(factory3(100)() === 100)
