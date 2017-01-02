@@ -1,0 +1,61 @@
+*{
+  box-sizing: border-box;
+}
+
+body{
+  background-color: SlateGrey
+}
+
+.mainTitle{
+  font-size: 30px;
+  text-align: center;
+}
+
+.buttonsLeft{
+  display: inline-block;
+  margin-left: 250px;
+  height: 200px
+  width: 300px;
+}
+
+.buttonsCenter{
+  display: inline-block;
+  height: 200px
+  width: 300px;
+}
+
+.buttonsRight{
+  display: inline-block;
+  height: 200px
+  width: 300px;
+}
+
+.button{
+  border-radius: 15px;
+  font-size: 15px;
+  display: block;
+  height: 80px;
+  margin: 40px;
+  width: 180px;
+}
+
+
+.outputTitle{
+  margin-left: 500px;
+}
+
+.sectionHTML{
+  display: inline-block;
+}
+.weatherButton{
+  height: 30px;
+  vertical-align: top;
+  width: 60px;
+}
+
+.weatherText{
+  display: inline-block;
+  height: 30px;
+  margin-left: 500px;
+  width: 100px;
+}
