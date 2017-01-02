@@ -191,7 +191,11 @@ console.assert(NUMBER === 48)
 // as input. It should invoke that input function only if
 // the value of a certain global variable, called ORACLE, is
 // "YES." Otherwise, it will does nothing.
-
+function conditionallyInvoke(functionName){
+  if(ORACLE==="YES"){
+    functionName();
+  }
+}
 var ORACLE = 'NO'
 
 conditionallyInvoke(doubleGlobalNumber)
