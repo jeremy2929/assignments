@@ -31,8 +31,10 @@ console.assert(doubleNum(5) === 10)
  */
 function sum(x,y){
   if (typeof(x)!="number" || typeof(y)!="number"){
-    z=null;
-    return z;
+    return null;
+  }
+  if (isNegative(x)===true || isNegative(y)===true){
+    return null;
   }
   var z = x+y;
   return z;
