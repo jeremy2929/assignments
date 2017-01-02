@@ -85,7 +85,7 @@ console.assert(isNegative(10) === false)
 console.assert(isNegative(0) === false)
 console.assert(isNegative(-999) === true)
 
-
+// Part 5
 // Now, modify your sum function again, so that it
 // will return null if any of the inputs is negative.
 // To avoid repeating yourself, use your isNegative
@@ -94,11 +94,40 @@ console.assert(isNegative(-999) === true)
 console.assert(sum(5,-5) === null)
 
 
-// Part 5
-
+// Part 6
 // Write a function that will find the minimum of four
 // input numbers. You can do it using nested if statements,
 // boolean operators, or both (but not neither).
+function minimum(a,b,c,d){
+  if (a<b){
+    if (a<c){
+      if (a<d){
+        return a;
+      }
+    }
+  }
+  if (b<a){
+    if (b<c){
+      if (b<d){
+        return b;
+      }
+    }
+  }
+  if (c<a){
+    if (c<b){
+      if (c<d){
+        return c;
+      }
+    }
+  }
+  if (d<a){
+    if (d<b){
+      if (d<c){
+        return d;
+      }
+    }
+  }
+}
 
 console.assert(minimum(1,2,4,0) === 0)
 console.assert(minimum(1000,-2,-99,50) === -99)
