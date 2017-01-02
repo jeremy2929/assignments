@@ -72,7 +72,13 @@ console.assert(sum(true, 5) === null);
 
 // Write a function called isNegative that will tell
 // whether a number is negative or not.
-
+function isNegative(x){
+  if (x<0){
+    return true;
+  }else{
+    return false;
+  }
+}
 console.assert(isNegative(10) === false)
 console.assert(isNegative(0) === false)
 console.assert(isNegative(-999) === true)
