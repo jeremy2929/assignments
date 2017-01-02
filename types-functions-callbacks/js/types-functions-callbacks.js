@@ -8,17 +8,18 @@
 // Part EXAMPLE
 
 // Write a function called addOne() that returns the input number, plus one.
-
-console.assert(addOne(1) === 2)
-
+function addOne(givenNumber){
+  return givenNumber+=1;
+}
+console.assert(addOne(1) === 2);
 // Part 0
 
 // Fix the following code so that the assertion passes.
 
 var doubleNum = function(num) {
-    var newNum = num * 2
+    var newNum = num * 2;
+    return newNum;
 }
-
 console.assert(doubleNum(5) === 10)
 
 
@@ -28,7 +29,14 @@ console.assert(doubleNum(5) === 10)
  * Write a function called sum that takes two numbers as
  * inputs and computes the sum of those two numbers.
  */
-
+function sum(x,y){
+  if (typeof(x)!="number" || typeof(y)!="number"){
+    z=null;
+    return z;
+  }
+  var z = x+y;
+  return z;
+}
 
 console.assert(sum(8, 11) === 19);
 console.assert(sum(4, 100) === 104);
@@ -40,7 +48,10 @@ console.assert(sum(4, 100) === 104);
 // repeating yourself, use your sum function inside
 // of your average function.
 
-
+function average(x,y){
+  total = sum(x,y);
+  return total / 2;
+}
 console.assert(average(8,12) === 10)
 console.assert(average(100,200) === 150)
 
