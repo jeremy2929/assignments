@@ -222,7 +222,12 @@ console.assert(factory()() === 'hello world')  // INCEPTION!
 // Part 11
 
 // Want more?
-
+var factory2 = function() {
+    var innerFunc = function(x) {
+        console.log('hello world');
+        return x
+    }
+    return innerFunc}
 console.assert(factory2()('you sly dog') === 'you sly dog')
 console.assert(factory2()(999) === 999)
 
