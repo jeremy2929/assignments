@@ -11,15 +11,14 @@ body{
   text-align: center;
 }
 
-.buttonsLeft{
-  display: inline-block;
-  margin-left: 250px;
-  height: 200px
-  width: 300px;
+.noteTitle{
+  font-size: 20px;
+  text-align: center;
 }
 
-.buttonsCenter{
+.buttonsLeft{
   display: inline-block;
+  margin-left: 350px;
   height: 200px
   width: 300px;
 }
