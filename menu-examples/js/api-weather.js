@@ -74,6 +74,7 @@ document.addEventListener("DOMContentLoaded",function(){
              });  // closing load event for sunrise time conversion request
             // send the request to API
             xhr.send();
+            setTimeout(0);
             // creating new API request to conver sunrise time to zulu time
             var xhr = new XMLHttpRequest();
             // sending the raw sunrise data to API
@@ -99,6 +100,7 @@ document.addEventListener("DOMContentLoaded",function(){
             });  // closing load event for sunset time conversion request
             // send the request to API
             xhr.send();
+            setTimeout(0);
          }); // closing load event for all weather data from openweather
          // send the request to API
           xhr.send();
