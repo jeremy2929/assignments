@@ -1,10 +1,10 @@
 
 var newFile = this;
+console.log("the DOM has now loaded");
 console.log("the DOM has loaded");
 
 // the keyword var creates private scope
-newFile.testButtonElement = document.querySelector("[data-js='testButton']");
-
+/*
 newFile.outputElement = document.querySelector("[data-js='output']");
 newFile.ontestButtonClick = function(e){
   // set the output to THIS number that was clicked
@@ -15,3 +15,4 @@ newFile.ontestButtonClick = function(e){
 newFile
     .testButtonElement
     .addEventListener("click", newFile.ontestButtonClick);
+*/
