@@ -1,19 +1,8 @@
-//document.addEventListener("DOMContentLoaded", function(){
-
-
-
-  // Loads initial file(s)
-//  var newName = require("./newFile");
-
-
-//})
-
 import React from 'react'
-
+var totalAmount = 0;
 export default React.createClass({
   getInitialState() {
     return {
-      outputCalculation: "0"
     }
   },
   onAddButtonClick(e) {
@@ -21,6 +10,7 @@ export default React.createClass({
     var textArray = textEntered.split(",");
     var textToDisplay = textArray[0];
     var amountToDisplay = textArray[1];
+    totalAmount += eval(amountToDisplay);
     this.refs.textEntered.value = "";
     this.setState({
       itemDescription: textToDisplay,
@@ -28,25 +18,13 @@ export default React.createClass({
       textOfTextArea: ""
     })
     var desc = this.state.itemDescription;
-    var string = "<article class='itemsEach'></arcticle><img class='itemsCheckBox' ref='eachCheck' src = 'nocheck.jpg'></img><text class='itemsDescription' ref='eachItem'>" + textToDisplay + "</text><text class='itemAmount'>" + "$" + amountToDisplay + "</text></article>";
-    this.refs.listItem.innerHTML += string;
-  },
-  onClearButtonClick() {
-    this.setState({
-      outputCalculation: "0"
-    })
-  },
-  onClickNumber(e) {
-    this.refs.outputCalculation.classList = "output output--red"
-    // Concat number that was clicked to existing number
-    var currentNumber = this.state.outputCalculation;
-    var clickedNumber = e.target.textContent;
-    this.setState({
-      outputCalculation: currentNumber + clickedNumber
-    })
+    var totalString = this.refs.listItem.innerHTML;
+    var newString = "<article class='itemsEach'></arcticle><img class='itemsCheckBox' ref='eachCheck' src = 'nocheck.jpg'></img><text class='itemsDescription' ref='eachItem'>" + textToDisplay + "</text><text class='itemAmount'>" + "$" + amountToDisplay + "</text></article>";
+    this.refs.listItem.innerHTML = newString+totalString;
+    var totalAmountString = "TOTAL  ";
+    this.refs.totalHTML.value = totalAmountString;
   },
   render() {
-    // Inside of the <h1> using this.state is called BINDING
     return (
       <main className="wholeArea">
         <h1 className="mainTitle"> GIFTS TO BUY</h1>
@@ -60,11 +38,9 @@ export default React.createClass({
             </form>
             <section className="itemsList">
                 <article className="article" ref="listItem">
-
                 </article>
             </section>
-            <p className="totalAmount">
-          TOTAL   $0</p>
+            <p className="totalAmount" ref="totalHTML"> { this.state.totalHTML }</p>
       </div>
       </main>
     )
