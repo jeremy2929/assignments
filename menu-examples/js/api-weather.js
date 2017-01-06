@@ -36,7 +36,8 @@ document.addEventListener("DOMContentLoaded",function(){
             // find position of keyword 'temp' for current temperature
             var tempPosition = string.indexOf('"temp"');
             // grab current temp data (Kelvin) 7 positions past 'temp'
-            var temp = string[tempPosition+7]+string[tempPosition+8]+string[tempPosition+9]+string[tempPosition+10]+string[tempPosition+11];
+            var temp = string[tempPosition+7]+string[tempPosition+8]+string[tempPosition+9];
+            // took the decimals out bcuz sometimes not pesent --->+string[tempPosition+10]+string[tempPosition+11];
             // convert temp data to numeric and subtract 273 for conversion to Celsius.
             var celTemp=eval(temp)-273.15;
             // convert temp data to Farenheit
