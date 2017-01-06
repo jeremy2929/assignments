@@ -16,10 +16,20 @@ export default React.createClass({
       outputCalculation: "0"
     }
   },
-  onAddButtonClick() {
+  onAddButtonClick(e) {
+    var textEntered = this.refs.textEntered.value;
+    var textArray = textEntered.split(",");
+    var textToDisplay = textArray[0];
+    var amountToDisplay = textArray[1];
+    this.refs.textEntered.value = "";
     this.setState({
-      outputCalculation: "test"
+      itemDescription: textToDisplay,
+      itemAmount: amountToDisplay,
+      textOfTextArea: ""
     })
+    var desc = this.state.itemDescription;
+    var string = "<article class='itemsEach'></arcticle><img class='itemsCheckBox' ref='eachCheck' src = 'nocheck.jpg'></img><text class='itemsDescription' ref='eachItem'>" + textToDisplay + "</text><text class='itemAmount'>" + "$" + amountToDisplay + "</text></article>";
+    this.refs.listItem.innerHTML += string;
   },
   onClearButtonClick() {
     this.setState({
@@ -31,7 +41,6 @@ export default React.createClass({
     // Concat number that was clicked to existing number
     var currentNumber = this.state.outputCalculation;
     var clickedNumber = e.target.textContent;
-
     this.setState({
       outputCalculation: currentNumber + clickedNumber
     })
@@ -39,39 +48,24 @@ export default React.createClass({
   render() {
     // Inside of the <h1> using this.state is called BINDING
     return (
-
       <main className="wholeArea">
         <h1 className="mainTitle"> GIFTS TO BUY</h1>
         <div className="listBox">
             <form className="formBox">
-              <textarea className="itemInputText" placeholder="Enter item description, amount"></textarea>
+              <textarea className="itemInputText" ref="textEntered" placeholder="Enter item description, amount"></textarea>
               <a href ="#">
-              <submit className="itemInputAdd" ref="addButton" onClick={ this.onAddButtonClick }>ADD
+              <submit className="itemInputAdd" ref="AddButtonClick" onClick={ this.onAddButtonClick }>ADD
               </submit>
             </a>
             </form>
             <section className="itemsList">
-                <article className="article" ref"listItem">
+                <article className="article" ref="listItem">
+
                 </article>
             </section>
             <p className="totalAmount">
           TOTAL   $0</p>
       </div>
-
-      <section>
-        <button className="clearButton" ref="outputClear" onClick={ this.onClearButtonClick }>c</button>
-        <h1 className="output" ref="outputCalculation"> { this.state.outputCalculation } </h1>
-        <button onClick={ this.onClickNumber }> 0 </button>
-        <button onClick={ this.onClickNumber }> 1 </button>
-        <button onClick={ this.onClickNumber }> 2 </button>
-        <button onClick={ this.onClickNumber }> 3 </button>
-        <button onClick={ this.onClickNumber }> 4 </button>
-        <button onClick={ this.onClickNumber }> 5 </button>
-        <button onClick={ this.onClickNumber }> 6 </button>
-        <button onClick={ this.onClickNumber }> 7 </button>
-        <button onClick={ this.onClickNumber }> 8 </button>
-        <button onClick={ this.onClickNumber }> 9 </button>
-      </section>
       </main>
     )
   }
