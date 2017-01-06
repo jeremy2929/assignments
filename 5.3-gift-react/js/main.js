@@ -1,5 +1,6 @@
 import React from 'react'
 var totalAmount = 0;
+var totalAmountString = "";
 export default React.createClass({
   getInitialState() {
     return {
@@ -21,8 +22,7 @@ export default React.createClass({
     var totalString = this.refs.listItem.innerHTML;
     var newString = "<article class='itemsEach'></arcticle><img class='itemsCheckBox' ref='eachCheck' src = 'nocheck.jpg'></img><text class='itemsDescription' ref='eachItem'>" + textToDisplay + "</text><text class='itemAmount'>" + "$" + amountToDisplay + "</text></article>";
     this.refs.listItem.innerHTML = newString+totalString;
-    var totalAmountString = "TOTAL  ";
-    this.refs.totalHTML.value = totalAmountString;
+    totalAmountString = "TOTAL  $" + totalAmount.toString();
   },
   render() {
     return (
@@ -40,7 +40,7 @@ export default React.createClass({
                 <article className="article" ref="listItem">
                 </article>
             </section>
-            <p className="totalAmount" ref="totalHTML"> { this.state.totalHTML }</p>
+            <p className="totalAmount" ref="totalHTML"> { totalAmountString }</p>
       </div>
       </main>
     )
