@@ -1,0 +1,99 @@
+*{
+  box-sizing: border-box;
+}
+
+body{
+  background-color: grey;
+}
+
+.entireArea{
+  background-color: white;
+  margin-left: 200px;
+  width: 890px;
+
+}
+.mainArea{
+    height: 1250px;
+  width: 890px;
+}
+
+.topArea{
+  float: right;
+  vertical-align: top;
+  width: 800px;
+}
+
+.topLeftIcon{
+  margin-left: 15px;
+  margin-top: 15px;
+}
+
+.topLeftTitle{
+  color: RoyalBlue;
+  display: block;
+  margin-left: 15px;
+  font-size: 20px;
+  margin-bottom: 0;
+}
+
+.topLeftDate{
+  margin-left: 15px;
+  margin-top: 0;
+  width: 100px;
+}
+
+.introText{
+  display: inline-block;
+  font: helvitca;
+  font-size: 20px;
+  margin-left: 15px;
+}
+
+.commentAuthorIcon{
+  margin-left: 15px;
+  margin-top: 15px;
+}
+
+.commentAuthorName {
+  display: inline-block;
+  font-weight: bolder;
+  font-size: 20px;
+  height: 15px;
+  margin-top: 20px;
+  width: 150px;
+}
+
+.commentText {
+  font-size: 20px;
+  margin: 0px;
+  width: 800px;
+}
+
+.commentArea{
+  float: right;
+  height: 15px;
+  margin: 0px;
+  padding: 0px;
+  vertical-align: top;
+  width: 800px;
+}
+
+.moreComments{
+  display: inline-block;
+  font-size: 20px;
+  margin-left: 15px;
+  margin-right: 620px;
+  margin-bottom: 5px;
+}
+
+.xOfY{
+  display: inline-block;
+  font-size: 20px;
+  width: 70px;
+}
+
+.bottomFooter{
+  vertical-align: bottom;
+  height: 50px;
+  width: 890;
+}
