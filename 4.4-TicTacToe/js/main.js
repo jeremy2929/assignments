@@ -117,6 +117,7 @@ $(function(){
           var winHTML = "[alt='"+winPosition+"']";
           // locate which HTML element contains part of the 3 in a row using alt HTML
           var $highlightElement=$body.find(winHTML);
+          // add class for winning square to highlight bold in red
           $highlightElement.addClass("square--won");
           //--------------------------------------------------------------------------------------
           // convert the position of second of 3 in a row in large string back to a 9 square board
@@ -125,6 +126,7 @@ $(function(){
           var winHTML = "[alt='"+winPosition+"']";
           // locate which HTML element contains part of the 3 in a row using alt HTML
           var $highlightElement=$body.find(winHTML);
+          // add class for winning square to highlight bold in red
           $highlightElement.addClass("square--won");
           //--------------------------------------------------------------------------------------
           // convert the position of third of 3 in a row in large string back to a 9 square board
@@ -133,11 +135,12 @@ $(function(){
           var winHTML = "[alt='"+winPosition+"']";
           // locate which HTML element contains part of the 3 in a row using the alt HTML
           var $highlightElement=$body.find(winHTML);
+          // add class for winning square to highlight bold in red
           $highlightElement.addClass("square--won");
           //--------------------------------------------------------------------------------------
           // a winner was found, so need to reset for new game
           needReset = true;
-          // if x wins, then find all x's to fade opacity....
+          // if x wins, then find all o's to fade opacity....
           if (winningPlayer === "x"){
             // loop through all square to find O's
             for (var j = 0; j < 10; j++){
