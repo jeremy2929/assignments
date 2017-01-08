@@ -79,6 +79,7 @@ body{
 }
 
 .moreComments{
+  color: RoyalBlue;
   display: inline-block;
   font-size: 20px;
   margin-left: 15px;
@@ -89,6 +90,7 @@ body{
 .xOfY{
   display: inline-block;
   font-size: 20px;
+  opacity: .5;
   width: 70px;
 }
 

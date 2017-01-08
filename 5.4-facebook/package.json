@@ -2,7 +2,13 @@
   "name": "boilerplate-jasmine",
   "version": "1.0.0",
   "description": "",
-  "main": "webpack.config.js",
+  "main": "index.html",
+  "scripts": {
+    "test": "jest",
+    "webj": "webpack --watch"
+  },
+  "author": "",
+  "license": "ISC",
   "dependencies": {
     "babel-loader": "^6.2.10",
     "babel-preset-es2015": "^6.18.0",
@@ -24,10 +30,5 @@
     "react-dom": "^15.4.2",
     "react-test-renderer": "^15.4.2",
     "webpack": "^1.14.0"
-  },
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "",
-  "license": "ISC"
+  }
 }
