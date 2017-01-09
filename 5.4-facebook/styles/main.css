@@ -23,6 +23,10 @@ body{
   width: 890px;
 }
 
+.linkNoUnderline{
+    text-decoration: none;
+}
+
 .topArea{
   float: right;
   vertical-align: top;
