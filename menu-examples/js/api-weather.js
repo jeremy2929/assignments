@@ -23,6 +23,7 @@ document.addEventListener("DOMContentLoaded",function(){
         xhr.addEventListener("load", function(e){
             // 'this' is equal to XHR event. xhrData will store the string of data we need
             var xhrData = this.response;
+            console.log(xhrData);
             // assign data to a variable
             var string = xhrData;
             // find position of keyword 'sunrise' time in data string
@@ -51,31 +52,32 @@ document.addEventListener("DOMContentLoaded",function(){
             articleElement.innerHTML += pHTML;
             pHTML = "";
             // creating new API request to convert sunrise time to zulu time
-            var xhr = new XMLHttpRequest();
-            // sending the raw sunrise data to API
-            var url = "https://helloacm.com/api/unix-timestamp-converter/?cached&s="+sunriseRaw;
-            xhr.open("GET",url);
-            xhr.addEventListener("load", function(e){
-               // assign data (zulu time) from API to a string
-               var sunriseString = this.response;
-               // split the string (zulu time) into an array
-               sunriseArray=sunriseString.split("");
-               // grab the hour digits from the string (zulu)
-               hourString = sunriseArray[12]+sunriseArray[13];
-               // convert the two digit string into a numeric
-               hourNumeric = eval(hourString);
-               // add 6 to zulu hour to get Central Standard Time PM
-               sunRisehour = hourNumeric+6;
-               // grab the minute digits from the string (zulu)
-               sunRiseminutes = sunriseArray[15]+sunriseArray[16];
-               // build the HTML to display output
-               pHTML = "<p class='outputDisplay'>Sunrise:  "+sunRisehour+":"+sunRiseminutes+"am";
-               // inserting the output element into HTML
-      //         articleElement.innerHTML += pHTML;
-             });  // closing load event for sunrise time conversion request
-            // send the request to API
-            xhr.send();
-            setTimeout(0);
+              var xhr = new XMLHttpRequest();
+              // sending the raw sunrise data to API
+              var url = "https://helloacm.com/api/unix-timestamp-converter/?cached&s="+sunriseRaw;
+              xhr.open("GET",url);
+              xhr.addEventListener("load", function(e){
+                 // assign data (zulu time) from API to a string
+                 var sunriseString = this.response;
+                 console.log(sunriseString);
+                 // split the string (zulu time) into an array
+                 sunriseArray=sunriseString.split("");
+                 // grab the hour digits from the string (zulu)
+                 hourString = sunriseArray[12]+sunriseArray[13];
+                 // convert the two digit string into a numeric
+                 hourNumeric = eval(hourString);
+                 // add 6 to zulu hour to get Central Standard Time PM
+                 sunRisehour = hourNumeric+6;
+                 // grab the minute digits from the string (zulu)
+                 sunRiseminutes = sunriseArray[15]+sunriseArray[16];
+                 // build the HTML to display output
+                 pHTML = "<p class='outputDisplay'>Sunrise:  "+sunRisehour+":"+sunRiseminutes+"am";
+                 // inserting the output element into HTML
+        //         articleElement.innerHTML += pHTML;
+               });  // closing load event for sunrise time conversion request
+              // send the request to API
+              xhr.send();
+
             // creating new API request to conver sunrise time to zulu time
             var xhr = new XMLHttpRequest();
             // sending the raw sunrise data to API
@@ -84,6 +86,7 @@ document.addEventListener("DOMContentLoaded",function(){
             xhr.addEventListener("load", function(e){
                // assign data (zulu time) from API to a string
                var sunsetString = this.response;
+               console.log(sunsetString);
                // split the string (zulu time) into an array
                sunsetArray=sunsetString.split("");
                // grab the hour digits from the string (zulu)
@@ -101,7 +104,6 @@ document.addEventListener("DOMContentLoaded",function(){
             });  // closing load event for sunset time conversion request
             // send the request to API
             xhr.send();
-            setTimeout(0);
          }); // closing load event for all weather data from openweather
          // send the request to API
           xhr.send();

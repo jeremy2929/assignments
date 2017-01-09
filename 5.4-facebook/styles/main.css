@@ -8,7 +8,7 @@ body{
 
 .addButton{
   display: block;
-  height: 20px;
+  height: 15px;
   width: 890px;
 }
 
@@ -50,12 +50,13 @@ body{
 
 .introText{
   display: inline-block;
-  font: helvitca;
+  font: helvetica;
   font-size: 20px;
   margin-left: 15px;
 }
 
 .commentAuthorIcon{
+  display: inline-block;
   margin-left: 15px;
   margin-top: 15px;
 }
@@ -65,27 +66,35 @@ body{
   font-weight: bolder;
   font-size: 20px;
   height: 15px;
-  margin-top: 20px;
   margin-bottom: 0px;
   vertical-align: top;
-  width: 150px;
+  width: 120px;
 }
 
 .commentText {
   display: inline-block;
+  float: right;
   font: helvetica;
   font-size: 20px;
+  margin-bottom: 0;
   margin-left: 15px;
   margin-top: 0;
-  width: 875px;
+  vertical-align: top;
 }
 
 .commentArea{
-  height: 15px;
+  height: 400px;
   margin: 0px;
   padding: 0px;
   vertical-align: top;
-  width: 800px;
+  width: 890px;
+}
+
+.commentDate {
+  font: helvetica;
+  opacity: .5;
+  margin-left: 30px;
+  margin-top: 0;
 }
 
 .moreComments{
@@ -108,4 +117,7 @@ body{
   vertical-align: bottom;
   height: 50px;
   width: 890;
+}
+li {
+  list-style: none;
 }
