@@ -6,6 +6,12 @@ body{
   background-color: grey;
 }
 
+.addButton{
+  display: block;
+  height: 20px;
+  width: 890px;
+}
+
 .entireArea{
   background-color: white;
   margin-left: 200px;
@@ -60,17 +66,21 @@ body{
   font-size: 20px;
   height: 15px;
   margin-top: 20px;
+  margin-bottom: 0px;
+  vertical-align: top;
   width: 150px;
 }
 
 .commentText {
+  display: inline-block;
+  font: helvetica;
   font-size: 20px;
-  margin: 0px;
-  width: 800px;
+  margin-left: 15px;
+  margin-top: 0;
+  width: 875px;
 }
 
 .commentArea{
-  float: right;
   height: 15px;
   margin: 0px;
   padding: 0px;
