@@ -60,45 +60,44 @@ body{
 }
 
 .commentAuthorIcon{
-  display: inline-block;
+  display: inline-block;;
   margin-left: 15px;
   margin-top: 15px;
+  width: 80px;
 }
 
+
 .commentAuthorName {
-  display: inline-block;
+  display: inline;
+  font: helvetica;
   font-weight: bolder;
   font-size: 20px;
-  height: 15px;
-  margin-bottom: 0px;
   vertical-align: top;
-  width: 120px;
+  margin-top: 15px;
+  word-wrap: break-word;
+}
+
+.commentAreaText{
+    float: right;
+    margin-top: 15px;
+    vertical-align: top;
+    width: 790px;
 }
 
 .commentText {
-  display: inline-block;
-  float: right;
+  display: inline;
   font: helvetica;
   font-size: 20px;
-  margin-bottom: 0;
-  margin-left: 15px;
-  margin-top: 0;
+  margin-top: 45px;
   vertical-align: top;
-}
-
-.commentArea{
-  height: 400px;
-  margin: 0px;
-  padding: 0px;
-  vertical-align: top;
-  width: 890px;
+  word-wrap: break-word;
 }
 
 .commentDate {
+  display: block;
   font: helvetica;
   opacity: .5;
-  margin-left: 30px;
-  margin-top: 0;
+  margin-left: 100px;
 }
 
 .moreComments{

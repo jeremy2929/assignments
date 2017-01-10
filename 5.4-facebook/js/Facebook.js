@@ -37,8 +37,6 @@ export default React.createClass({
     },
   render() {
     myDisplayDate = myDate.substring(4,10)+", "+myDate.substring(11,15)
-
-
     return (
     <div className="entireArea">
      <section className="mainArea">
@@ -56,8 +54,10 @@ export default React.createClass({
        <article className="commentArea" ref="commentArticle"> {this.state.comments.map ((comment,i)=>{
            return <li key={i}>
                       <img className='commentAuthorIcon' src={`${comment.authorIcon}`}></img>
-                      <h3 className='commentAuthorName'> {comment.author}</h3>
-                      <p className='commentText'> {comment.commentText}</p>
+                      <div className='commentAreaText'>
+                         <h3 className='commentAuthorName'> {comment.author}</h3>
+                         <p className='commentText'> {comment.commentText}</p>
+                      </div>
                       <p className='commentDate'> {comment.commentDate} </p>
                  </li>
          })
