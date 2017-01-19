@@ -73,7 +73,7 @@ document.addEventListener("DOMContentLoaded",function(){
                  // build the HTML to display output
                  pHTML = "<p class='outputDisplay'>Sunrise:  "+sunRisehour+":"+sunRiseminutes+"am";
                  // inserting the output element into HTML
-        //         articleElement.innerHTML += pHTML;
+                 articleElement.innerHTML += pHTML;
                });  // closing load event for sunrise time conversion request
               // send the request to API
               xhr.send();

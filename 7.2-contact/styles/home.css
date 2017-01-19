@@ -1,0 +1,19 @@
+*{
+box-sizing: border-box;
+}
+
+.body{
+  background-color: pink;
+}
+
+.contactsList{
+  color: green;
+}
+
+.contactTitle{
+  color: red;
+}
+
+.contactDetails{
+  color: blue;
+}
