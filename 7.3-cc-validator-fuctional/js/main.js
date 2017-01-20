@@ -60,7 +60,6 @@ export default React.createClass({
                 {
                   this.state.cc_cards.map ((ccnum,i)=>
                   {
-
                   return      <li key={i}>
                             <p className="ccNumber">Number: {ccnum.number}</p>
                             <p className="ccName">Name: {ccnum.name}</p>
