@@ -1,7 +1,15 @@
 .invalid{
-  border-color: red;
+  color: red;
 }
 
 .valid{
-  border-color: green;
+  color: green;
+}
+
+.ccInput{
+  width: 200px;
+}
+
+.ccName{
+  color: blue;
 }
