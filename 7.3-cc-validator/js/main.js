@@ -2,7 +2,7 @@ import React from 'react'
 import { render } from 'react-dom'
 var Card = require('react-credit-card')
 var creditCardValidator = require('credit-card-validator');
-// this number was randomly entered but worked! 3535453535353535
+//
 export default React.createClass({
   getInitialState(){
     return{
@@ -45,15 +45,11 @@ export default React.createClass({
         this.state.cc_cards.unshift(newCard)
         this.setState(this.state.cc_cards)
       }
-      console.log(validCard);
 },
 
   render() {
-
-    return(
       <div className="demo-container">
         <div className="card-wrapper">
-
           <div className="form-container active">
             <form action="">
               <input className="ccInput" placeholder="Card number 16 digits max" pattern="[0-9]{13,16}"  ref="ccNum" onChange={this.onCardNumber}/>
