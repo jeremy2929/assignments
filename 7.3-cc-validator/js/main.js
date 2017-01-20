@@ -48,10 +48,11 @@ export default React.createClass({
 },
 
   render() {
+      return (
       <div className="demo-container">
         <div className="card-wrapper">
           <div className="form-container active">
-            <form action="">
+            <form>
               <input className="ccInput" placeholder="Card number 16 digits max" pattern="[0-9]{13,16}"  ref="ccNum" onChange={this.onCardNumber}/>
             </form>
             <h1 className="ccData"> Credit Card List</h1>
@@ -59,7 +60,7 @@ export default React.createClass({
                 {
                   this.state.cc_cards.map ((ccnum,i)=>
                   {
-                    return <li key={i}>
+                  return  <li key={i}>
                             <p className="ccNumber">Number: {ccnum.number}</p>
                             <p className="ccName">Name: {ccnum.name}</p>
                             <p ref="ccValid">Validation: {ccnum.valid}</p>
@@ -70,5 +71,6 @@ export default React.createClass({
           </div>
         </div>
       </div>
-)}
+    }
+    )}
 })

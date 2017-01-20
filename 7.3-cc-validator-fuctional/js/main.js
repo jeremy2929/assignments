@@ -47,7 +47,8 @@ export default React.createClass({
       }
 },
 
-  render() {
+  render(){
+    return (
       <div className="demo-container">
         <div className="card-wrapper">
           <div className="form-container active">
@@ -59,7 +60,8 @@ export default React.createClass({
                 {
                   this.state.cc_cards.map ((ccnum,i)=>
                   {
-                    return <li key={i}>
+
+                  return      <li key={i}>
                             <p className="ccNumber">Number: {ccnum.number}</p>
                             <p className="ccName">Name: {ccnum.name}</p>
                             <p ref="ccValid">Validation: {ccnum.valid}</p>
@@ -70,5 +72,5 @@ export default React.createClass({
           </div>
         </div>
       </div>
-)}
+  )}
 })
