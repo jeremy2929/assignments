@@ -10,12 +10,12 @@ export default React.createClass({
           {
             number: "214276575634532",
             name: "John Doe",
-            valid: "Bad CC Number!"
+            valid: "false"
           },
           {
             number: "21423523534532",
             name: "Mr Ripoff",
-            valid: "Bad CC Number!"
+            valid: "false"
           }
         ]
       }
@@ -28,22 +28,24 @@ export default React.createClass({
         var newCard = {
           number: cardNum,
           name: "New Guy",
-          valid: "Good CC Number!"
+          valid: "true"
         }
         this.refs.ccNum.value = ""
         this.state.cc_cards.unshift(newCard)
         this.setState(this.state.cc_cards)
+        this.refs.ccValid.className = "valid"
       }
       var cardNumLength = cardNum.length
       if (cardNumLength > 16){
         var newCard = {
           number: cardNum,
           name: "New Guy",
-          valid: "Bad CC Number!"
+          valid: "false"
         }
         this.refs.ccNum.value = ""
         this.state.cc_cards.unshift(newCard)
         this.setState(this.state.cc_cards)
+        this.refs.ccValid.className = "invalid"
       }
 },
 
@@ -60,10 +62,11 @@ export default React.createClass({
                 {
                   this.state.cc_cards.map ((ccnum,i)=>
                   {
-                  return      <li key={i}>
+                  return  <li key={i}>
                             <p className="ccNumber">Number: {ccnum.number}</p>
                             <p className="ccName">Name: {ccnum.name}</p>
-                            <p ref="ccValid">Validation: {ccnum.valid}</p>
+                            <p className={ccnum.valid ? "invalid" : "valid"}>Validation: {ccnum.valid}</p>
+
                           </li>
                   })
                 }
