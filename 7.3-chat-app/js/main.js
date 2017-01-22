@@ -1,6 +1,9 @@
+/*   This script creates a chat room where user can read stored chats and user has ability
+    to add chat messages. All chats are stored along with date on external server  */
 import React from 'react'
 import Validator from 'validator'
 import { ajax } from 'jquery'
+
 export default React.createClass({
   componentDidMount(){
     ajax({
@@ -30,6 +33,7 @@ export default React.createClass({
     alert("Failure to connect to URL")
   },
   onClickSubmit(e){
+    var currentDate = Date().substring(4,16)
     e.preventDefault()
     var textInputValue = this.refs.textInput.value
       ajax({
@@ -38,25 +42,31 @@ export default React.createClass({
       type: "POST",
       data:
           {
-            textInputValue
+            text: textInputValue,
+            date: currentDate,
+
           },
       success: this.onPostAjaxLoadSuccess,
       error: this.AjaxLoadError
       })
-    this.refs.textInput.value=""
-    this.setState({testMsgs})
+    this.refs.textInput.value = ""
   },
   render() {
     return(
     <main>
       <section>
         <h1 className="chatTitle">Chat Room</h1>
-            <ul className="listChat">
+            <ul id="list" className="newList">
               {
                 this.state.textMsgs.map((textMsg, i)=>{
-                  return <p key={i}>
-                            {textMsg.textInputValue}
-                         </p>
+                  if (textMsg.date != undefined){
+                    console.log("msg=",textMsg);
+                    return <div><p className="msgDate">{textMsg.date}</p>
+                              <p className="eachMsg" key={i}>
+                                {textMsg.text}
+                              </p>
+                            </div>
+                  }
                 })
               }
             </ul>

@@ -1,5 +1,29 @@
-.dataList{
-  color: blue;
+*{
+  box-sizing: border-box;
+}
+
+.wholePage{
+  background-color: skyblue;
+}
+
+.eachMsg{
+  background: lightgrey;
+  border: solid black 1px;
+  display: inline-block;
+  font-size: 20px;
+  height: auto;
+  margin: 2px;
+  overflow: auto;
+  padding-left: 2px;
+  width: 1100px;
+}
+
+.msgDate{
+  display: inline-block;
+  font-size: 13px;
+  height: auto;
+  vertical-align: top;
+  width: 65px;
 }
 
 .listChat {
@@ -10,13 +34,16 @@
   list-style: none;
   margin-left: 320px;
   overflow: scroll;
+  overflow-x: inherit;
   padding-left: 10px;
   width: 50%;
 }
 
 .createChat {
   background-color: DarkSeaGreen;
+  border: solid 2px;
   border-radius: 6px;
+  color: purple;
   display: inline-block;
   font-size: 30px;
   height: 40px;
@@ -43,11 +70,14 @@
 }
 
 .chatTitle {
-  background-color: black;
+  background-color: DarkSeaGreen;
+  border: solid 2px;
+  color: purple;
   font-size: 50px;
   font-weight: bolder;
   opacity: 0.8;
+  margin-left: 25%;
   padding: 4px;
   text-align: center;
-  color: rgb(26, 145, 169);
+  width: 638px;
 }
