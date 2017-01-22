@@ -1,3 +1,53 @@
 .dataList{
   color: blue;
 }
+
+.listChat {
+  background-color: lightgrey;
+  border: 8px solid black;
+  border-radius: 10px;
+  height: 300px;
+  list-style: none;
+  margin-left: 320px;
+  overflow: scroll;
+  padding-left: 10px;
+  width: 50%;
+}
+
+.createChat {
+  background-color: DarkSeaGreen;
+  border-radius: 6px;
+  display: inline-block;
+  font-size: 30px;
+  height: 40px;
+  line-height: 40px;
+  margin-left: 25%;
+  margin-top: 10px;
+  padding-top: 0px;
+  text-align: center;
+  transform: translateY(4px);
+  width: 638px;
+}
+
+.textChat {
+  border-radius: 6px;
+  display: inline-block;
+  font-size: 15px;
+  height: 40px;
+  line-height: 40px;
+  margin-left: 25%;
+  margin-bottom: 10px
+  padding-top: 0px;
+  transform: translateY(4px);
+  width: 638px;
+}
+
+.chatTitle {
+  background-color: black;
+  font-size: 50px;
+  font-weight: bolder;
+  opacity: 0.8;
+  padding: 4px;
+  text-align: center;
+  color: rgb(26, 145, 169);
+}

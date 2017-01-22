@@ -1,7 +1,6 @@
 import React from 'react'
 import Validator from 'validator'
 import { ajax } from 'jquery'
-
 export default React.createClass({
   componentDidMount(){
     ajax({
@@ -13,64 +12,58 @@ export default React.createClass({
   },
   getInitialState(){
     return{
-      isEmailValid: false,
-      emailValue: "",
-      emailAddresses: ["test@crap.com"]
+      textValue: "",
+      textMsgs: ["text messages"]
     }
   },
   onInitialAjaxLoadSuccess(response){
     this.setState({
-      emailAddresses: response
+      textMsgs: response.reverse()
     })
   },
   onPostAjaxLoadSuccess(response){
     this.setState({
-      emailAddresses: this.state.emailAddresses.concat(response)
+      textMsgs: this.state.textMsgs.concat(response)
     })
   },
   onAjaxLoadError(response){
-
+    alert("Failure to connect to URL")
   },
   onClickSubmit(e){
     e.preventDefault()
-    var emailInputValue = this.refs.emailInput.value
-    var isEmail = Validator.isEmail(emailInputValue);
-    if (isEmail){
-    //  this.state.emailAddresses.unshift(emailInputValue)
-    //  this.setState(this.state.emailAddresses)
-    //  console.log(this.state.emailAddresses);
+    var textInputValue = this.refs.textInput.value
       ajax({
-        url: "https://tiny-tiny.herokuapp.com/collections/jeremy2929-test",
-        dataType: "json",
-        type: "POST",
-        data:
+      url: "https://tiny-tiny.herokuapp.com/collections/jeremy2929-test",
+      dataType: "json",
+      type: "POST",
+      data:
           {
-            emailInputValue
+            textInputValue
           },
-        success: this.onPostAjaxLoadSuccess,
-        error: this.AjaxLoadError
+      success: this.onPostAjaxLoadSuccess,
+      error: this.AjaxLoadError
       })
-    }
-    this.refs.emailInput.value=""
+    this.refs.textInput.value=""
+    this.setState({testMsgs})
   },
   render() {
     return(
-<main>
+    <main>
       <section>
-        <input ref="emailInput" type="email"/>
-        <input type="submit" onClick={this.onClickSubmit}/>
+        <h1 className="chatTitle">Chat Room</h1>
+            <ul className="listChat">
+              {
+                this.state.textMsgs.map((textMsg, i)=>{
+                  return <p key={i}>
+                            {textMsg.textInputValue}
+                         </p>
+                })
+              }
+            </ul>
+            <input className="textChat" placeholder="enter chat text here" ref="textInput" type="text"/>
+            <input className="createChat" type="submit" onClick={this.onClickSubmit}/>
       </section>
-      <section>
-        <h2>Entered Emails</h2>
-        {
-          this.state.emailAddresses.map((emailAddress, i)=>{
-            return <p key={i}>
-                      {emailAddress.emailInputValue}
-                   </p>
-          })
-        }
-      </section>
-</main>
+    </main>
     )
   }
 })
