@@ -1,0 +1,73 @@
+*{
+  box-sizing: border-box;
+}
+
+.chooseNumber{
+  text-align: center;
+}
+
+.box{
+margin: 0;
+display: inline-block;
+}
+
+.square{
+  border: solid 1px;
+  display: inline-block;
+  height: 40px;
+  margin: 0;
+  padding: 3px;
+  text-align: center;
+  width: 40px;
+}
+
+.allSquares{
+  border: solid 2px;
+  display: inline-block;
+  font-size: 20px;
+  height: 132px;
+  margin: 0;
+  width: 124px;
+}
+
+.box1{
+  border: solid 2px;
+  display: inline-block;
+  height: 64px;
+  margin: 0;
+  width: 64px;
+
+}
+
+.box2{
+  border: solid 2px;
+  display: inline-block;
+  height: 64px;
+  margin: 0;
+  width: 64px;
+
+}
+
+.entireBox{
+  display: inline-block;
+  height: 195px;
+  margin: 0;
+  width: 195px;
+}
+
+.solveButton{
+  background-color: greenyellow;
+  border: solid 2px;
+  display: block;
+  height: 20px;
+  margin-top: 40px;
+  width: 100px;
+}
+
+.resetButton{
+  background-color: crimson;
+  border: solid 2px;
+  display: block;
+  height: 20px;
+  width: 100px;
+}
