@@ -5,7 +5,6 @@
 import React from 'react'
 import Validator from 'validator'
 import { ajax } from 'jquery'
-var showAll = true
 
 export default React.createClass({
   componentDidMount(){
