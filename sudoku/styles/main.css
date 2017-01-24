@@ -6,6 +6,8 @@
   text-align: center;
 }
 
+
+
 .box{
 margin: 0;
 display: inline-block;
@@ -21,6 +23,11 @@ display: inline-block;
   width: 40px;
 }
 
+.all81Squares{
+  height: 122px;
+  width: 124px;
+}
+
 .allSquares{
   border: solid 2px;
   display: inline-block;
@@ -33,19 +40,49 @@ display: inline-block;
 .box1{
   border: solid 2px;
   display: inline-block;
-  height: 64px;
+  height: 124px;
   margin: 0;
-  width: 64px;
-
+  width: 124px;
 }
 
 .box2{
   border: solid 2px;
   display: inline-block;
-  height: 64px;
+  height: 124px;
   margin: 0;
-  width: 64px;
+  width: 124px;
+}
 
+.box3{
+  border: solid 2px;
+  display: inline-block;
+  height: 124px;
+  margin: 0;
+  width: 124px;
+
+}
+
+.box4{
+  border: solid 2px;
+  display: inline-block;
+  height: 124px;
+  margin: 0;
+  width: 124px;
+}
+
+.row1{
+  height: 42;
+  width: 375
+}
+
+.row2{
+  height: 42;
+  width: 375
+}
+
+.row3{
+  height: 42;
+  width: 375
 }
 
 .entireBox{
