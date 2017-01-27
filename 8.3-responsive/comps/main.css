@@ -150,7 +150,7 @@ height: auto;
   background-color: black;
   color: white;
   font-size: 8px;
-  height: 25px;
+  height: auto;
   padding: 3px;
   text-align: center;
   margin-top: 1%;
@@ -159,9 +159,14 @@ height: auto;
 
 .bottomClick{
   color: white;
+  display: inline-block;
   font-weight: bolder;
 }
 
+.bottomNoClick{
+  display: inline-block;
+  font-weight: lighter;
+}
 @media only screen and (min-width: 478px) {
     .imageMain{
       display: block;
@@ -317,8 +322,7 @@ height: auto;
     background-color: black;
     color: white;
     font-size: 12px;
-    font-weight: lighter;
-    height: 25px;
+    height: auto;
     padding-top: 10px;
     text-align: center;
     margin-top: 1%;
@@ -327,6 +331,12 @@ height: auto;
 
   .bottomClick{
     color: white;
+    display: inline-block;
     font-weight: bolder;
+  }
+
+  .bottomNoClick{
+    display: inline-block;
+    font-weight: lighter;
   }
 }
