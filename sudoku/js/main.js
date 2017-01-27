@@ -116,13 +116,8 @@ export default React.createClass({
   getInitialState(){
     return{
       box1: ["_","_","_","_","_","_","_","_","_"],
-      box2: ["*","_","*","_","_","_","_","_","_"],
-      box3: ["*","_","*","_","_","_","_","_","_"]
+      currentNum: 0
     }
-    var boxNumber = "*"
-    var num = "*"
-    this.setState({boxNumber})
-  //  console.log("working");
   },
   onClickSolve(){
     for (var i = 1; i<24; i++){
@@ -131,23 +126,23 @@ export default React.createClass({
   },
 
   onClickSquare(e){
+    e.target.textContent = this.state.currentNum
+
   console.log("test empty square");
   },
-
   onClickNumber(e){
     var num = e.target.textContent
     console.log("num=",num);
-    this.setState({num})
-    this.refs.box9.value=6
+    this.setState({currentNum: num})
   },
 
   render() {
     return(
       <section>
-          <article>
-            <h1 className="title">Sudoku</h1>
+        <article>
+          <h1 className="title">Sudoku</h1>
           <div className="box1">
-            <p className="square" ref="box1" type="text"/>
+            <p onClick={this.onClickSquare}className="square" ref="box1" type="text"/>
             <p className="square" ref="box2" type="text"/>
             <p className="square" ref="box3" type="text"/>
             <p className="square" ref="box4" type="text"/>
@@ -250,15 +245,17 @@ export default React.createClass({
             <p className="square" ref="box81" type="text"/>
           </div>
         </article>
-      </section>
+
           <article className="numberChoose">
             <div className="allSquares"
               ref="listOfPost">
               {
-                this.state.box3.map ((box,i)=>
+                this.state.box1.map ((box,i)=>
                 {
+                  console.log("num=",num);
+
                   return <div className="box" key={i}>
-                    <p type="number" className="square" ref="box" onClick={this.onNumber}>{i+1}</p>
+                    <p type="number" className="square" ref="box" onClick={this.onClickNumber}>{i+1}</p>
                 </div>
                 })
               }
@@ -267,6 +264,7 @@ export default React.createClass({
             <button className="solveButton" onClick={this.onClickSolve}>Solve</button>
             <button className="resetButton">Reset</button>
           </article>
+          </section>
     )
   }
 })
