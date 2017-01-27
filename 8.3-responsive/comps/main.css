@@ -21,6 +21,7 @@ body{
 .plansBox1{
   height: 3%;
   padding: 3px;
+  margin-left: 1%;
   width: 20%;
 }
 
@@ -143,6 +144,22 @@ height: auto;
   height: 5%;
   margin: 3px;
   width: 100%;
+}
+
+.bottomBanner{
+  background-color: black;
+  color: white;
+  font-size: 8px;
+  height: 25px;
+  padding: 3px;
+  text-align: center;
+  margin-top: 1%;
+  width: 100%;
+}
+
+.bottomClick{
+  color: white;
+  font-weight: bolder;
 }
 
 @media only screen and (min-width: 478px) {
@@ -294,5 +311,22 @@ height: auto;
     height: 100px;
     margin: 3px;
     width: 45%;
+  }
+
+  .bottomBanner{
+    background-color: black;
+    color: white;
+    font-size: 12px;
+    font-weight: lighter;
+    height: 25px;
+    padding-top: 10px;
+    text-align: center;
+    margin-top: 1%;
+    width: 100%;
+  }
+
+  .bottomClick{
+    color: white;
+    font-weight: bolder;
   }
 }
