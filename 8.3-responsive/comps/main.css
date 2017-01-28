@@ -168,7 +168,186 @@ height: auto;
   display: inline-block;
   font-weight: lighter;
 }
-@media only screen and (min-width: 478px) {
+
+@media only screen and (min-width: 478px){
+    .imageMain{
+      display: block;
+      margin-left: 9em;
+      height: 12em;
+      width: 50%;
+    }
+
+  .navBar{
+    font-size: 14px;
+    height: 10px;
+    margin-top: 0;
+    margin-left: 10em;
+    margin-bottom: 5px;
+    width: 45%;
+    white-space: pre;
+  }
+
+  .plansBox1{
+    display: inline-block;;
+    height: auto;
+    margin-left: 24%;
+    padding: 3px;
+    width: 15%;
+  }
+
+  .plansBox2{
+    display: inline-block;
+    height: auto;
+    padding: 3px;
+    width: 15%;
+  }
+  .plansBox3{
+    display: inline-block;
+    height: auto;
+    padding: 3px;
+    width: 15%;
+  }
+
+  .planType1{
+    font: arial;
+    font-size: 14px;
+    margin: 0;
+    margin-top: 10px;
+    text-align: center;
+  }
+
+  .planType2{
+    font: courier;
+    font-size: 40px;
+    margin: 0;
+    text-align: center;
+  }
+
+  .planType3{
+    font-size: 14px;
+    margin: 0;
+    opacity: .5;
+    text-align: center;
+  }
+
+  .squareBox1{
+    background-color: rgb(81, 146, 81);
+    color: white;
+    display: inline-block;
+    height: 105px;
+    margin-top: 10px;
+    width: 100%;
+  }
+
+  .squareBox2{
+    background-color: rgb(44, 73, 133);
+    color: white;
+    display: inline-block;
+    height: 105px;
+    margin-top: 10px;
+    width: 100%;
+  }
+
+  .squareBox3{
+    background-color: rgb(17, 17, 17);
+    color: white;
+    display: inline-block;
+    height: 105px;
+    margin-top: 10px;
+    width: 100%;
+  }
+
+  .textBox{
+    background-color: rgb(247, 247, 247);
+    border: solid 1px;
+    font: arial;
+    font-size: 12px;
+    height: 15px;
+    margin: 0px;
+    opacity: .7;
+    padding-top: 5px;
+    text-align: center;
+    width: 99%;
+  }
+
+  .allPlans{
+    margin-left: 6%;
+    padding: 5px;
+  }
+
+  .buttonBox{
+    border: solid 1px;
+    font: helvetica;
+    height: 30px;
+    margin: 0px;
+    width: 99%;
+  }
+
+  .chooseButton{
+    background-color: white;
+    border-radius: 7px;
+    font-size: 8px;
+    font-weight: 900;
+    height: auto;
+    margin-left: 30%;
+    margin-top: 8px;
+    padding: 3px;
+    text-align: center;
+    width: 40%;
+  }
+
+  .textGroup{
+  margin-left: 24%;
+  width: 50%;
+  }
+
+  .textTitle{
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 900;
+    margin: 0px;
+    margin-top: 10px;
+    width: 100%;
+  }
+
+  .textBody{
+    font-size: 14px;
+    height: 50px;
+    width: 90%;
+
+  }
+  .eachText{
+    display: inline-block;
+    height: 100px;
+    margin: 3px;
+    width: 45%;
+  }
+
+  .bottomBanner{
+    background-color: black;
+    color: white;
+    font-size: 12px;
+    height: auto;
+    padding-top: 10px;
+    text-align: center;
+    margin-left: 24%;
+    margin-top: 1%;
+    width: 50%;
+  }
+
+  .bottomClick{
+    color: white;
+    display: inline-block;
+    font-weight: bolder;
+  }
+
+  .bottomNoClick{
+    display: inline-block;
+    font-weight: lighter;
+  }
+}
+
+@media only screen and (min-width: 650px){
     .imageMain{
       display: block;
       margin-left: 11em;
@@ -325,10 +504,12 @@ height: auto;
   .bottomBanner{
     background-color: black;
     color: white;
+    display: block;
     font-size: 12px;
     height: auto;
     padding-top: 10px;
     text-align: center;
+    margin-left: 0;
     margin-top: 1%;
     width: 100%;
   }
