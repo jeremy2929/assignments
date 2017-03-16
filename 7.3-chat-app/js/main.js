@@ -9,7 +9,7 @@ import { ajax } from 'jquery'
 export default React.createClass({
   componentDidMount(){
       ajax({
-      url: "https://tiny-tiny.herokuapp.com/collections/jeremy2929-app",
+      url: "https://tiny-tiny.herokuapp.com/collections/jeremy2929-app3",
       dataType: "json",
       success: this.onInitialAjaxLoadSuccess,
       error: this.onAjaxLoadError
@@ -44,7 +44,7 @@ export default React.createClass({
     var textInputValue = this.refs.textInput.value
     if (textInputValue != ""){
       ajax({
-        url: "https://tiny-tiny.herokuapp.com/collections/jeremy2929-app",
+        url: "https://tiny-tiny.herokuapp.com/collections/jeremy2929-app3",
         dataType: "json",
         type: "POST",
         data:
@@ -56,11 +56,13 @@ export default React.createClass({
         error: this.AjaxLoadError
       })
       var showing = this.refs.Show15.className
-      if (showing==="hiddenButton"){
-        var dataLength = this.state.data.length-15
-        this.state.data=[]
-        for (var j = dataLength;j<dataLength+15; j++){
-          this.state.data[j]=this.state.textMsgs[j]
+      if (showing === "hiddenButton"){
+        if (this.state.data.length > 15){
+          var dataLength = this.state.data.length - 14
+          this.state.data = []
+          for (var j = dataLength; j < dataLength + 15; j++){
+            this.state.data[j] = this.state.textMsgs[j]
+          }
         }
       }
       this.refs.textInput.value = ""
@@ -69,20 +71,22 @@ export default React.createClass({
     this.setState(this.state.textMsgs)
   },
   onClickShowAll(){
-    this.refs.Show15.className="visibleButton"
-    this.refs.ShowAll.className="hiddenButton"
+    this.refs.Show15.className = "visibleButton"
+    this.refs.ShowAll.className = "hiddenButton"
     this.state.data = this.state.textMsgs
     this.setState(this.state.data)
     this.refs.textInput.value = ""
   },
   onClickShow15(){
-    this.refs.ShowAll.className="visibleButton"
-    this.refs.Show15.className="hiddenButton"
-    this.state.data=this.state.textMsgs
-    var dataLength = this.state.data.length-15
-    this.state.data=[]
-    for (var j = dataLength;j<dataLength+15; j++){
-      this.state.data[j]=this.state.textMsgs[j]
+    this.refs.ShowAll.className = "visibleButton"
+    this.refs.Show15.className = "hiddenButton"
+    this.state.data = this.state.textMsgs
+    if (this.state.data.length > 15){
+      var dataLength = this.state.data.length - 15
+      this.state.data = []
+      for (var j = dataLength; j < dataLength + 15; j++){
+        this.state.data[j] = this.state.textMsgs[j]
+      }
     }
     this.setState(this.state.data)
   },
@@ -95,9 +99,9 @@ export default React.createClass({
               {
                 this.state.data.map((textMsg, i)=>{
                   if (textMsg.date != undefined && textMsg.text != ""){
-                    return <article className="eachMsgContainer">
+                    return <article className="eachMsgContainer" key={i}>
                               <p key="1" className="msgDate">{textMsg.date}</p>
-                              <p key="2" className="eachMsg" key={i}>
+                              <p key="2" className="eachMsg" >
                                 {textMsg.text}
                               </p>
                             </article>

@@ -16,7 +16,8 @@ document.addEventListener("DOMContentLoaded",function(){
         // assign zipcode entered to variable
         var zipcode=textElement.value;
         // build a URL to API server using zipcode
-        var url = "http://api.openweathermap.org/data/2.5/weather?zip="+zipcode+",us&APPID=9026ccc1a8da530115ed275fb180ac36"
+
+        var url =  "https://api.nasa.gov/planetary/apod?api_key=0Q6BnoGKV0whkEatPySH5Z0cVZpGHTRCLnwB7mrt"
         // open URL for API server
         xhr.open("GET",url);
         // Listen for the Load event. The argument used is e because event is reserved keyword
