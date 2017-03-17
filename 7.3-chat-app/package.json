@@ -26,6 +26,8 @@
     "webpack": "^1.14.0"
   },
   "scripts": {
+    "start": "node index.js",
+    "heroku-postbuild": "webpack",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",

@@ -3,13 +3,12 @@
     The user has the option to click button to show only last 15 chat messages or click button to
     show all messages  */
 import React from 'react'
-import Validator from 'validator'
 import { ajax } from 'jquery'
 
 export default React.createClass({
   componentDidMount(){
       ajax({
-      url: "https://tiny-tiny.herokuapp.com/collections/jeremy2929-app3",
+      url: "https://tiny-tiny.herokuapp.com/collections/jeremy2929-new",
       dataType: "json",
       success: this.onInitialAjaxLoadSuccess,
       error: this.onAjaxLoadError
@@ -44,7 +43,7 @@ export default React.createClass({
     var textInputValue = this.refs.textInput.value
     if (textInputValue != ""){
       ajax({
-        url: "https://tiny-tiny.herokuapp.com/collections/jeremy2929-app3",
+        url: "https://tiny-tiny.herokuapp.com/collections/jeremy2929-new",
         dataType: "json",
         type: "POST",
         data:
